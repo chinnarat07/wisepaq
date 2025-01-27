@@ -121,7 +121,7 @@ if (isset($_GET['p_id'])) {
                 <label for="post_category">Post Category ID</label>
                 <select class="form-control" name="post_category" id="post_category">
                     <?php
-                    $query = "SELECT * FROM tbl_categories";
+                    $query = "SELECT * FROM tbl_categories ORDER BY cat_page ASC";
                     $fetch_data = mysqli_query($connection, $query);
                     while ($Row = mysqli_fetch_assoc($fetch_data)) {
                         $cat_id = $Row["cat_id"];
