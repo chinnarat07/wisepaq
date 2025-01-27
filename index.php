@@ -9,9 +9,9 @@ include "./includes/db.php";
 
 <body>
 
- <!-- Start Header -->
- <?php include("./includes/header.php") ?>
-    <!-- End Header -->
+  <!-- Start Header -->
+  <?php include("./includes/header.php") ?>
+  <!-- End Header -->
 
   <main class="main">
 
@@ -1083,9 +1083,9 @@ include "./includes/db.php";
 
   </main>
 
-        <!-- Footer Start -->
-        <?php include("./includes/footer.php") ?>
-        <!-- Footer End -->
+  <!-- Footer Start -->
+  <?php include("./includes/footer.php") ?>
+  <!-- Footer End -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

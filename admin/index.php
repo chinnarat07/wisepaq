@@ -7,7 +7,7 @@ include "includes_admin/navigation.php";
 <!-- Page Content -->
 
 
-    <div  style="width:500px; margin:0 auto;"">
+    <div  style="width:500px; margin:0 auto;">
         <?php
         include "includes_admin/sidebar.php"
         ?>
@@ -17,3 +17,4 @@ include "includes_admin/navigation.php";
     /* Page Footer */
     include "includes_admin/footer.php"
     ?>
+      <script src="./js/enable.js"></script>
