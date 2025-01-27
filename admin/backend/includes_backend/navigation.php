@@ -1,3 +1,4 @@
+<div id="wrapper">
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -8,16 +9,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">WISEPAQ  <small><?php echo $_SESSION['username'] ?></small></a>
+        <a class="navbar-brand" href="index.php"><b>WISEPAQ</b><span style="font-size: 18px;">admin</span></a>
+        <!-- <a class="navbar-brand" href="index.php">WISEPAQ  <small><?php echo $_SESSION['username'] ?></small></a> -->
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
-        <li><a href="../index.php">Login Page</a></li>
+        <li><a href="../../index.php">Website</a></li>
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['username'] ?> <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle"  data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['username'] ?> <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="profile.php"><i class="fa fa-fw fa-user"></i> Profile</a>
+                    <a  href="profile.php"><i class="fa fa-fw fa-user "></i> Profile</a>
                 </li>
                 <li class="divider"></li>
                 <li>
@@ -30,10 +32,10 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
             <li class="active">
-                <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                <a style="padding-left: 22px;" href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#posts-dropdown">
+                <a style="padding-left: 21px;" href="javascript:;" data-toggle="collapse" data-target="#posts-dropdown">
                     <i class="fa fa-table"></i> Posts <i class="fa fa-fw fa-caret-down"></i>
                 </a>
                 <ul id="posts-dropdown" class="collapse">
@@ -46,13 +48,13 @@
                 </ul>
             </li>
             <li>
-                <a href="categories.php">
+                <a style="padding-left: 21px;" href="categories.php">
                     <i class="fa fa-folder"></i> Categories
                 </a>
             </li>
 
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#users-dropdown">
+                <a style="padding-left:22px;" href="javascript:;" data-toggle="collapse" data-target="#users-dropdown">
                     <i class="fa fa-user"></i> Users <i class="fa fa-fw fa-caret-down"></i>
                 </a>
                 <ul id="users-dropdown" class="collapse">

@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <?php
 //include "includes_admin/db.php";
 include '../includes/db.php';
@@ -7,9 +5,7 @@ include '../includes/db.php';
 include "includes_admin/header.php";
 include "includes_admin/navigation.php";
 
-
 $errMessage = false;
-
 
 ?>
 <!-- Page Content -->
@@ -17,29 +13,30 @@ $errMessage = false;
     <?php
     if (isset($_GET['p_id'])) {
         $the_post_id = $_GET['p_id'];
-        $lang = $_GET['lang']; 
+        $lang = $_GET['lang'];
         $query = "SELECT * FROM tbl_posts WHERE post_id = $the_post_id ";
         $select_all_posts_query = mysqli_query($connection, $query);
 
         while ($Row = mysqli_fetch_assoc($select_all_posts_query)) {
             $post_id = $Row['post_id'];
-            if ($lang=='en'){
-                    $post_title = base64_decode($Row['post_title']);
-            }else{
-                   $post_title = base64_decode($Row['post_title_thai']);
+            if ($lang == 'en') {
+                $post_title =  base64_decode($Row['post_title']);
+                $post_subtitle =  base64_decode($Row['post_subtitle']);
+            } else {
+                $post_title =  base64_decode($Row['post_title_thai']);
+                $post_subtitle =  base64_decode($Row['post_subtitle_thai']);
             }
-            
-            // $post_author = $Row['post_author'];
+            $post_link_url = $Row['post_link'];
             $post_date = $Row['post_date'];
             $post_image = $Row['post_image'];
-            
-            if ($lang=='en'){
-                     $post_content = base64_decode($Row['post_content']);
-            }else{
-                    $post_content = base64_decode($Row['post_content_thai']);
-            }            
- 
-            ?>
+
+            if ($lang == 'en') {
+                $post_content = base64_decode($Row['post_content']);
+            } else{
+                $post_content = base64_decode($Row['post_content_thai']);
+            } 
+
+    ?>
             <div class="row">
                 <!-- Blog Post Content Column -->
                 <div class="col-lg-8">
@@ -49,10 +46,15 @@ $errMessage = false;
                     <!-- Title -->
                     <h1><?php echo $post_title; ?></h1>
 
+                    <!-- Subtitle -->
+                    <h3><?php echo $post_subtitle; ?></h3>
+
                     <!-- Author -->
                     <!-- <p class="lead">
-                        by <a href="#"><?php echo $post_author; ?></a>
+                        by </a>
                     </p> -->
+                    <!--Link Url-->
+                    <a class="btn btn-link text-light" href="<?php echo $post_link_url ?>" target="_blank">click link</i></a>
 
                     <hr>
 
@@ -68,23 +70,15 @@ $errMessage = false;
 
                     <!-- Post Content -->
                     <p><?php echo $post_content; ?></p>
-                    <hr>
 
                     <!-- Blog Comments -->
-
-    
-
-                    <hr>
-
-       
-                    <br>
 
                 </div>
 
                 <!-- Blog Sidebar Widgets Column -->
                 <?php
-                  //      include "includes/sidebar.php"
-                        ?>
+                //      include "includes/sidebar.php"
+                ?>
             </div>
     <?php
         }

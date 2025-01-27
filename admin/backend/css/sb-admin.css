@@ -23,7 +23,8 @@ body {
 
 #page-wrapper {
   width: 100%;
-  padding: 0;
+  min-height: 94vh;
+  padding: 0px;
   background-color: #fff;
 }
 
@@ -34,11 +35,11 @@ body {
 
 @media (min-width: 768px) {
   #wrapper {
-    padding-left: 225px;
+    padding-left: 55px;
   }
 
   #page-wrapper {
-    padding: 10px;
+    padding: 0px 50px 0px 50px;
   }
 }
 
@@ -113,44 +114,81 @@ ul.alert-dropdown {
 /* Side Navigation */
 
 @media (min-width: 768px) {
-  .side-nav {
-    position: fixed;
-    top: 51px;
-    left: 225px;
-    width: 225px;
-    margin-left: -225px;
-    border: none;
-    border-radius: 0;
-    overflow-y: auto;
-    background-color: #222;
-  }
-
-  .side-nav > li > a {
-    width: 225px;
-  }
-
-  .side-nav li a:hover,
-  .side-nav li a:focus {
-    outline: none;
-    background-color: #000 !important;
-  }
+ /* ตั้งค่า Side Navigation ให้แสดงเฉพาะไอคอนในสถานะเริ่มต้น */
+ .side-nav {
+  position: fixed;
+  top: 51px;
+  left: 0;
+  width: 65px; /* แสดงเฉพาะไอคอน */
+  background-color: #222;
+  height: 100vh; /* ยืดความสูงให้เต็มหน้าจอ */
+  overflow-x: hidden;  /* ซ่อน scrollbar แนวนอน */
+  transition: width 0.5s ease; /* เพิ่มความนุ่มนวลในการขยาย */
 }
 
+.side-nav > li > a {
+  color: #999;
+  padding: 17px 22px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* ป้องกันข้อความตัด */
+  overflow: hidden; /* ซ่อนข้อความที่เกิน */
+  text-overflow: ellipsis;
+  transition: background-color 0.2s, padding 0.3s; /* เพิ่ม transition */
+  font-size: 15px;
+}
+
+/* ไอคอนในเมนู */
+.side-nav > li > a i {
+  margin-right: 40px; /* เริ่มต้นไม่เว้นระยะห่างระหว่างไอคอนกับข้อความ */
+  font-size: 22px;
+  transition: margin-right 0.5s ease, font-size 0.5s ease; /* เพิ่ม transition สำหรับระยะห่างและขนาดไอคอน */
+}
+
+/* เมื่อ hover ให้ขยายเมนูและแสดงเนื้อหา */
+.side-nav:hover {
+  width: 225px; /* ขยายเมื่อโฮเวอร์ */
+}
+.side-nav > li > a {
+  width: 225px;
+}
+
+.side-nav li a:hover,
+.side-nav li a:focus {
+  outline: none;
+  background-color: #000 !important;
+}
+
+/* เมื่อโฮเวอร์ไอคอน */
+.side-nav:hover > li > a {
+  padding: 17px 15px 17px 20px; /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
+}
+
+.side-nav:hover > li > a i {
+  margin-right: 5px; /* แสดงระยะห่างระหว่างไอคอนกับข้อความ */
+  font-size: 22px; /* ขนาดไอคอนเล็กลง */
+  transition: margin-right 0.3s ease, font-size 0.5s ease; /* เพิ่ม transition ให้กับ margin-right และ font-size */
+}
+
+/* เมนูย่อย */
 .side-nav > li > ul {
   padding: 0;
+  list-style: none;
 }
 
 .side-nav > li > ul > li > a {
   display: block;
-  padding: 10px 15px 10px 38px;
+  padding: 15px 15px 15px 65px;
+ 
   text-decoration: none;
   color: #999;
 }
 
 .side-nav > li > ul > li > a:hover {
   color: #fff;
-}
 
+}
+}
 /* Flot Chart Containers */
 
 .flot-chart {
@@ -222,3 +260,27 @@ ul.alert-dropdown {
 .panel-yellow a:hover {
   color: #df8a13;
 }
+.upload-icon{
+  font-weight: 400;
+  cursor: pointer;
+}
+.upload-icon i, .upload-icon span {
+  color: #0b76e8; 
+  transition: color 0.3s ease;
+}
+
+.upload-icon:hover i, .upload-icon:hover span {
+  color: #ff5733; /* สีใหม่เมื่อ hover */
+}
+
+
+.img-post {
+  width: 100%; 
+  height: 200px;  /* กำหนดความสูงที่แน่นอน */
+  display: none;  /* ทำให้ภาพแสดงเสมอ */
+  border: 1px solid #ddd; 
+  padding: 5px; 
+  border-radius: 5px;
+  object-fit: contain;  /* ปรับอัตราส่วนของรูปภาพให้เต็มพื้นที่โดยไม่บิดเบี้ยว */
+}
+

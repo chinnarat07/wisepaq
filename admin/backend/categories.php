@@ -6,10 +6,10 @@ include "includes_backend/navigation.php";
 $error_message = "";
 if (isset($_POST["submit"])) {
     $cat_title = $_POST['cat_title'];
-    $cat_title_thai = $_POST['cat_title_thai'];
-    $cat_page = $_POST['cat_page'];  
+    $cat_title_thai = $_POST['cat_title_thai']; 
+    $cat_page = $_POST['cat_page']; 
     if (!empty($cat_title) || $cat_title != "") {
-        $query = "INSERT INTO tbl_categories (cat_title,cat_title_thai,cat_page) VALUES('$cat_title','$cat_title_thai','$cat_page'); ";
+        $query = "INSERT INTO tbl_categories (cat_title,cat_title_thai,cat_page) VALUES('$cat_title','$cat_title_thai','$cat_page '); ";
         $create_query = mysqli_query($connection, $query);
         if (!$create_query) {
             die("Query Failed: " . mysqli_error($connection));
@@ -68,11 +68,14 @@ if (isset($_GET["edit"], $_POST["update_category"])) {
                 <h1 class="page-header">
                     Welcome to  <small><?php echo $_SESSION['username'] ?></small>
                 </h1>
-               
             </div>
+        </div>
+
+        <div class="row">
+            <!-- จัดการ Add Category และ Edit Category -->
             <div class="col-xs-6">
-                <div style="border: 2px solid gray;" >
-                     <h3>&nbsp;Add Category</h3>
+                <div style="border: 2px solid gray;">
+                    <h3>&nbsp;Add Category</h3>
                     <form action="" method="POST">
                         <div class="form-group">
                             <label for="cat_title">&nbsp;&nbsp;Category</label>
@@ -81,66 +84,71 @@ if (isset($_GET["edit"], $_POST["update_category"])) {
                         <div class="form-group">
                             <label for="cat_title">&nbsp;&nbsp;[ภาษาไทย] Category</label>
                             <input type="text" class="form-control" name="cat_title_thai" id="">
-                        </div>           
-                         <div class="form-group">
+                        </div>
+                        <div class="form-group">
                             <label for="cat_page">&nbsp;&nbsp;Category page</label>
                             <input type="number" class="form-control" name="cat_page" id="">
-                        </div>                                 
+                        </div>
                         <div class="form-group">
                             <input class="btn btn-primary" type="submit" name="submit" value="  Add Category">
                         </div>
                     </form>
                 </div>
-                <div style="height:10px"></div>      
-               <div style="border: 2px solid gray;" >
-                     <h3>&nbsp;Edit Category</h3>             
-                        <form action="" method="POST">
-                            <?php
-                            if (isset($_GET['edit'])) {
-                                $cat_id = $_GET['edit'];
-                                $query = "SELECT * FROM tbl_categories WHERE cat_id=$cat_id";
-                                $fetch_data = mysqli_query($connection, $query);
-                                while ($Row = mysqli_fetch_assoc($fetch_data)) {
-                                    $cat_title = $Row["cat_title"];
-                                    $cat_title_thai = $Row["cat_title_thai"];
-                                    $cat_page = $Row["cat_page"];
-                                    if (isset($cat_title)) {
-                                        ?>
-                                        <div class="form-group">
-                                            <label for="cat_title">&nbsp;&nbsp;Category</label>
-                                            <input type="text" value="<?php echo $cat_title; ?>" class="form-control" name="cat_title" id="">
-                                        </div>
 
-                                          <div class="form-group">
-                                            <label for="cat_title_thai">&nbsp;&nbsp;[ภาษาไทย] Category</label>
-                                            <input type="text" value="<?php echo $cat_title_thai; ?>" class="form-control" name="cat_title_thai" id="">
-                                        </div>                 
+                <!-- ฟอร์ม Edit Category -->
+                <div style="height:10px"></div>
+                <form action="" method="POST">
+                    <?php
+                    if (isset($_GET['edit'])) {
+                        $cat_id = $_GET['edit'];
+                        $query = "SELECT * FROM tbl_categories WHERE cat_id=$cat_id";
+                        $fetch_data = mysqli_query($connection, $query);
+                        while ($Row = mysqli_fetch_assoc($fetch_data)) {
+                            $cat_title = $Row["cat_title"];
+                            $cat_title_thai = $Row["cat_title_thai"];
+                            $cat_page = $Row["cat_page"];
+                            if (isset($cat_title)) {
+                                ?>
+                                <div style="border: 2px solid gray;">
+                                    <h3>&nbsp;Edit Category</h3>
+                                    <div class="form-group">
+                                        <label for="cat_title">&nbsp;&nbsp;Category</label>
+                                        <input type="text" value="<?php echo $cat_title; ?>" class="form-control" name="cat_title" id="">
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label for="cat_page">&nbsp;&nbsp; Category Page</label>
-                                            <input type="number" value="<?php echo $cat_page; ?>" class="form-control" name="cat_page" id="">
-                                        </div>                                    
-                            
-                                        <div class="form-group">
-                                            <input class="btn btn-primary" type="submit" name="update_category" value="Edit Category">
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="cat_title_thai">&nbsp;&nbsp;[ภาษาไทย] Category</label>
+                                        <input type="text" value="<?php echo $cat_title_thai; ?>" class="form-control" name="cat_title_thai" id="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cat_page">&nbsp;&nbsp; Category Page</label>
+                                        <input type="number" value="<?php echo $cat_page; ?>" class="form-control" name="cat_page" id="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="btn btn-primary" type="submit" name="update_category" value="Edit Category">
+                                    </div>
+                                </div>
                             <?php };
-                                }
-                            }
-                            ?>
-                        </form>
-                </div>    
+                        }
+                    }
+                    ?>
+                </form>
+
                 <span><?php echo $error_message; ?></span>
             </div>
-            <div class="col-xs-6">
+
+            <!-- จัดตาราง ID ทางขวา -->
+            <div class="col-xs-6" style="display: flex; justify-content: flex-end;">
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Category</th>
                             <th>[ภาษาไทย] Category</th>
-                           <th>Category Page</th> 
-                           <th>Action</th> 
+                            <th>Category Page</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -152,14 +160,13 @@ if (isset($_GET["edit"], $_POST["update_category"])) {
                                     <td>{$Row['cat_id']}</td>
                                     <td>{$Row['cat_title']}</td>
                                     <td>{$Row['cat_title_thai']}</td>
-                                    <td>{$Row['cat_page']}</td>     
+                                    <td>{$Row['cat_page']}</td>
                                     <td>
-                                         <a onClick=\"javascript: return confirm('Please confirm deletion');\"href='categories.php?delete={$Row['cat_id']}'>Delete</a>
-                                         | <a href='categories.php?edit={$Row['cat_id']}'>Edit</a>
+                                        <a href='categories.php?edit={$Row['cat_id']}'><i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i></a> |
+                                        <a onClick=\"javascript: return confirm('Please confirm deletion');\"href='categories.php?delete={$Row['cat_id']}'><i class='fa fa-trash-o fa-lg' aria-hidden='true'></i></a>
                                     </td>
                                 </tr>";
                         }
-                        //=    <a href='categories.php?delete={$Row['cat_id']}'>Delete</a>              
                         ?>
                     </tbody>
                 </table>

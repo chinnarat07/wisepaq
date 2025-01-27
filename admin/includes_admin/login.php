@@ -6,40 +6,38 @@ if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
 
-    $username = mysqli_real_escape_string($connection, $username);
-    $password = mysqli_real_escape_string($connection, $password);
+   // The data to send to the API
+    $postData = array(
+        'action' => 'getUser',
+        'searchTerm' => $username
+    ); 
 
-    $query = "SELECT * FROM tbl_users WHERE user_name='$username'";
-    $select_user_query = mysqli_query($connection, $query);
-    if (!$select_user_query) {
-        die("Query Failed: " . mysqli_error($connection));
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "http://localhost/wisepaqAPI/");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json","Authorization: OAuth 2.0 token here"));
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+    $result = curl_exec($ch);    
+
+    $datasearch =   json_decode( $result, true);
+    
+    if (isset($datasearch[0]['user_id']) ) {
+          if ($username === $datasearch[0]["user_name"] && $password ===$datasearch[0]["user_password"]) {           
+            // Access the data
+           $user_name = $datasearch[0]["user_name"];
+           $user_firstname = $datasearch[0]["user_firstname"];
+           $user_lastname = $datasearch[0]["user_lastname"];          
+            
+           $_SESSION['username'] = $user_name;
+           $_SESSION['firstname'] = $user_firstname;
+           $_SESSION['lastname'] = $user_lastname;
+           header("Location: ../backend/index.php");          
+          }else{     
+               echo "<script>alert('Password not correct!');window.history.go(-1);</script>";
+          }
+    }else{
+             echo "<script>alert('Not found user!');window.history.go(-1);</script>";
     }
-     //echo  $password = encrypt($password);
-     //exit;
 
-    if (empty($username) || empty($password)) {
-             echo "<script>alert('Not found user!');</script>";
-             //=    header("Location: ../index.php");
-    } else {
-
-            while ($Row = mysqli_fetch_array($select_user_query)) {
-                $user_id = $Row['user_id'];
-                $user_role = $Row['user_role'];
-                $user_name = $Row['user_name'];
-                $user_firstname = $Row['user_firstname'];
-                $user_lastname = $Row['user_lastname'];
-                $user_password = $Row['user_password'];
-            }       
-
-                if ($username === $user_name && $password === $user_password) {           
-                        $_SESSION['username'] = $user_name;
-                        $_SESSION['firstname'] = $user_firstname;
-                        $_SESSION['lastname'] = $user_lastname;
-                        header("Location: ../backend/index.php");
-                }else{
-                         echo "<script>alert('User Or Password not correct!!');window.history.go(-1);</script>";           
-                }
-     }
-     
 }
-?>

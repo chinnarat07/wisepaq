@@ -4,12 +4,16 @@ if (isset($_POST['update_post'], $_GET['p_id'])) {
 
     $post_title = base64_encode($_POST['title']);
     $post_title_thai = base64_encode($_POST['title_thai']);
+    $post_subtitle = base64_encode($_POST['subtitle']);
+    $post_subtitle_thai = base64_encode($_POST['subtitle_thai']);
+    $post_link_url = $_POST['link_url'];
     $post_category_id = $_POST['post_category'];
     $post_status = $_POST['post_status'];
+    $post_pin = $_POST['post_pin'];
 
-    $post_content = base64_encode($_POST['editor']);
-    $post_content_thai = base64_encode($_POST['editor2']);
-    $post_date = date("Y-m-d H:i:s");//date('d-m-y');    
+    $post_content = base64_encode($_POST['post_content']);
+    $post_content_thai = base64_encode($_POST['post_content_thai']);
+    $post_date = date("Y-m-d H:i:s"); //date('d-m-y');    
 
     $post_image_old = $_POST['post_image_old'];
 
@@ -18,7 +22,6 @@ if (isset($_POST['update_post'], $_GET['p_id'])) {
         $path = $_FILES['post_image']['name'];
         $ext = pathinfo($path, PATHINFO_EXTENSION);
         $post_image = strtotime(date("Y-m-d H:i:s")) . '.' . $ext;
-
 
         unlink("../images/$post_image_old");
         move_uploaded_file($post_image_temp, "../images/$post_image");
@@ -31,6 +34,10 @@ if (isset($_POST['update_post'], $_GET['p_id'])) {
     $query .= "post_category_id='$post_category_id', ";
     $query .= "post_title='$post_title', ";
     $query .= "post_title_thai='$post_title_thai', ";
+    $query .= "post_subtitle='$post_subtitle', ";
+    $query .= "post_subtitle_thai='$post_subtitle_thai', ";
+    $query .= "post_link='$post_link_url', ";
+    $query .= "post_pin='$post_pin', ";
     $query .= "post_date='$post_date', ";
     $query .= !empty($post_image) ? "post_image='$post_image', " : null;
     $query .= "post_content='$post_content', ";
@@ -46,7 +53,6 @@ if (isset($_POST['update_post'], $_GET['p_id'])) {
     header("Location: posts.php");
     //= echo "<p class='alert alert-success'>Post updated successfully. <a href='../post.php?p_id=$the_post_id'>View Post</a></p>";
 }
-
 ?>
 
 
@@ -58,9 +64,13 @@ if (isset($_GET['p_id'])) {
     while ($Row = mysqli_fetch_assoc($fetch_data)) {
         $post_id = $Row['post_id'];
         $post_title = base64_decode($Row['post_title']);
-        $post_title_thai =base64_decode($Row['post_title_thai']);
+        $post_title_thai = base64_decode($Row['post_title_thai']);
+        $post_subtitle = base64_decode($Row['post_subtitle']);
+        $post_subtitle_thai = base64_decode($Row['post_subtitle_thai']);
+        $post_link_url = $Row['post_link'];
         $post_category_id = $Row['post_category_id'];
         $post_status = $Row['post_status'];
+        $post_pin = $Row['post_pin'];
         $post_image_old = $Row['post_image'];
         $post_image = $Row['post_image'];
         $post_date = $Row['post_date'];
@@ -68,17 +78,46 @@ if (isset($_GET['p_id'])) {
         $post_content_thai = base64_decode($Row['post_content_thai']);
         ?>
         <form action="" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="title">Post Title</label>
-                <input type="text" class="form-control" value="<?php echo $post_title; ?>" name="title">
+            <!--                        <div class="form-group">
+                                        <img src='../images/<?php echo $post_image ?>' alt='image' width='100px'>
+                                        <input type="file" name="post_image">
+                                        <input type="hidden" id="post_image_old" name="post_image_old" value="<?php echo $post_image_old; ?>">
+                                    </div>-->
+            <!--x-->
+            <div class="form-group col-lg-12">
+                <label for="post_image" class="d-block">Post Image</label>
+                <div>
+                    <label for="post_image" class="upload-icon">
+                        <span style="margin-left: 8px ;">เลือกไฟล์รูปภาพ</span> <i class="fa fa-file-image-o" aria-hidden="true" style="font-size: 2.3rem;"></i>
+                    </label>
+                    <input type="file" name="post_image" id="post_image" style="display: none;" accept="image/*">
+                    <input type="hidden" id="post_image_old" name="post_image_old" value="<?php echo $post_image_old; ?>">
+                </div>
+                <div id="preview-container">
+                    <!-- หากมี post_image_old ให้แสดงรูปเก่าหากไม่มีให้แสดงเป็น "no-image" -->
+                    <img id="preview-image" src='../images/<?php echo $post_image ? $post_image : '#'; ?>' alt="Preview Image" class="img-post" style="display: <?php echo $post_image ? 'block' : 'none'; ?>;">
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="title_thai">[ภาษาไทย] Post Title</label>
-                <input type="text" class="form-control" value="<?php echo $post_title_thai; ?>" name="title_thai">
+            <script>
+                document.getElementById('post_image').addEventListener('change', function (event) {
+                    const previewImage = document.getElementById('preview-image');
+                    const file = event.target.files[0]; // ดึงไฟล์ที่เลือก
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            previewImage.src = e.target.result; // แสดงรูปใน img
+                            previewImage.style.display = 'block'; // ทำให้ img ปรากฏ
+                        };
+                        reader.readAsDataURL(file); // อ่านไฟล์เป็น Data URL
+                    }
+                });
+            </script>
+            <div class="form-group col-lg-12">
+                <label for="link">Link Url</label>
+                <input type="text" class="form-control" value="<?php echo $post_link_url ?>" name="link_url">
             </div>
-
-            <div class="form-group">
+            <div class="form-group col-lg-4">
                 <label for="post_category">Post Category ID</label>
                 <select class="form-control" name="post_category" id="post_category">
                     <?php
@@ -96,8 +135,7 @@ if (isset($_GET['p_id'])) {
                     ?>
                 </select>
             </div>
-
-            <div class="form-group">
+            <div class="form-group col-lg-4">
                 <label for="post_status">Post Status</label>
                 <select class="form-control" name="post_status" id="post_category">
                     <option value='<?php echo $post_status; ?>'><?php echo $post_status; ?></option>
@@ -108,49 +146,64 @@ if (isset($_GET['p_id'])) {
                     <?php } ?>
                 </select>
             </div>
-
-            <div class="form-group">
-                <img src='../images/<?php echo $post_image ?>' alt='image' width='100px'>
-                <input type="file" name="post_image">
-                <input type="hidden" id="post_image_old" name="post_image_old" value="<?php echo $post_image_old; ?>">
+            <div class="form-group col-lg-4">
+                <label for="post_pin">Post Pin</label>
+                <select class="form-control" name="post_pin" id="post_category">
+                    <option value='<?php echo $post_pin; ?>'><?php echo ($post_pin === "1") ? "Important" : "Unimportant"; ?></option>
+                    <?php if ($post_pin === "1") { ?>
+                        <option value='0'>Unimportant</option>
+                    <?php } else { ?>
+                        <option value='1'>Important</option>
+                    <?php } ?>
+                </select>
             </div>
-
-            <div class="form-group">
-                <label for="post_content">Post Content</label>
-                <textarea id="editor" name="editor" class="form-control">
-                            <?php echo $post_content; ?>
-                        </textarea>
+            <div class="form-group  col-lg-6">
+                <label for="title">Post Title</label>
+                <input type="text" class="form-control" value="<?php echo $post_title; ?>" name="title">
+            </div>
+            <div class="form-group  col-lg-6">
+                <label for="subtitle">Post subtitle</label>
+                <input type="text" class="form-control" value="<?php echo $post_subtitle; ?>" name="subtitle">
+            </div>
+            <div class="form-group col-lg-12">
+                <label id="my-ckeditor" for="post_content">Post Content</label>
+                <textarea id="editor" name="post_content" class="form-control">
+                    <?php echo $post_content; ?>
+                </textarea>
                 <script>
                     CKEDITOR.dtd.$removeEmpty['i'] = false;
                     CKEDITOR.dtd.$removeEmpty['span'] = false;
-
                     CKEDITOR.replace('editor');
-
                     CKEDITOR.config.width = "100%";
-                    CKEDITOR.config.height = "700px";
+                    CKEDITOR.config.height = "300px";
                 </script>
             </div>
-
-            <div class="form-group">
-                <label for="post_content_thai">[ภาษาไทย] Post Content</label>
-                <textarea id="editor2" name="editor2" class="form-control">
-                            <?php echo $post_content_thai; ?>
-                         </textarea>
+            <div class="form-group  col-lg-6">
+                <label for="title">[ภาษาไทย] Post Title</label>
+                <input type="text" class="form-control" value="<?php echo $post_title_thai; ?>" name="title_thai">
+            </div>
+            <div class="form-group  col-lg-6">
+                <label for="subtitle">[ภาษาไทย] Post subtitle</label>
+                <input type="text" class="form-control" value="<?php echo $post_subtitle_thai; ?>" name="subtitle_thai">
+            </div>
+            <div class="form-group col-lg-12">
+                <label id="my-ckeditor" for="post_content_thai">[ภาษาไทย] Post Content</label>
+                <textarea id="editor2" name="post_content_thai" class="form-control">
+                    <?php echo $post_content_thai; ?>
+                </textarea>
                 <script>
                     CKEDITOR.dtd.$removeEmpty['i'] = false;
                     CKEDITOR.dtd.$removeEmpty['span'] = false;
-
                     CKEDITOR.replace('editor2');
-
-                    CKEDITOR.config.width = "100%";
-                    CKEDITOR.config.height = "700px";
                 </script>
             </div>
+
 
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" name="update_post" value="Update">
             </div>
         </form>
-    <?php }
+        <?php
+    }
 }
 ?>

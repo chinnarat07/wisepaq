@@ -2,11 +2,10 @@
 ob_start();
 include '../../includes/db.php';
 session_start();
-if (!isset($_SESSION["username"])){
-  header("Location:../index.php");
+if (!isset($_SESSION['username'])) {
+  header("Location: ../index.php");
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,15 +17,29 @@ if (!isset($_SESSION["username"])){
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- <script src="./js/ckeditor.js"></script> -->
-  <script src="./ckeditor/ckeditor.js"></script>
+  <script src="../ckeditor/ckeditor.js"></script>
   <script src="https://www.gstatic.com/charts/loader.js">
   </script>
 
 
-  <title>WISEPAQ</title>
+<title>WISEPAQ | วางระบบ network | Thailand</title>
+
+<!-- Favicon -->
+<link href="../../img/wisepaq.jpg" rel="icon">
 
   <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- glightbox -->
+    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link href="css/sb-admin.css" rel="stylesheet">
@@ -40,9 +53,41 @@ if (!isset($_SESSION["username"])){
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link
+      rel="icon"
+      href="assets/img/kaiadmin/favicon.ico"
+      type="image/x-icon"
+    />
 
+    <!-- Fonts and icons -->
+    <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["assets/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="assets/css/demo.css" />
 </head>
 
 <body>
 
-  <div id="wrapper">
+  <!-- <div id="wrapper"> -->
