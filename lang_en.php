@@ -10,7 +10,7 @@ define('address','SSP Tower 2, 19th Floor, Na Ranong Road, Klongtoey Bangkok, Th
 //footer
 define('page_footer_1','Get In Touch');
 define('page_footer_2','116/69 SSP Tower 2, 19th Floor, Na Ranong Road, Klongtoey, Klongtoey Bangkok, Thailand 10110');
-define('page_footer_3','081-935-9559');
+define('page_footer_3','02-119-5300');
 define('page_footer_4','hello@wisepaq.com');
 
 define('page_footer_5','Address');
@@ -86,10 +86,10 @@ define('page_service_9','Cargo Storage');
 define('page_service_10','Complete warehouse management service with WMS system, controlling product picking and distribution.');
 
 //contact.php
-define('page_contact_1','Call Now');
+define('page_contact_1','Phone Number');
 define('page_contact_2','If you have any questions or we can support your business.');
 define('page_contact_3','Name');
-define('page_contact_4','Email');
+define('page_contact_4','Email Address');
 define('page_contact_5','Subject');
 define('page_contact_6','Message');
 define('page_contact_7','Leave a message here');
