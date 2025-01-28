@@ -29,19 +29,19 @@ include "./includes/db.php";
               </div>
 
               <h1 class="mb-4">
-                Maecenas Vitae <br>
-                Consectetur Led <br>
-                <span class="accent-text">Vestibulum Ante</span>
+                WELCOME TO <br>
+                <span class="accent-text">WISEPAQ</span>
               </h1>
 
               <p class="mb-4 mb-md-5">
-                Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
-                Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+              Welcome to Wisepaq, your trusted partner for all your technology needs.
+               We specialize in providing top-notch technology, IT support, engineering, and outsource services to enhance your organization's success and productivity. 
+               With our tailored solutions, we ensure that your technology supports your business goals and growth.
               </p>
 
               <div class="hero-buttons">
                 <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
-                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
+                <a href="https://video.wixstatic.com/video/11062b_6743da5900054f1f8e69f53302930a6a/720p/mp4/file.mp4" class="btn btn-link mt-2 mt-sm-0 glightbox">
                   <i class="bi bi-play-circle me-1"></i>
                   Play Video
                 </a>

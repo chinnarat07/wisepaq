@@ -29,72 +29,160 @@ include "includes/db.php";
 
             <!-- Navbar & Hero End -->
 
-             <!-- Features Start -->
-        <div class="container-xxl py-5" id="feature">
-            <div class="container py-5 px-lg-5">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="text-primary-gradient fw-medium">App Features</h5>
-                    <h1 class="mb-5">Awesome Features</h1>
+            <!-- About Section -->
+            <section id="about" class="about section">
+
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <?php
+                        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=2 and tbl_categories.cat_id=14";
+                        $fetch_posts_data = mysqli_query($connection, $query);
+                        while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
+                            $the_post_id = $Row['post_id'];
+                            $the_post_image = $Row['post_image'];
+                            if ($_SESSION['lang'] == 'en') {
+
+                                $the_post_title = base64_decode($Row['post_title']);
+                                $the_post_content = base64_decode($Row['post_content']);
+                            } else {
+                                $the_post_title = base64_decode($Row['post_title_thai']);
+                                $the_post_content = base64_decode($Row['post_content_thai']);
+                            }
+                        ?>
+
+                    <div class="row gy-4 align-items-center justify-content-between">
+
+                        <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+                            <span class="about-meta">MORE ABOUT US</span>
+                            
+                            <h1 class="about-title"><?php echo $the_post_title ?></h1>
+                            <p class="about-description"><?php echo $the_post_content ?></p>
+
+                            <div class="row feature-list-wrapper">
+                                <div class="col-md-6">
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill"></i> Lorem ipsum dolor sit amet</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Consectetur adipiscing elit</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Sed do eiusmod tempor</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill"></i> Incididunt ut labore et</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Dolore magna aliqua</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Ut enim ad minim veniam</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="info-wrapper">
+                                <div class="row gy-4">
+                                    <div class="col-lg-5">
+                                        <div class="profile d-flex align-items-center gap-3">
+                                            <img src="assets/img/avatar-1.webp" alt="CEO Profile" class="profile-image">
+                                            <div>
+                                                <h4 class="profile-name">Mario Smith</h4>
+                                                <p class="profile-position">CEO &amp; Founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="contact-info d-flex align-items-center gap-2">
+                                            <i class="bi bi-telephone-fill"></i>
+                                            <div>
+                                                <p class="contact-label">Call us anytime</p>
+                                                <p class="contact-number">+123 456-789</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="image-wrapper">
+                                <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                                    <img src="<?php echo "admin/images/" . $the_post_image; ?>" alt="Business Meeting" class="img-fluid main-image rounded-4">
+                                    <img src="assets/img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4">
+                                </div>
+                                <div class="experience-badge floating">
+                                    <h3>15+ <span>Years</span></h3>
+                                    <p>Of experience in business service</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                            <i class="fa fa-shield" aria-hidden="true"></i>
-                            </div>
-                            <h5 class="mb-3">High Resolution</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </div>
+
+            </section><!-- /About Section -->
+
+            <!-- Features Start -->
+            <div class="container-xxl py-5" id="feature">
+                <div class="container py-5 px-lg-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">App Features</h5>
+                        <h1 class="mb-5">Awesome Features</h1>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-layer-group text-white fs-4"></i>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-laptop text-white fs-4" aria-hidden="true"></i>
+                                </div>
+                                <h5 class="mb-3">Outsource</h5>
+                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                             </div>
-                            <h5 class="mb-3">Retina Ready</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-edit text-white fs-4"></i>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-shield-lock text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3">Security</h5>
+                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                             </div>
-                            <h5 class="mb-3">Editable Data</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-shield-alt text-white fs-4"></i>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-cpu text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3">Software</h5>
+                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                             </div>
-                            <h5 class="mb-3">Fully Secured</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-cloud text-white fs-4"></i>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-hdd-rack text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3">Hardware</h5>
+                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                             </div>
-                            <h5 class="mb-3">Cloud Storage</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-mobile-alt text-white fs-4"></i>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-cloud text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3">Cloud Storage</h5>
+                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                             </div>
-                            <h5 class="mb-3">Fully Responsive</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-tools text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3">IT Support</h5>
+                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Features End -->
+            <!-- Features End -->
 
 
             <!-- About Start -->
@@ -108,7 +196,7 @@ include "includes/db.php";
                     <div class="row g-4 justify-content-center">
 
                         <?php
-                        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=2";
+                        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=2 and tbl_categories.cat_id=2";
                         $fetch_posts_data = mysqli_query($connection, $query);
                         while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
                             $the_post_id = $Row['post_id'];

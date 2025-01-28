@@ -14,14 +14,14 @@
                     <i class="fa fa-envelope me-3"></i><?php echo constant('page_footer_4') ?>
                 </p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="https://x.com/Wisepaq"><i
-                            class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/Wisepaqbusiness/"><i
-                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://x.com/Wisepaq">
+                        <i class="bi bi-twitter-x"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/Wisepaqbusiness/">
+                        <i class="bi bi-facebook"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://youtube.com/@wisepaq-business?feature=shared">
-                        <i class="fab fa-youtube"></i></a>
+                        <i class="bi bi-youtube"></i></a>
                     <a class="btn btn-outline-light btn-social" href="">
-                        <i class="fab fa-linkedin-in"></i></a>
+                        <i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
 
@@ -112,3 +112,17 @@
         </div>
     </div>
 </div>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
