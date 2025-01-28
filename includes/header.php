@@ -151,6 +151,7 @@ include('lang_' . $_SESSION['lang'] . '.php');
                     <option value="en">English</option>
                   </select>
                 </li> -->
+              <!-- test -->
 
         <div class="pc-lang">
           <div class="text-box" id="dropdown">
