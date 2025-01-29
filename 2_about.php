@@ -183,8 +183,6 @@ include "includes/db.php";
                 </div>
             </div>
             <!-- Features End -->
-
-
             <!-- About Start -->
             <div class="container-fluid service py-5">
                 <div class="container py-5">

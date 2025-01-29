@@ -12,7 +12,6 @@ include "includes/db.php";
     <?php include("./includes/header.php") ?>
     <!-- End Header -->
 
-
     <!-- Blog Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -49,7 +48,7 @@ include "includes/db.php";
                                     <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
                                 </div>
                                 <h4 class="mb-3"><?php echo $the_post_title ?></h4>
-                                <p><?php echo $the_post_content ?></p>
+                                <p><?php echo $the_post_content?></p>
                                 <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
