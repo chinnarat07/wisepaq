@@ -229,5 +229,3 @@
     <!-- End Footer -->
 
 </body>
-
-</html>

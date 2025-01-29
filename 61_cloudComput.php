@@ -44,5 +44,3 @@
     <!-- End Footer -->
 
 </body>
-
-</html>
