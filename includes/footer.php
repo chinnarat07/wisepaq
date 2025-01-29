@@ -14,13 +14,13 @@
                     <i class="fa fa-envelope me-3"></i><?php echo constant('page_footer_4') ?>
                 </p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-dark btn-social" href="https://x.com/Wisepaq">
+                    <a class="btn btn-outline-light btn-social" href="https://x.com/Wisepaq">
                         <i class="bi bi-twitter-x"></i></a>
-                    <a class="btn btn-outline-dark btn-social" href="https://www.facebook.com/Wisepaqbusiness/">
+                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/Wisepaqbusiness/">
                         <i class="bi bi-facebook"></i></a>
-                    <a class="btn btn-outline-dark btn-social" href="https://youtube.com/@wisepaq-business?feature=shared">
+                    <a class="btn btn-outline-light btn-social" href="https://youtube.com/@wisepaq-business?feature=shared">
                         <i class="bi bi-youtube"></i></a>
-                    <a class="btn btn-outline-dark btn-social" href="">
+                    <a class="btn btn-outline-light btn-social" href="">
                         <i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
