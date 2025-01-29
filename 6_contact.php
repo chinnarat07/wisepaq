@@ -110,5 +110,3 @@
     <!-- End Footer -->
 
 </body>
-
-</html>
