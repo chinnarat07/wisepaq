@@ -22,9 +22,13 @@
     --light: #ffffff;
     --dark: #000000;
     --gays:#7a7878;
-
 }
 
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> 9e79948ffe5536766153420f9f54d9ef82b4b487
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */

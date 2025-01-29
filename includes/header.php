@@ -215,7 +215,7 @@ include "./includes/db.php";
           </label>
         </div>
       </div>
-      <div class="pc-lang my-auto me-5">
+      <div class="pc-lang my-auto me-4">
         <div class="text-box" id="dropdown">
           <span class="text-content">
             <img id="selected-flag" src="img/flag.png" alt="TH Flag" class="lang-select">
