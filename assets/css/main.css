@@ -18,7 +18,7 @@
 
     --primary: #369eff;
     --secondary: #95ffca;
-    --light: #000000;
+    --light: #ffffff;
     --dark: #000000;
 
 }
@@ -2862,4 +2862,33 @@ are {
 .bg-secondary-gradient {
   background: linear-gradient(to bottom right, var(--secondary), var(--primary));
 }
+
+/*** Service Start ***/
+.service .service-item {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+}
+
+.service .service-item,
+.service .service-item .service-icon,
+.service .service-item a {
+  transition: 0.5s;
+}
+
+.service .service-item:hover {
+  background: rgba(202, 233, 247, 0.885);
+  border: 1px ;
+}
+
+
+.service .service-item:hover .service-icon,
+.service .service-item:hover a {
+  background: var(--bs-white) !important;
+}
+
+.service .service-item:hover a:hover {
+  background: var(--bs-primary) !important;
+  color: var(--bs-white);
+}
+
+/*** Service End ***/
 

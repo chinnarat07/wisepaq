@@ -7,12 +7,13 @@ include "includes/db.php";
 ?>
 <!-- -------- -->
 
-<body>
+<body class="light-background">
     <!-- Start Header -->
     <?php include("./includes/header.php") ?>
     <!-- End Header -->
 
 
+    <!-- product Start -->
     <div class="container-fluid service py-5">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 80%;">
             <div class="row g-1 justify-content-center">
@@ -32,27 +33,30 @@ include "includes/db.php";
                         $the_post_content = base64_decode($Row['post_content_thai']);
                     }
                 ?>
-                
-                        <div class="service-item text-center p-4 flex-column align-items-center mt-5">
-                            <div class="blog-item">
-                                <div class="blog-item">
-                                    <img src="<?php echo "admin/images/" . $the_post_image; ?>" class="img-fluid" style="object-fit:cover;" alt="">
-                                </div>
-                            </div>
-                            <h2 class="display-6 mb-4"><?php echo $the_post_title ?></h2>
-                            <p class="fs-4 mb-4"><?php echo $the_post_content ?></p>
-                            <br>
+
+                    <div class="rounded service-item text-center p-4 flex-column align-items-center mt-5">
+
+                        <div class="blog-item">
+                            <img src="<?php echo "admin/images/" . $the_post_image; ?>" class="img-fluid" style="object-fit:cover;" alt="">
                         </div>
+
+                        <br>
+                        <h2 class="display-6 mb-4"><?php echo $the_post_title ?></h2>
+                        <div class="rounded ">
+                            <p class="fs-4 mb-4"><?php echo $the_post_content ?></p>
+                        </div>
+                        <br>
+                    </div>
             </div>
         <?php } ?>
         </div>
     </div>
-
-
-
+    <!-- product End -->
+     
     <!-- Start Footer -->
     <?php include("./includes/footer.php") ?>
     <!-- End Footer -->
 
 </body>
+
 </html>
