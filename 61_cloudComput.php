@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Database -->
-<?php
-include "includes/db.php";
-?>
-<!-- -------- -->
-
-<body class="light-background">
-    <!-- Start Header -->
-    <?php include("./includes/header.php") ?>
-    <!-- End Header -->
-
-
+ <?php include("./includes/header.php") ?>
     <!-- product Start -->
     <div class="container-fluid service py-5">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 80%;">

@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Database -->
-<?php
-include "includes/db.php";
-?>
-<!-- -------- -->
+<?php include("./includes/header.php") ?>
 
 <body>
-    <!-- Start Header -->
-    <?php include("./includes/header.php") ?>
-    <!-- End Header -->
+
+    
+
 
 
 

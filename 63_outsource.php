@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,10 +124,14 @@ include "includes/db.php";
         ?>
     </div>
     <!-- content outsource End -->
+=======
+ <?php include("./includes/header.php") ?>
+>>>>>>> 14f3251e2bf37520e6fea5a73a0c06907400a54e
 
 
 
 
+<<<<<<< HEAD
 </body>
 
 <!-- Start Footer -->
@@ -135,4 +140,11 @@ include "includes/db.php";
 
 </body>
 
+=======
+    <!-- Start Footer -->
+    <?php include("./includes/footer.php") ?>
+    <!-- End Footer -->
+
+</body>
+>>>>>>> 14f3251e2bf37520e6fea5a73a0c06907400a54e
 </html>
