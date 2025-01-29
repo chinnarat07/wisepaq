@@ -12,7 +12,6 @@ include "includes/db.php";
     <?php include("./includes/header.php") ?>
     <!-- End Header -->
 
-
     <div class="container-fluid service py-5">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 80%;">
             <div class="row g-1 justify-content-center">
@@ -47,8 +46,6 @@ include "includes/db.php";
         <?php } ?>
         </div>
     </div>
-
-
 
     <!-- Start Footer -->
     <?php include("./includes/footer.php") ?>

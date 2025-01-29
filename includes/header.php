@@ -12,7 +12,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -97,52 +99,65 @@ include('lang_' . $_SESSION['lang'] . '.php');
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav ms-auto p-4 p-lg-0">
-        <?php
-        // Query to fetch menu data
-        $query = "SELECT * FROM menu";
-        $fetch_data = mysqli_query($connection, $query);
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <?php
+                $query = "SELECT * FROM menu";
+                $fetch_data = mysqli_query($connection, $query);
 
-        if (mysqli_num_rows($fetch_data) > 0) {
-          while ($Row = mysqli_fetch_assoc($fetch_data)) {
-            $menu_id = $Row['id_menu'];
-            $menu_title = ($_SESSION['lang'] == 'en') ? $Row['name'] : $Row['menuTH'];
-            $link = $Row['link'];
+                if (mysqli_num_rows($fetch_data) == 0) {
+                    //echo "<h1 class='text-center'>No content Found</h1>";
+                } else {
+                    while ($Row_menu = mysqli_fetch_assoc($fetch_data)) {
+                        $menu_id = $Row_menu['id_menu'];
+                        // $menu_title = ($_SESSION['lang'] == 'en') ? $Row_menu['menu_name'] : $Row_menu['menu_name_thai'];
+                        $link = $Row_menu['link'];
+                        if ($_SESSION['lang'] == 'en') {
+                            $menu_title = $Row_menu['name'];
+                        } else{
+                            $menu_title = $Row_menu['menuTH'];
+                        } 
+                        $query_sub = "SELECT * FROM menu_dd WHERE id_menu = $menu_id";
+                        $fetch_data_sub = mysqli_query($connection, $query_sub);
 
-            // Query to fetch submenu data
-            $query_sub = "SELECT * FROM menu_dd WHERE id_menu = $menu_id";
-            $fetch_data_sub = mysqli_query($connection, $query_sub);
-
-            // Check if submenu exists
-            if (mysqli_num_rows($fetch_data_sub) == 0) {
-        ?>
-              <!-- Regular menu item -->
-              <li class="nav-item">
-                <a href="<?php echo $link; ?>" class="nav-link"><?php echo $menu_title; ?></a>
-              </li>
-            <?php
-            } else {
-            ?>
-              <!-- Dropdown menu item -->
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"><?php echo $menu_title; ?></a>
-                <ul class="dropdown-menu">
-                  <?php
-                  // Fetch and display submenu items
-                  while ($Row_sub = mysqli_fetch_assoc($fetch_data_sub)) {
-                    $menu_title_sub = ($_SESSION['lang'] == 'en') ? $Row_sub['name_dd'] : $Row_sub['menuTH_dd'];
-                    $link_sub = $Row_sub['link_dd'];
-                  ?>
-                    <li><a href="<?php echo $link_sub; ?>" class="dropdown-item"><?php echo $menu_title_sub; ?></a></li>
-                  <?php } ?>
-                </ul>
-              </li>
-
-        <?php
-            }
-          }
-        }
-        ?>
+                        if (mysqli_num_rows($fetch_data_sub) == 0) {
+                            // ไม่มีเมนูย่อย
+                ?>
+                            <a href="<?php echo $link; ?>" class="nav-item nav-link  <?php echo ($current_page == basename($link)) ? 'active' : ''; ?>">
+                                <?php echo $menu_title; ?>
+                            </a>
+                        <?php
+                        } else {
+                            // มีเมนูย่อย
+                        ?>
+                            <div class="nav-item dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                    <?php echo $menu_title; ?>
+                                </a>
+                                <div class="dropdown-menu  m-0 ps-2 py-0">
+                                    <?php
+                                    while ($Row_sub = mysqli_fetch_assoc($fetch_data_sub)) {
+                                        // $menu_title_sub = ($_SESSION['lang'] == 'en') ? $Row_sub['menu_subname'] : $Row_sub['menu_subname_thai'];
+                                        $link_sub = $Row_sub['link_dd'];
+                                        if ($_SESSION['lang'] == 'en') {
+                                            $menu_title_sub = $Row_sub['name_dd'];
+                                        } else{
+                                            $menu_title_sub = $Row_sub['menuTH_dd'];
+                                        }
+                                    ?>
+                                        <a href="<?php echo $link_sub; ?>" class="dropdown-item text-uppercase  text-dark  py-2   <?php echo ($current_page == basename($link_sub)) ? 'active' : ''; ?>">
+                                            <?php echo $menu_title_sub; ?>
+                                        </a>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                <?php
+                        }
+                    }
+                }
+                ?>
+            </div>
         <!-- Language selector -->
         <!-- <li class="nav-item">
                   <select id="select_lang" onchange="change_lang(this.value)" class="form-select form-select-sm" style="font-size: 10px;">
