@@ -47,7 +47,7 @@
                                 }
                                 $link = $Row['linkFQ'];
                         ?>
-                                <a href="<?php echo $link; ?>" class="btn btn-link fs-5"><?php echo $menu_title; ?></a>
+                                <a href="<?php echo $link; ?>" class="btn btn-link fs-6 text-decoration-none"><?php echo $menu_title; ?></a>
 
                         <?php }
                         }
@@ -73,7 +73,7 @@
                                 }
                                 $link = $Row['linkFP'];
                         ?>
-                                <a href="<?php echo $link; ?>" class="btn btn-link fs-5"><?php echo $menu_title; ?></a>
+                                <a href="<?php echo $link; ?>" class="btn btn-link fs-6 text-decoration-none"><?php echo $menu_title; ?></a>
 
                         <?php }
                         }
