@@ -24,11 +24,6 @@
     --gays:#7a7878;
 }
 
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> 9e79948ffe5536766153420f9f54d9ef82b4b487
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
@@ -2510,6 +2505,7 @@ are {
   position: relative;
   height: 100%;
   min-height: 400px;
+  
 }
 
 .img-border::before {
@@ -2519,7 +2515,8 @@ are {
   left: 0;
   right: 3rem;
   bottom: 3rem;
-  border: 5px solid var(--primary);
+  border: 5px solid ;
+  border-image: linear-gradient(to right, var(--primary), var(--secondary))1;
 }
 
 .img-border img {

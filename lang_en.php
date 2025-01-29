@@ -89,6 +89,13 @@ define('page_service_8','Cross-border trucking service (Cross Border Service) to
 define('page_service_9','Cargo Storage');
 define('page_service_10','Complete warehouse management service with WMS system, controlling product picking and distribution.');
 
+//outsource.php 
+define('page_outsource_1','Outsourcing services or hiring temporary employees, whether on a monthly, annual, or per-task basis, involves contracting a company or individual with specific knowledge, skills, and expertise in certain areas to perform a task. This could either be for the entire task or just a part of it. The key point is that it should not affect the overall operations of your company.');
+define('page_outsource_2','Outsource Services Since 2009');
+define('page_outsource_3','With over 10 years of experience in providing outsourced services, we help businesses connect technology and enhance operational efficiency.');
+define('page_outsource_4','Over 200 licenses');
+define('page_outsource_5','We proudly support over 200 outsource licenses, helping businesses enhance efficiency and streamline operations.');
+
 //contact.php
 define('page_contact_1','Phone Number');
 define('page_contact_2','If you have any questions or we can support your business.');

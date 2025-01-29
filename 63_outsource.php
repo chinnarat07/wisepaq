@@ -9,24 +9,27 @@
         <div class="container">
 
             <div class="col-lg-12 wow fadeIn text-center align-items-center" data-wow-delay="0.1s">
-                <div class="card rounded" style="object-fit:cover;">
-                    <img class="img-fluid card-img-top" src="./img/ImgMain/img_new/wn1.jpg" alt="">
+                <div class="rounded" >
+                    <img class="img-fluid h-50% w-100%" style="object-fit:contain;" src="./img/ImgWeb/ai-gen-1.jpg" alt="">
                 </div>
+                <br>
             </div>
 
             <div class="col-lg-12 wow fadeIn text-center align-items-center" data-wow-delay="0.5s">
-                <p class="d-inline-block bg-secondary text-primary py-1 px-4">About Us</p>
+                <p class="d-inline-block rounded bg-secondary-gradient text-light py-3 px-4 fs-2">OUTSOURCE</p>
                 <h1 class="text-uppercase mb-4">More Than Just A Haircut. Learn More About Us!</h1>
-                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
+                <p><?php echo constant('page_outsource_1') ?></p>
+                <!-- <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p> -->
+                <br>
                 <div class="row g-4">
                     <div class="col-md-6">
-                        <h3 class="text-uppercase mb-3">Since 1990</h3>
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+                        <h3 class="text-uppercase mb-3"><?php echo constant('page_outsource_2') ?></h3>
+                        <p class="mb-0"><?php echo constant('page_outsource_3') ?></p>
                     </div>
+                    <br>
                     <div class="col-md-6">
-                        <h3 class="text-uppercase mb-3">1000+ clients</h3>
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+                        <h3 class="text-uppercase mb-3"><?php echo constant('page_outsource_4') ?></h3>
+                        <p class="mb-0"><?php echo constant('page_outsource_5') ?></p>
                     </div>
                 </div>
             </div>
