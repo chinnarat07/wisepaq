@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Database -->
-<?php
-include "includes/db.php";
-?>
-<!-- -------- -->
-
-<body>
-    <!-- Start Header -->
-    <?php include("./includes/header.php") ?>
+<!-- Start Header -->
+<?php include("./includes/header.php") ?>
     <!-- End Header -->
-
+<body>
     <!-- Navbar & Hero Start -->
     <div class="container-fluid header position-relative overflow-hidden p-0">
         <!-- Hero Header Start -->

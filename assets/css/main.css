@@ -19,18 +19,10 @@
 
     --primary: #369eff;
     --secondary: #95ffca;
-    --light: #000000;
+    --light: #ffffff;
     --dark: #000000;
-    --gays:#7a7878;
-
-<<<<<<< HEAD
+    --gays:#6b6a6a;
 }
-/* cccccc */
-=======
-
-}
-/* 0002 */
->>>>>>> aa5188dcce2a0eb94a91870fc4f1be84b682824e
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
@@ -282,7 +274,7 @@ h6 {
     color: var(--primary) !important;
     background-color: #FFFFFF !important;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 992.98px) {
     .navbar-light .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
@@ -330,23 +322,17 @@ h6 {
         top: 100%;
         visibility: visible;
         transition: .5s;
-        opacity: 1;
+        opacity: 1;  
     }
 }
 .mobile-lang{
     display: none;
 }
 /* ดรอปดาวน์สำหรับหน้าจอเล็ก */
-@media (max-width:992px) {
-    .navbar-nav .dropdown-menu {
-        position: static; /* ป้องกันเมนูเลื่อนไปผิดตำแหน่ง */
-        float: none; /* ปรับเมนูให้อยู่ภายในเนื้อหา */
-        background-color: white; /* แก้สีพื้นหลังเมนู */
-        border: none !important;
-        width: 100%;
-    }
+@media (max-width:900px) {
+    
     .pc-lang{
-        display: none;
+        display: none ;
     }
     .mobile-lang{
         display: block;

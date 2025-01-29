@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Database -->
-<?php
-include "includes/db.php";
-?>
-<!-- -------- -->
-
-<body>
-    <!-- Start Header -->
-    <?php include("./includes/header.php") ?>
-    <!-- End Header -->
-
-    <!-- Solution content Start -->
+<?php include("./includes/header.php") ?>
+ <!-- Solution content Start -->
         <div class="container">
             <div class="row g-5 py-5 align-items-center">
                 <?php

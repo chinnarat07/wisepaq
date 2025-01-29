@@ -9,9 +9,12 @@ define('address','SSP Tower 2, 19th Floor, Na Ranong Road, Klongtoey Bangkok, Th
 
 //footer
 define('page_footer_1','Get In Touch');
+define('page_footer_1.1','Your Trusted Technology Partner');
 define('page_footer_2','116/69 SSP Tower 2, 19th Floor, Na Ranong Road, Klongtoey, Klongtoey Bangkok, Thailand 10110');
 define('page_footer_3','02-119-5300');
+define('page_footer_3.1','021195310');
 define('page_footer_4','hello@wisepaq.com');
+define('page_footer_4.1','@wisepaq');
 
 define('page_footer_5','Address');
 define('page_footer_6','Quick Link');
@@ -19,6 +22,7 @@ define('page_footer_7','Business');
 define('page_footer_8','Terms & Condition');
 define('page_footer_9','Support');
 define('page_footer_10','Contact Us');
+define('page_footer_0','&copy;' .date("Y"). 'Wisepaq, All Right Reserved.');
 //define('page_footer_8','Vision Mission');
 //define('page_footer_9','Our Services');
 //define('page_footer_10','Contact Us');
