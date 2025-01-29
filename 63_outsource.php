@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Database -->
-<?php
-include "includes/db.php";
-?>
-<!-- -------- -->
-
-<body>
+    <body>
     <!-- Start Header -->
     <?php include("./includes/header.php") ?>
     <!-- End Header -->
@@ -17,30 +7,30 @@ include "includes/db.php";
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
-  
-                <div class="col-lg-12 wow fadeIn text-center align-items-center" data-wow-delay="0.1s">
+
+            <div class="col-lg-12 wow fadeIn text-center align-items-center" data-wow-delay="0.1s">
                 <div class="card rounded" style="object-fit:cover;">
-                        <img class="img-fluid card-img-top" src="./img/ImgMain/img_new/wn1.jpg" alt="">
+                    <img class="img-fluid card-img-top" src="./img/ImgMain/img_new/wn1.jpg" alt="">
                 </div>
-                </div>
-                
-                <div class="col-lg-12 wow fadeIn text-center align-items-center" data-wow-delay="0.5s">
-                    <p class="d-inline-block bg-secondary text-primary py-1 px-4">About Us</p>
-                    <h1 class="text-uppercase mb-4">More Than Just A Haircut. Learn More About Us!</h1>
-                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <h3 class="text-uppercase mb-3">Since 1990</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h3 class="text-uppercase mb-3">1000+ clients</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
-                        </div>
+            </div>
+
+            <div class="col-lg-12 wow fadeIn text-center align-items-center" data-wow-delay="0.5s">
+                <p class="d-inline-block bg-secondary text-primary py-1 px-4">About Us</p>
+                <h1 class="text-uppercase mb-4">More Than Just A Haircut. Learn More About Us!</h1>
+                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h3 class="text-uppercase mb-3">Since 1990</h3>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="text-uppercase mb-3">1000+ clients</h3>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
                     </div>
                 </div>
- 
+            </div>
+
         </div>
     </div>
     <!-- About End -->
@@ -124,27 +114,9 @@ include "includes/db.php";
         ?>
     </div>
     <!-- content outsource End -->
-=======
- <?php include("./includes/header.php") ?>
->>>>>>> 14f3251e2bf37520e6fea5a73a0c06907400a54e
 
-
-
-
-<<<<<<< HEAD
-</body>
-
-<!-- Start Footer -->
-<?php include("./includes/footer.php") ?>
-<!-- End Footer -->
-
-</body>
-
-=======
     <!-- Start Footer -->
     <?php include("./includes/footer.php") ?>
     <!-- End Footer -->
 
-</body>
->>>>>>> 14f3251e2bf37520e6fea5a73a0c06907400a54e
-</html>
+    </body>
