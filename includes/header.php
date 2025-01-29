@@ -94,7 +94,7 @@ include "./includes/db.php";
   ======================================================== -->
 </head>
 
-<body>
+<body class="light-background">
   <!-- Topbar Start -->
   <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
     <div class="row gx-0 d-none d-lg-flex">
@@ -215,7 +215,7 @@ include "./includes/db.php";
           </label>
         </div>
       </div>
-      <div class="pc-lang my-auto me-5">
+      <div class="pc-lang my-auto me-4">
         <div class="text-box" id="dropdown">
           <span class="text-content">
             <img id="selected-flag" src="img/flag.png" alt="TH Flag" class="lang-select">

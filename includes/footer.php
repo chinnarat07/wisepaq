@@ -1,11 +1,11 @@
   <!-- Footer Start -->
     <div id="footer">
-        <div class="container-fluid  text-dark footer mt-0 wow fadeIn " style="background-color: #d9d7d7;" data-wow-delay="0.1s ">
+        <div class="container-fluid bg-white text-dark footer mt-0 wow fadeIn " data-wow-delay="0.1s ">
             <div class="container pt-5 pb-2">
                 <div class="row g-5 ">
                     <div class="col-lg-3 col-md-6 px-0 ">
                         <a href="index.php">
-                            <img src="img/wisepaq-Photoroom.png" alt="" class="mx-auto d-block "  style="margin-top: 1rem;  background-color: red;">
+                            <img src="img/wisepaq.jpg" alt="" class="mx-auto d-block "  style="margin-top: 1rem;  background-color: red;">
                             <p class="text-dark mt-3 fs-5 fw-bold p-3 text-center shadow-lg" style="border-radius: 5px; border: 3px  solid #b8b4b4;"><?php echo constant('page_footer_1.1') ?></p>
                         </a>
                     </div>
