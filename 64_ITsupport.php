@@ -1,159 +1,110 @@
- <?php include("./includes/header.php") ?>
+<?php include("./includes/header.php") ?>
+
+<!-- Feature Start -->
+<div class="container-fluid feature overflow-hidden py-5">
+    <div class="container py-5">
+
+        
+            <div class="row justify-content-center align-items-center text-center mb-5">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="feature-img h-100" style="object-fit: cover;">
+                        <img src="./img/ImgWeb/ai-gen-4.jpg" class="img-fluid w-100 rounded" style="object-fit:cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
+                    <h4 class="text-primary">WISEPAQ</h4>
+                    <h1 class="display-5 mb-4"><?php echo constant('page_itsupport_1') ?></h1>
+                    <p class="mb-4 fs-2"><?php echo constant('page_itsupport_2') ?></p>
+                </div>
+            </div>
+      
 
 
-  <!-- Feature Start -->
-  <div class="container-fluid feature overflow-hidden py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
-                    <h4 class="text-primary">Our Feature</h4>
-                    <h1 class="display-5 mb-4">Important Features For Email Marketing</h1>
-                    <p class="mb-0">Dolor sit amet consectetur, adipisicing elit. Ipsam, beatae maxime. Vel animi eveniet doloremque reiciendis soluta iste provident non rerum illum perferendis earum est architecto dolores vitae quia vero quod incidunt culpa corporis, porro doloribus. Voluptates nemo doloremque cum.
-                    </p>
+        <div class="row g-5" style="margin-top: 3rem;">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                <h1 class="display-5 mb-4">Advanced Communication Systems</h1>
+                <p class="mb-0">Explore our cutting-edge technologies designed to enhance communication in various industries. From GSM Gateway systems to VOIP solutions, we offer a wide range of features to meet your needs.</p>
+            </div>
+            <div class="row g-4 justify-content-center text-center mb-5">
+                <!-- GSM Gateway System -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="text-center p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 100px; height: 100px;"><i class="bi bi-router fs-1"></i></div>
+                        <div class="feature-content">
+                            <a href="#" class="h4">GSM Gateway System</a>
+                            <p class="mt-4 mb-0"><?php echo constant('page_itsupport_3') ?></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- VOIP System -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="text-center p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 100px; height: 100px;"><i class="bi bi-phone-vibrate fs-1"></i></div>
+                        <div class="feature-content">
+                            <a href="#" class="h4">VOIP System</a>
+                            <p class="mt-4 mb-0"><?php echo constant('page_itsupport_4') ?></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- IPBX -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="text-center rounded p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 100px; height: 100px;"><i class="bi bi-pci-card-network fs-1"></i></div>
+                        <div class="feature-content">
+                            <a href="#" class="h4">IPBX</a>
+                            <p class="mt-4 mb-0"><?php echo constant('page_itsupport_5') ?></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Conference System -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="text-center rounded p-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 100px; height: 100px;"><i class="bi bi-usb-micro fs-1"></i></div>
+                        <div class="feature-content">
+                            <a href="#" class="h4">Conference System</a>
+                            <p class="mt-4 mb-0"><?php echo constant('page_itsupport_6') ?></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="row g-4 justify-content-center text-center mb-5">
+                    <!-- GSM Gateway System -->
                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="text-center p-4">
-                            <div class="d-inline-block rounded bg-light p-4 mb-4"><i class="fas fa-envelope fa-5x text-secondary"></i></div>
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 100px; height: 100px;"><i class="bi bi-headset fs-1"></i></div>
                             <div class="feature-content">
-                                <a href="#" class="h4">Email Marketing <i class="fa fa-long-arrow-alt-right"></i></a>
-                                <p class="mt-4 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.consectetur adipisicing elit
-                                </p>
+                                <a href="#" class="h4">Voice Logger</a>
+                                <p class="mt-4 mb-0"><?php echo constant('page_itsupport_7') ?></p>
                             </div>
                         </div>
                     </div>
+                    <!-- Voice Logger -->
                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="text-center p-4">
-                            <div class="d-inline-block rounded bg-light p-4 mb-4"><i class="fas fa-mail-bulk fa-5x text-secondary"></i></div>
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 100px; height: 100px;"><i class="bi bi-code-square fs-1"></i></div>
+
                             <div class="feature-content">
-                                <a href="#" class="h4">Email Builder <i class="fa fa-long-arrow-alt-right"></i></a>
-                                <p class="mt-4 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.consectetur adipisicing elit
-                                </p>
+                                <a href="#" class="h4">ELASTIX</a>
+                                <p class="mt-4 mb-0"><?php echo constant('page_itsupport_8') ?></p>
                             </div>
                         </div>
                     </div>
+                    <!-- ELASTIX -->
                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="text-center rounded p-4">
-                            <div class="d-inline-block rounded bg-light p-4 mb-4"><i class="fas fa-sitemap fa-5x text-secondary"></i></div>
+                        <div class="text-center p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 100px; height: 100px;"><i class="bi bi-wifi fs-1"></i></div>
                             <div class="feature-content">
-                                <a href="#" class="h4">Customer Builder <i class="fa fa-long-arrow-alt-right"></i></a>
-                                <p class="mt-4 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.consectetur adipisicing elit
-                                </p>
+                                <a href="#" class="h4">Radio over Internet</a>
+                                <p class="mt-4 mb-0"><?php echo constant('page_itsupport_9') ?></p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="text-center rounded p-4">
-                            <div class="d-inline-block rounded bg-light p-4 mb-4"><i class="fas fa-tasks fa-5x text-secondary"></i></div>
-                            <div class="feature-content">
-                                <a href="#" class="h4">Campaign Manager <i class="fa fa-long-arrow-alt-right"></i></a>
-                                <p class="mt-4 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.consectetur adipisicing elit
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row g-5 pt-5" style="margin-top: 6rem;">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="feature-img h-100" style="object-fit: cover;">
-                            <img src="./img/ImgWeb/ai-gen-4.jpg" class="img-fluid w-100" style="object-fit:cover;" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
-                        <h4 class="text-primary">Fearutes</h4>
-                        <h1 class="display-5 mb-4">Push Your Visitors Into Happy Customers</h1>
-                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, suscipit itaque quaerat dicta porro illum, autem, molestias ut animi ab aspernatur dolorum officia nam dolore. Voluptatibus aliquam earum labore atque.
-                        </p>
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="d-flex">
-                                    <i class="fas fa-newspaper fa-4x text-secondary"></i>
-                                    <div class="d-flex flex-column ms-3">
-                                        <h2 class="mb-0 fw-bold">285</h2>
-                                        <small class="text-dark">Created Projects</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex">
-                                    <i class="fas fa-users fa-4x text-secondary"></i>
-                                    <div class="d-flex flex-column ms-3">
-                                        <h2 class="mb-0 fw-bold">6560</h2>
-                                        <small class="text-dark">Happy Clients</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- Feature End -->
-
-         <!-- FAQ Start -->
-         <div class="container-fluid FAQ bg-light overflow-hidden py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                       <div class="accordion" id="accordionExample">
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseTOne">
-                                        Why did you choose Our Email Services?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta distinctio hic fuga odio excepturi ducimus sequi at. Doloribus, non aspernatur.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Are there any hidden charges? 
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta distinctio hic fuga odio excepturi ducimus sequi at. Doloribus, non aspernatur.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item border-0">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        What are the key challenges of email marketing?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta distinctio hic fuga odio excepturi ducimus sequi at. Doloribus, non aspernatur.</p>
-                                    </div>
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="FAQ-img RotateMoveRight rounded">
-                            <img src="img/about-1.png" class="img-fluid w-100" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- FAQ End -->
+    </div>
+</div>
+<!-- Feature End -->
 
-
-
-    <!-- Start Footer -->
-    <?php include("./includes/footer.php") ?>
-    <!-- End Footer -->
-
+<!-- Start Footer -->
+<?php include("./includes/footer.php") ?>
+<!-- End Footer -->
