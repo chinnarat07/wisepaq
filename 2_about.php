@@ -204,8 +204,8 @@
                                     <div class="blog-item">
                                         <div class="blog-img">
                                             <img src="<?php echo "admin/images/" . $the_post_image; ?>" class="img-fluid w-100" style="object-fit:cover;" alt="">
-
                                             <div class="service-content">
+                                                <br>
                                                 <h4 class="mb-4"><?php echo $the_post_title ?></h4>
                                                 <p class="mb-0"><?php echo $the_post_content ?>
                                                 </p>
