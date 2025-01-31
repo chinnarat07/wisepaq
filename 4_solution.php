@@ -1,4 +1,10 @@
 <?php include("./includes/header.php") ?>
+
+<div class="text-center mx-auto wow fadeInUp section-title mt-4" data-wow-delay="0.1s" style="max-width: 800px;">
+    <h2 class="display-5 mb-4">OUR SOLUTIONS</h2>
+    <p class="mb-0 fs-5"><?php echo constant('page_solution_2') ?></p>
+ </div>
+
  <!-- Solution content Start -->
         <div class="container">
                 <?php

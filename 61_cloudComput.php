@@ -1,6 +1,12 @@
  <?php include("./includes/header.php") ?>
+
+ <div class="text-center mx-auto wow fadeInUp section-title mt-4" data-wow-delay="0.1s" style="max-width: 800px;">
+    <h2 class="display-5 mb-4">CLOUD COMPUTING</h2>
+    <p class="mb-0 fs-5"><?php echo constant('page_cloudComput_3') ?></p>
+ </div>
+
     <!-- product Start -->
-    <div class="container-fluid service py-5">
+    <div class="container-fluid service">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 80%;">
             <div class="row g-1 justify-content-center">
 
