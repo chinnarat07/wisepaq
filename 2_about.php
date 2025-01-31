@@ -122,7 +122,7 @@
                                     <i class="bi bi-laptop text-white fs-4" aria-hidden="true"></i>
                                 </div>
                                 <h5 class="mb-3">Outsource</h5>
-                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="m-0"><?php echo constant('page_about_7')?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -131,7 +131,7 @@
                                     <i class="bi bi-shield-lock text-white fs-4"></i>
                                 </div>
                                 <h5 class="mb-3">Security</h5>
-                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="m-0"><?php echo constant('page_about_8')?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -140,7 +140,7 @@
                                     <i class="bi bi-cpu text-white fs-4"></i>
                                 </div>
                                 <h5 class="mb-3">Software</h5>
-                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="m-0"><?php echo constant('page_about_9')?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -149,7 +149,7 @@
                                     <i class="bi bi-hdd-rack text-white fs-4"></i>
                                 </div>
                                 <h5 class="mb-3">Hardware</h5>
-                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="m-0"><?php echo constant('page_about_10')?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -158,7 +158,7 @@
                                     <i class="bi bi-cloud text-white fs-4"></i>
                                 </div>
                                 <h5 class="mb-3">Cloud Storage</h5>
-                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="m-0"><?php echo constant('page_about_11')?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -167,7 +167,7 @@
                                     <i class="bi bi-tools text-white fs-4"></i>
                                 </div>
                                 <h5 class="mb-3">IT Support</h5>
-                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="m-0"><?php echo constant('page_about_12')?></p>
                             </div>
                         </div>
                     </div>
