@@ -66,7 +66,13 @@ define('page_about_10','Services related to the installation, repair, maintenanc
 define('page_about_11','Service that provides cloud storage space where users can upload, download, and store data from anywhere with an internet connection.');
 define('page_about_12','Service that provides assistance with the use of information technology, including software, hardware, network systems, and troubleshooting various issues.');
 
-
+//solution.php
+define('page_solution_1','Our Solutions');
+define('page_solution_2','Solution used for managing or supporting various information technology (IT) aspects.');
+define('page_solution_3','Logistics');
+define('page_solution_4','Outsourcing');
+define('page_solution_5','IT Support');
+define('page_solution_6','Security');
 
 
 //vision.php
@@ -96,6 +102,13 @@ define('page_service_7','Land Transport');
 define('page_service_8','Cross-border trucking service (Cross Border Service) to countries in Indochina, including Burma and Laos.');
 define('page_service_9','Cargo Storage');
 define('page_service_10','Complete warehouse management service with WMS system, controlling product picking and distribution.');
+
+//cloudComput.php
+define('page_cloudComput_1','CLOUD COMPUTING');
+define('page_cloudComput_2','We provide cloud computing services to help businesses store, manage, and process data more efficiently and securely.');
+define('page_cloudComput_3','Computer resources through the internet, such as servers and software, without the need to invest in hardware. It allows access to data from anywhere and helps save costs.');
+define('page_cloudComput_4','A service that provides cloud storage space where users can upload, download, and store data from anywhere with an internet connection.');
+
 
 
 //software.php
@@ -130,6 +143,15 @@ define('page_itsupport_8','Software used to create a VOIP-based telephone system
 define('page_itsupport_9','Broadcasting radio signals over the internet instead of traditional radio waves, allowing radio stations to reach a global audience.');
 define('page_itsupport_10','');
 define('page_itsupport_11','');
+
+//security.php
+define('page_security_1','SECURITY');
+define('page_security_2','We provide a wide range of security services to protect your business from cyber threats and ensure the safety of your data.');
+define('page_security_3','We provide CCTV, Firewall, Fingerprint scan, Face scan, Palm scan, and Fire Alarm systems.');
+define('page_security_4','A system that protects computer systems and networks from unauthorized access, attacks, or damage, ensuring the confidentiality, integrity, and availability of data.');
+define('page_security_5','A system that detects, prevents, and responds to cyber threats, including malware, ransomware, and phishing attacks, to protect your data and systems.');
+define('page_security_6','A system that encrypts data to protect it from unauthorized access, ensuring that only authorized users can read or modify the data.');
+define('page_security_7','A system that monitors and analyzes network traffic to detect and respond to security incidents, ensuring the security of your network and data.');
 
 //contact.php
 define('page_contact_1','Phone Number');

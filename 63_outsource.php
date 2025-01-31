@@ -5,17 +5,16 @@
 
     <!-- About Start -->
     <div class="container-xxl py-5">
-        <div class="container">
+        <div class="container ">
 
-            <div class="col-lg-12 wow fadeIn text-center align-items-center" data-wow-delay="0.1s">
-                <div class="rounded" >
-                    <img class="img-fluid h-50% w-100%" style="object-fit:contain;" src="./img/ImgWeb/ai-gen-1.jpg" alt="">
+            <div class="col-lg-12 wow fadeIn text-center align-items-center d-flex" data-wow-delay="0.1s">
+                <div class="justify-content-center">
+                    <img class="img-fluid h-50 w-50 rounded " style="object-fit:cover;" src="./img/ImgWeb/ai-gen-1.jpg" alt="">
                 </div>
-                <br>
             </div>
 
             <div class="col-lg-12 wow fadeIn text-center align-items-center" data-wow-delay="0.5s">
-                <p class="d-inline-block rounded bg-secondary-gradient text-light py-3 px-4 fs-2">OUTSOURCE</p>
+                <p class="d-inline-block rounded bg-secondary-gradient text-light py-3 px-4 fs-2 mt-4">OUTSOURCE</p>
                 <h1 class="text-uppercase mb-4">More Than Just A Haircut. Learn More About Us!</h1>
                 <p><?php echo constant('page_outsource_1') ?></p>
                 <!-- <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p> -->
@@ -65,7 +64,7 @@
              <div class="row g-5 py-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="img-border">
-                            <img class="img-fluid" src="<?php echo "admin/images/" . $the_post_image; ?>" alt="" />
+                            <img class="img-fluid " src="<?php echo "admin/images/" . $the_post_image; ?>" alt="" />
                         </div>
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
