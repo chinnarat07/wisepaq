@@ -13,15 +13,15 @@
              <br>
              <h2 class="display-4 mb-2">SOFTWARE DEVELOP</h2>
              <h2 class="fs-3 mb-4"><?php echo constant('page_software_11') ?></h2>
-             <button type="button" class="btn btn-primary"><?php echo constant('page_software_2') ?></button>
-             <button type="button" class="btn btn-primary"><?php echo constant('page_software_3') ?></button>
-             <button type="button" class="btn btn-primary"><?php echo constant('page_software_4') ?></button>
-             <button type="button" class="btn btn-primary"><?php echo constant('page_software_5') ?></button>
-             <button type="button" class="btn btn-primary"><?php echo constant('page_software_6') ?></button>
-             <button type="button" class="btn btn-primary"><?php echo constant('page_software_7') ?></button>
-             <button type="button" class="btn btn-primary"><?php echo constant('page_software_8') ?></button>
-             <button type="button" class="btn btn-primary"><?php echo constant('page_software_9') ?></button>
-             <button type="button" class="btn btn-primary"><?php echo constant('page_software_10') ?></button>
+             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_2') ?></button>
+             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_3') ?></button>
+             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_4') ?></button>
+             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_5') ?></button>
+             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_6') ?></button>
+             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_7') ?></button>
+             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_8') ?></button>
+             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_9') ?></button>
+             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_10') ?></button>
           </div>
        </div>
     </div>
