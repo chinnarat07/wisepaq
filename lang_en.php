@@ -89,6 +89,40 @@ define('page_service_8','Cross-border trucking service (Cross Border Service) to
 define('page_service_9','Cargo Storage');
 define('page_service_10','Complete warehouse management service with WMS system, controlling product picking and distribution.');
 
+
+//software.php
+define('page_software_1','We have a team to develop websites and programs in various formats as required.');
+define('page_software_2','Ship System');
+define('page_software_3','Parts System');
+define('page_software_4','Factory System');
+define('page_software_5','ERP');
+define('page_software_6','DEPOT System');
+define('page_software_7','Hospital Registration System');
+define('page_software_8','Dormitory System');
+define('page_software_9','Nabour System');
+define('page_software_10','ETC.');
+define('page_software_11','What We Have');
+
+//outsource.php 
+define('page_outsource_1','Outsourcing services or hiring temporary employees, whether on a monthly, annual, or per-task basis, involves contracting a company or individual with specific knowledge, skills, and expertise in certain areas to perform a task. This could either be for the entire task or just a part of it. The key point is that it should not affect the overall operations of your company.');
+define('page_outsource_2','Outsource Services Since 2009');
+define('page_outsource_3','With over 10 years of experience in providing outsourced services, we help businesses connect technology and enhance operational efficiency.');
+define('page_outsource_4','Over 200 licenses');
+define('page_outsource_5','We proudly support over 200 outsource licenses, helping businesses enhance efficiency and streamline operations.');
+
+//itsupport.php
+define('page_itsupport_1','IT SUPPORT');
+define('page_itsupport_2','We provide products and technologies tailored to various businesses, along with the best services for our customers.');
+define('page_itsupport_3','A system that connects mobile phones to an internal telephone system (PBX), allowing calls to be made and received through mobile networks, which helps reduce communication costs.');
+define('page_itsupport_4','A telephone system that uses the internet to transmit voice instead of traditional phone lines, enabling cheaper and more convenient calls.');
+define('page_itsupport_5','A telephone system that uses IP (Internet Protocol) technology to manage internal phone calls within an organization, making it easier and more affordable to make and receive calls.');
+define('page_itsupport_6','A system used for multi-party phone or video conferences, allowing multiple participants to join a meeting at the same time.');
+define('page_itsupport_7','A system that records all phone calls, which can be used for future reference or auditing purposes.');
+define('page_itsupport_8','Software used to create a VOIP-based telephone system (similar to an IPBX) within an organization, including features like conferencing, voice recording, and call management.');
+define('page_itsupport_9','Broadcasting radio signals over the internet instead of traditional radio waves, allowing radio stations to reach a global audience.');
+define('page_itsupport_10','');
+define('page_itsupport_11','');
+
 //contact.php
 define('page_contact_1','Phone Number');
 define('page_contact_2','If you have any questions or we can support your business.');

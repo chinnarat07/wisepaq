@@ -2505,6 +2505,7 @@ are {
   position: relative;
   height: 100%;
   min-height: 400px;
+  
 }
 
 .img-border::before {
@@ -2514,7 +2515,8 @@ are {
   left: 0;
   right: 3rem;
   bottom: 3rem;
-  border: 5px solid var(--primary);
+  border: 5px solid ;
+  border-image: linear-gradient(to right, var(--primary), var(--secondary))1;
 }
 
 .img-border img {
