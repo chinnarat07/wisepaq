@@ -2778,3 +2778,19 @@ are {
 
 /*** Service End ***/
 
+.video-container {
+  position: relative;
+  width: 100%; /* ปรับขนาดเต็มพื้นที่ */
+  max-width: 640px; /* จำกัดความกว้างสูงสุด */
+  margin: auto; /* จัดให้อยู่ตรงกลาง */
+
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+
+}
+

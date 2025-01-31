@@ -21,37 +21,35 @@
                 WELCOME TO <br>
                 <span class="accent-text">WISEPAQ</span>
               </h1>
+              <?php
+              $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=2 and tbl_categories.cat_id=14";
+              $fetch_posts_data = mysqli_query($connection, $query);
+              while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
+                $the_post_id = $Row['post_id'];
+                $the_post_image = $Row['post_image'];
+                if ($_SESSION['lang'] == 'en') {
 
-              <p class="mb-4 mb-md-5">
-              Welcome to Wisepaq, your trusted partner for all your technology needs.
-               We specialize in providing top-notch technology, IT support, engineering, and outsource services to enhance your organization's success and productivity. 
-               With our tailored solutions, we ensure that your technology supports your business goals and growth.
-              </p>
+                  $the_post_title = base64_decode($Row['post_title']);
+                  $the_post_content = base64_decode($Row['post_content']);
+                } else {
+                  $the_post_title = base64_decode($Row['post_title_thai']);
+                  $the_post_content = base64_decode($Row['post_content_thai']);
+                }
+              ?>
 
-              <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
-                <a href="https://video.wixstatic.com/video/11062b_6743da5900054f1f8e69f53302930a6a/720p/mp4/file.mp4" class="btn btn-link mt-2 mt-sm-0 glightbox">
-                  <i class="bi bi-play-circle me-1"></i>
-                  Play Video
-                </a>
-              </div>
+                <span> <?php echo $the_post_content; ?></span>
+
+              <?php  } ?>
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
-              <img src="assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid">
-
-              <div class="customers-badge">
-                <div class="customer-avatars">
-                  <img src="assets/img/avatar-1.webp" alt="Customer 1" class="avatar">
-                  <img src="assets/img/avatar-2.webp" alt="Customer 2" class="avatar">
-                  <img src="assets/img/avatar-3.webp" alt="Customer 3" class="avatar">
-                  <img src="assets/img/avatar-4.webp" alt="Customer 4" class="avatar">
-                  <img src="assets/img/avatar-5.webp" alt="Customer 5" class="avatar">
-                  <span class="avatar more">12+</span>
-                </div>
-                <p class="mb-0 mt-2">12,000+ lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+          <div class="col-lg-6 ">
+            <div class="hero-buttons">
+              <div class="video-container ">
+                <video autoplay muted loop playsinline class="shadow-lg">
+                  <source src="https://video.wixstatic.com/video/11062b_6743da5900054f1f8e69f53302930a6a/720p/mp4/file.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
@@ -523,7 +521,7 @@
 
     </section><!-- /Services Section -->
 
-   
+
     <!-- Call To Action 2 Section -->
     <section id="call-to-action-2" class="call-to-action-2 section dark-background">
 
