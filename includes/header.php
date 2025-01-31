@@ -114,10 +114,10 @@ include "./includes/db.php";
           <small>02-119-5300</small>
         </div>
         <div class="h-100 d-inline-flex align-items-center ">
-          <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/Wisepaqbusiness/"><i class="bi bi-facebook"></i></a>
-          <a class="btn btn-sm-square bg-white text-primary me-1" href="https://x.com/Wisepaq"><i class="bi bi-twitter-x"></i></a>
-          <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="bi bi-line"></i></a>
-          <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="bi bi-instagram"></i></a>
+          <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/Wisepaqbusiness/" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a class="btn btn-sm-square bg-white text-primary me-1" href="https://x.com/Wisepaq" target="_blank"><i class="bi bi-twitter-x" ></i></a>
+          <a class="btn btn-sm-square bg-white text-primary me-1" href="https://youtube.com/@wisepaq-business?feature=shared" target="_blank"><i class="bi bi-youtube"></i></a>
+          <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/peraphol/" target="_blank"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
     </div>
