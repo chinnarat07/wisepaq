@@ -2,24 +2,6 @@
 <?php include("./includes/header.php") ?>
 <!-- End Header -->
 
-<body>
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid header position-relative overflow-hidden p-0">
-        <!-- Hero Header Start -->
-        <div class="hero-header overflow-hidden px-5">
-            <br>
-            <div class="row gy-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    <h1 class="display-4 text-dark mb-4 wow fadeInUp" data-wow-delay="0.3s"><?php echo constant('page_about_2') ?></h1>
-                    <p class="fs-4 mb-4 wow fadeInUp" data-wow-delay="0.5s"><?php echo constant('page_about_3') ?></p>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img src="./img/ImgWeb/laptop-2.jpg" class="img-fluid w-100 h-100" alt="">
-                </div>
-            </div>
-
-            <!-- Navbar & Hero End -->
-
             <!-- About Section -->
             <section id="about" class="about section">
 
@@ -113,7 +95,7 @@
                 <div class="container py-5 px-lg-5">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h5 class="text-primary-gradient fw-medium">App Features</h5>
-                        <h1 class="mb-5">Awesome Features</h1>
+                        <h1 class="mb-5"><?php echo constant('page_service_1') ?></h1>
                     </div>
                     <div class="row g-4">
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
