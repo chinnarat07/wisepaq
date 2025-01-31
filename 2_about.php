@@ -199,7 +199,6 @@
                                 $the_post_content = base64_decode($Row['post_content_thai']);
                             }
                         ?>
-<<<<<<< HEAD
                                 <div class="col-md-6 col-lg-4 col-xl-3 fadeInUp d-flex " data-wow-delay="0.1s">
                                     <div class="service-item text-center rounded p-4 d-flex flex-column w-100 shadow-lg">
                                         <div class="blog-item flex-grow-1">
@@ -209,19 +208,6 @@
                                             <div class="service-content">
                                                 <h4 class="mb-4"><?php echo $the_post_title; ?></h4>
                                                 <p class="mb-0"><?php echo $the_post_content; ?></p>
-=======
-                            <div class="col-md-6 col-lg-4 col-xl-3 fadeInUp" data-wow-delay="0.1s">
-                                <div class="service-item text-center rounded p-4">
-
-                                    <div class="blog-item">
-                                        <div class="blog-img">
-                                            <img src="<?php echo "admin/images/" . $the_post_image; ?>" class="img-fluid w-100" style="object-fit:cover;" alt="">
-                                            <div class="service-content">
-                                                <br>
-                                                <h4 class="mb-4"><?php echo $the_post_title ?></h4>
-                                                <p class="mb-0"><?php echo $the_post_content ?>
-                                                </p>
->>>>>>> 17e06321cd6077f9f526f3054ad30a2ba04e339d
                                             </div>
                                         </div>
                                     </div>
@@ -240,7 +226,3 @@
     <?php include("./includes/footer.php") ?>
     <!-- End Footer -->
 
-<<<<<<< HEAD
-</body>
-=======
->>>>>>> 17e06321cd6077f9f526f3054ad30a2ba04e339d

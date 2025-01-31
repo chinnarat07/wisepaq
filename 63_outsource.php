@@ -3,7 +3,6 @@
     <?php include("./includes/header.php") ?>
     <!-- End Header -->
 
-
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -33,13 +32,18 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- About End -->
 
+
+
+
+
+
+
     <!-- content outsource Start -->
-    <div class="row gy-5 gx-4">
+    <div class="container">
         <?php
         $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=8";
         $fetch_posts_data = mysqli_query($connection, $query);
@@ -55,65 +59,47 @@
                 $the_post_content = base64_decode($Row['post_content_thai']);
             }
 
-            if ($counter % 2 != 0) {
-        ?>
-                <div class="container-xxl py-5">
-                    <div class="container">
-                        <br>
-                        <div class="row g-5 ">
-
-                            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="img-border">
-                                    <img class="img-fluid" src="<?php echo "admin/images/" . $the_post_image; ?>" alt="" />
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="align-items-center">
-                                    <h1 class="mb-5" data-wow-delay="0.1s">
-                                        <?php echo $the_post_title ?>
-                                    </h1>
-                                    <p>
-                                        <?php echo $the_post_content ?>
-                                    </p>
-                                </div>
-                            </div>
+          // ตรวจสอบว่าตัวนับคือเลขคี่หรือคู่
+          if ($counter % 2 != 0) {
+            ?>  
+             <div class="row g-5 py-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="img-border">
+                            <img class="img-fluid" src="<?php echo "admin/images/" . $the_post_image; ?>" alt="" />
                         </div>
                     </div>
-                </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="d-flex align-items-center mb-4">
+                            <h1 class="mb-0"><?php echo $counter ?></h1>
+                            <span class="bg-primary mx-2" style="width: 30px; height: 2px;"></span>
+                            <h5 class="mb-0"><?php echo $the_post_title ?></h5>
+                        </div>
+                        <p class="mb-4"><?php echo $the_post_content ?></p>
+                    </div>
+                    </div>
+                <?php
+                } else {
+                ?>
+                <div class="row g-5 py-5 align-items-center flex-column-reverse flex-lg-row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="d-flex align-items-center mb-4">
+                            <h1 class="mb-0"><?php echo $counter ?></h1>
+                            <span class="bg-primary mx-2" style="width: 30px; height: 2px;"></span>
+                            <h5 class="mb-0"><?php echo $the_post_title ?></h5>
+                        </div>
+                        <p class="mb-4"><?php echo $the_post_content ?></p>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="img-border">
+                            <img class="img-fluid" src="<?php echo "admin/images/" . $the_post_image; ?>" alt="" />
+                        </div>
+                    </div>
+                    </div>
             <?php
-            } else {
-            ?>
-                <div class="container-xxl py-5">
-                    <div class="container">
-                        <div class="row g-5 ">
-                            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <br>
-
-                                <div class="align-items-center">
-                                    <h1 class="mb-5" data-wow-delay="0.1s">
-                                        <?php echo $the_post_title ?>
-                                    </h1>
-                                    <p>
-                                        <?php echo $the_post_content ?>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="img-border">
-                                    <img class="img-fluid" src="<?php echo "admin/images/" . $the_post_image; ?>" alt="" />
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-        <?php
+                }
+                $counter++; // เพิ่มตัวนับ
             }
-            $counter++; // เพิ่มตัวนับ
-        }
-        ?>
+            ?>
     </div>
     <!-- content outsource End -->
 
@@ -121,4 +107,3 @@
     <?php include("./includes/footer.php") ?>
     <!-- End Footer -->
 
-    
