@@ -3,11 +3,13 @@
         <div class="container-fluid bg-white text-dark footer mt-0 wow fadeIn " data-wow-delay="0.1s ">
             <div class="container pt-5 pb-2">
                 <div class="row g-5 ">
-                    <div class="col-lg-3 col-md-6 p-3 shadow p-4" style="border-radius: 50%; border: 3px  solid rgb(208, 206, 206);">
+                    <div class="col-lg-3 col-md-6 py-lg-4" >
+                        <div class="shadow pb-5 pt-3" style=" border-radius: 50%; border: 2px  solid rgb(208, 206, 206);">
                         <a href="index.php">
-                            <img src="img/wisepaq.jpg" alt="" class="mx-auto d-block " style="margin-top: 1rem; width:150px ;height:150px;">
-                            <p class="text-dark mt-0  fw-bold p-3 text-center" ><?php echo constant('page_footer_1.1') ?></p>
+                            <img src="img/wisepaq.jpg" alt="" class="mx-auto d-block " style="margin-top: 1rem; width:120px ;height:120px;">
+                            <p class="text-dark mt-2  fw-bold p-0 text-center" ><?php echo constant('page_footer_1.1') ?></p>
                         </a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-md-6  ps-5">
                         <h1 class="text-dark mb-4 "><?php echo constant('page_footer_5') ?></h1>
