@@ -55,7 +55,7 @@ define('page_index_slide_3', 'Focus on designing customized, turnkey solutions.'
 //about.php
 define('page_about_1','ABOUT US');
 define('page_about_2','What We Can Do for You!');
-define('page_about_3','We are Wisepaq, dedicated to innovation and elevating service standards to enhance businesses and fully meet the diverse needs of our clients. With over 16 years of experience and a team of professionals, we are ready to offer the best services in every aspect. We are confident that we can be the trusted partner you rely on for growth and success together.'); 
+define('page_about_3','We are Wisepaq, dedicated to innovation and elevating service standards to enhance businesses and fully meet the diverse needs of our clients. With over '.((date("Y") + 543) - 2552).' years of experience and a team of professionals, we are ready to offer the best services in every aspect. We are confident that we can be the trusted partner you rely on for growth and success together.'); 
 define('page_about_4','What You Can Expect from Us'); 
 define('page_about_5','Offering a one-stop solution Focus on designing a seamless customizable, turnkey solution to meet the needs of customers, regardless of business sector. Operating services in both industrial and industrial chains. academy There have been no less than 500 establishments and medical facilities in the country.'); 
 define('page_about_6','');

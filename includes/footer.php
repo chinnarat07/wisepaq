@@ -3,14 +3,14 @@
         <div class="container-fluid bg-white text-dark footer mt-0 wow fadeIn " data-wow-delay="0.1s ">
             <div class="container pt-5 pb-2">
                 <div class="row g-5 ">
-                    <div class="col-lg-3 col-md-6 px-0 ">
+                    <div class="col-lg-3 col-md-6 p-3 shadow p-4" style="border-radius: 50%; border: 3px  solid rgb(208, 206, 206);">
                         <a href="index.php">
-                            <img src="img/wisepaq.jpg" alt="" class="mx-auto d-block "  style="margin-top: 1rem;  background-color: red;">
-                            <p class="text-dark mt-3 fs-5 fw-bold p-3 text-center shadow-lg" style="border-radius: 5px; border: 3px  solid #b8b4b4;"><?php echo constant('page_footer_1.1') ?></p>
+                            <img src="img/wisepaq.jpg" alt="" class="mx-auto d-block " style="margin-top: 1rem; width:150px ;height:150px;">
+                            <p class="text-dark mt-0  fw-bold p-3 text-center" ><?php echo constant('page_footer_1.1') ?></p>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6  ps-5">
-                        <h2 class="text-dark mb-4 "><?php echo constant('page_footer_5') ?></h2>
+                        <h1 class="text-dark mb-4 "><?php echo constant('page_footer_5') ?></h1>
                         <p class="mb-2 "><i class="fa fa-map-marker-alt me-3 text-primary"></i><?php echo constant('page_footer_2') ?></p>
                         <p class="mb-2 "><i class="fa fa-phone-alt me-3 text-primary"></i><?php echo constant('page_footer_3') ?></p>
                         <p class="mb-2 "><i class="fa fa-fax me-3 text-primary"></i><?php echo constant('page_footer_3.1') ?></p>
