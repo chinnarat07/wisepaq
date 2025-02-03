@@ -14,8 +14,8 @@
             </div>
 
             <div class="col-lg-12 wow fadeIn text-center align-items-center" data-wow-delay="0.5s">
-                <p class="d-inline-block rounded bg-secondary-gradient text-light py-3 px-4 fs-2 mt-4">OUTSOURCE</p>
-                <h1 class="text-uppercase mb-4">More Than Just A Haircut. Learn More About Us!</h1>
+                <!-- <p class="d-inline-block rounded bg-secondary-gradient text-light py-3 px-4 fs-2 mt-4">OUTSOURCE</p> -->
+                <h1 class="text-uppercase mb-4 m-4">OUTSOURCE</h1>
                 <p><?php echo constant('page_outsource_1') ?></p>
                 <!-- <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p> -->
                 <br>

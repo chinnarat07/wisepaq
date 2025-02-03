@@ -14,7 +14,7 @@
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
                     <h4 class="text-primary">WISEPAQ</h4>
                     <h1 class="display-5 mb-4"><?php echo constant('page_itsupport_1') ?></h1>
-                    <p class="mb-4 fs-4"><?php echo constant('page_itsupport_2') ?></p>
+                    <p class="mb-0 fs-5"><?php echo constant('page_itsupport_2') ?></p>
                 </div>
             </div>
       

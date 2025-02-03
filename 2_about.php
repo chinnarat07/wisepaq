@@ -55,7 +55,7 @@
 <div class="container-xxl " id="feature">
     <div class="container py-5 px-lg-5">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 class="text-primary-gradient fw-medium">App Features</h5>
+            <h5 class="text-primary-gradient fw-medium">WISEPAQ</h5>
             <h1 class="mb-5"><?php echo constant('page_service_1') ?></h1>
         </div>
         <div class="row g-4">
