@@ -151,8 +151,8 @@ define('page_itsupport_6','A system used for multi-party phone or video conferen
 define('page_itsupport_7','A system that records all phone calls, which can be used for future reference or auditing purposes.');
 define('page_itsupport_8','Software used to create a VOIP-based telephone system (similar to an IPBX) within an organization, including features like conferencing, voice recording, and call management.');
 define('page_itsupport_9','Broadcasting radio signals over the internet instead of traditional radio waves, allowing radio stations to reach a global audience.');
-define('page_itsupport_10','');
-define('page_itsupport_11','');
+define('page_itsupport_10','COMMUNICATION');
+define('page_itsupport_11','The central system that switches and routes calls between telephone networks and VoIP users. This specific system will evaluate the best way to route multiple simultaneous calls. Its efficiency allows business users to share limited resources.');
 
 //security.php
 define('page_security_1','SECURITY');

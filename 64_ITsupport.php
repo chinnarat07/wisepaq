@@ -22,8 +22,8 @@
 
         <div class="row g-5" style="margin-top: 3rem;">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
-                <h1 class="display-5 mb-4">Advanced Communication Systems</h1>
-                <p class="mb-0">Explore our cutting-edge technologies designed to enhance communication in various industries. From GSM Gateway systems to VOIP solutions, we offer a wide range of features to meet your needs.</p>
+                <h1 class="display-5 mb-4"><?php echo constant('page_itsupport_10') ?></h1>
+                <p class="mb-0 fs-5"><?php echo constant('page_itsupport_11') ?></p>
             </div>
             <div class="row g-4 justify-content-center text-center mb-5">
                 <!-- GSM Gateway System -->
