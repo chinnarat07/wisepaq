@@ -1,4 +1,4 @@
-    <body>
+ 
     <!-- Start Header -->
     <?php include("./includes/header.php") ?>
     <!-- End Header -->

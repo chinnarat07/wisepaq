@@ -18,7 +18,7 @@
               </div>
 
               <h1 class="mb-4">
-                WELCOME TO <br>
+                <?php echo constant("welcome") ?><br>
                 <span class="accent-text">WISEPAQ</span>
               </h1>
               <?php
@@ -55,53 +55,25 @@
           </div>
         </div>
 
-        <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-trophy"></i>
-              </div>
-              <div class="stat-content">
-                <h4>3x Won Awards</h4>
-                <p class="mb-0">Vestibulum ante ipsum</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-briefcase"></i>
-              </div>
-              <div class="stat-content">
-                <h4>6.5k Faucibus</h4>
-                <p class="mb-0">Nullam quis ante</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              <div class="stat-content">
-                <h4>80k Mauris</h4>
-                <p class="mb-0">Etiam sit amet orci</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-award"></i>
-              </div>
-              <div class="stat-content">
-                <h4>6x Phasellus</h4>
-                <p class="mb-0">Vestibulum ante ipsum</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php
+        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=1 and tbl_categories.cat_id=15";
+        $fetch_posts_data = mysqli_query($connection, $query);
+        while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
+          $the_post_id = $Row['post_id'];
+          $the_post_image = $Row['post_image'];
+          if ($_SESSION['lang'] == 'en') {
 
+            $the_post_title = base64_decode($Row['post_title']);
+            $the_post_content = base64_decode($Row['post_content']);
+          } else {
+            $the_post_title = base64_decode($Row['post_title_thai']);
+            $the_post_content = base64_decode($Row['post_content_thai']);
+          }
+        ?>
+          <div>
+            <?php echo $the_post_content; ?>
+          </div>
+        <?php } ?>
       </div>
 
     </section><!-- /Hero Section -->

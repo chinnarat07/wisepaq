@@ -302,8 +302,11 @@ h6 {
 }
 
 .navbar-light.sticky-top {
-    top: 0px;
+    top: 20px;
     transition: .5s;
+    width: 95%;
+    margin: auto;
+    opacity: 0.96;
 }
 .navbar-toggler{
     border: 0px;
@@ -428,18 +431,18 @@ text-align: center;
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
+  right: 30px;
   bottom: -15px;
   z-index: 99999;
   background-color: var(--accent-color);
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   border-radius: 50px;
   transition: all 0.4s;
 }
 
 .scroll-top i {
-  font-size: 24px;
+  font-size: 40px;
   color: var(--contrast-color);
   line-height: 0;
 }
@@ -452,7 +455,7 @@ text-align: center;
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -738,7 +741,7 @@ section,
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 2rem;
+  padding: 2rem 0rem 2rem 2rem;
 }
 
 .hero .stat-item .stat-icon {
