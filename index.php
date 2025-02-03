@@ -172,7 +172,7 @@
               </div>
               <div>
                 <h3>Sangfor HCI</h3>
-                <!-- <p><?php echo constant('page_index_virtualiz_1')?></p> -->
+                <p><?php echo constant('page_index_virtualiz_1')?></p>
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -185,7 +185,7 @@
               </div>
               <div>
                 <h3>Nutanix</h3>
-                <!-- <p><?php echo constant('page_index_virtualiz_2')?></p> -->
+                <p><?php echo constant('page_index_virtualiz_2')?></p>
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -198,7 +198,7 @@
               </div>
               <div>
                 <h3>Microsoft</h3>
-                <!-- <p><?php echo constant('page_index_virtualiz_3')?></p> -->
+                <p><?php echo constant('page_index_virtualiz_3')?></p>
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -211,7 +211,7 @@
               </div>
               <div>
                 <h3>VMWare</h3>
-                <!-- <p><?php echo constant('page_index_virtualiz_4')?></p> -->
+                <p><?php echo constant('page_index_virtualiz_4')?></p>
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
