@@ -103,7 +103,7 @@
                    </ul>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 text-center">
-                   <img src="<?php echo "admin/images/" . $the_post_image; ?>" alt="" class="img-fluid">
+                   <img src="<?php echo "admin@WSP//images/" . $the_post_image; ?>" alt="" class="img-fluid">
                 </div>
              </div>
        </div> <!-- End tab content item -->

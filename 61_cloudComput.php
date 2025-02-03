@@ -29,7 +29,7 @@
                     <div class="rounded service-item text-center p-4 flex-column align-items-center mt-5">
 
                         <div class="blog-item">
-                            <img src="<?php echo "admin/images/" . $the_post_image; ?>" class="img-fluid" style="object-fit:cover;" alt="">
+                            <img src="<?php echo "admin@WSP//images/" . $the_post_image; ?>" class="img-fluid" style="object-fit:cover;" alt="">
                         </div>
 
                         <br>

@@ -54,6 +54,9 @@ define('page_index_slide_3', 'Focus on designing customized, turnkey solutions.'
 
 
 //about.php
+define('page_about_title_sm','LEARN ABOUT US');
+define('page_about_years','Years');
+define('page_about_title','Of experience in business service');
 define('page_about_1','ABOUT US');
 define('page_about_2','What We Can Do for You!');
 define('page_about_3','We are Wisepaq, dedicated to innovation and elevating service standards to enhance businesses and fully meet the diverse needs of our clients. With over '.((date("Y") + 543) - 2552).' years of experience and a team of professionals, we are ready to offer the best services in every aspect. We are confident that we can be the trusted partner you rely on for growth and success together.'); 

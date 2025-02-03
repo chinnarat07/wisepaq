@@ -29,7 +29,7 @@
                  <div class="col-lg-4 wow slideInUp " data-wow-delay="0.3s">
                      <div class="blog-item bg-light rounded overflow-hidden shadow-lg">
                          <div class="blog-img position-relative overflow-hidden">
-                             <img class="img-fluid w-100 " style="object-fit:cover;" src="<?php echo "admin/images/" . $the_post_image; ?>" alt="">
+                             <img class="img-fluid w-100 " style="object-fit:cover;" src="<?php echo "admin@WSP//images/" . $the_post_image; ?>" alt="">
                              <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
                          </div>
                          <div class="p-4">
