@@ -172,7 +172,7 @@
               </div>
               <div>
                 <h3>Sangfor HCI</h3>
-                <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                <p><?php echo constant('page_index_virtualiz_1')?></p>
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -185,7 +185,7 @@
               </div>
               <div>
                 <h3>Nutanix</h3>
-                <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+                <p><?php echo constant('page_index_virtualiz_2')?></p>
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -198,7 +198,7 @@
               </div>
               <div>
                 <h3>Microsoft</h3>
-                <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+                <p><?php echo constant('page_index_virtualiz_3')?></p>
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -211,7 +211,7 @@
               </div>
               <div>
                 <h3>VMWare</h3>
-                <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+                <p><?php echo constant('page_index_virtualiz_4')?></p>
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
