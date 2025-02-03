@@ -88,33 +88,33 @@
 
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="feature-box orange">
-              <i class="bi bi-award"></i>
-              <h4>Corporis voluptates</h4>
-              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              <i class="bi bi-gear"></i>
+              <h4>ENGINEERING</h4>
+              <p><?php echo constant('page_index_solution_1')?></p>
             </div>
           </div><!-- End Feature Borx-->
 
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="feature-box blue">
-              <i class="bi bi-patch-check"></i>
-              <h4>Explicabo consectetur</h4>
-              <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+              <i class="bi bi-reception-4"></i>
+              <h4>NETWORK SOLUTIONS</h4>
+              <p><?php echo constant('page_index_solution_2')?></p>
             </div>
           </div><!-- End Feature Borx-->
 
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="feature-box green">
-              <i class="bi bi-sunrise"></i>
-              <h4>Ullamco laboris</h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+              <i class="bi bi-cloud-check"></i>
+              <h4>Cloud Computing</h4>
+              <p><?php echo constant('page_index_solution_3')?></p>
             </div>
           </div><!-- End Feature Borx-->
 
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="feature-box red">
               <i class="bi bi-shield-check"></i>
-              <h4>Labore consequatur</h4>
-              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+              <h4>SECURITY</h4>
+              <p><?php echo constant('page_index_solution_4')?></p>
             </div>
           </div><!-- End Feature Borx-->
 
@@ -124,104 +124,6 @@
 
     </section><!-- /Features Cards Section -->
 
-    <!-- Features 2 Section -->
-    <section id="features-2" class="features-2 section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-
-
-      </div>
-
-    </section><!-- /Features 2 Section -->
-
-    <!-- Call To Action 2 Section -->
-    <section id="call-to-action-2" class="call-to-action-2 section dark-background">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>Call To Action</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a class="cta-btn" href="#">Call To Action</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Call To Action 2 Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>VIRTUALIZATION</h2>
-        <p>What We Can Do</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <img src="./img/imgMain/icon/icon-sangfor.png" alt="" width="50" height="50">
-              </div>
-              <div>
-                <h3>Sangfor HCI</h3>
-                <p><?php echo constant('page_index_virtualiz_1')?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-              <img src="./img/imgMain/icon/icon-nutanix.png" alt="" width="45" height="45">
-              </div>
-              <div>
-                <h3>Nutanix</h3>
-                <p><?php echo constant('page_index_virtualiz_2')?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-              <img src="./img/imgMain/icon/icon-microsoft.png" alt="" width="45" height="45">
-              </div>
-              <div>
-                <h3>Microsoft</h3>
-                <p><?php echo constant('page_index_virtualiz_3')?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-              <img src="./img/imgMain/icon/icon-vmware.png" alt="" width="50" height="50">
-              </div>
-              <div>
-                <h3>VMWare</h3>
-                <p><?php echo constant('page_index_virtualiz_4')?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
 
 
     <!-- Call To Action Section -->
@@ -231,9 +133,9 @@
 
         <div class="row content justify-content-center align-items-center position-relative">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="display-4 mb-4">Maecenas tempus tellus eget condimentum</h2>
-            <p class="mb-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
-            <a href="#" class="btn btn-cta">Call To Action</a>
+            <h2 class="display-4 mb-4"><?php echo constant('page_index_activity_1') ?></h2>
+            <p class="mb-4"><?php echo constant('page_index_activity_2') ?></p>
+            <a href="#" class="btn btn-cta"><?php echo constant('page_index_activity_3') ?></a>
           </div>
 
           <!-- Abstract Background Elements -->
@@ -278,6 +180,94 @@
       </div>
 
     </section><!-- /Call To Action Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>VIRTUALIZATION</h2>
+        <p>What We Can Do</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="./img/imgMain/icon/icon-sangfor.png" alt="" width="50" height="50">
+              </div>
+              <div>
+                <h3>Sangfor HCI</h3>
+                <p><?php echo constant('page_index_virtualiz_1') ?></p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="./img/imgMain/icon/icon-nutanix.png" alt="" width="45" height="45">
+              </div>
+              <div>
+                <h3>Nutanix</h3>
+                <p><?php echo constant('page_index_virtualiz_2') ?></p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="./img/imgMain/icon/icon-microsoft.png" alt="" width="45" height="45">
+              </div>
+              <div>
+                <h3>Microsoft</h3>
+                <p><?php echo constant('page_index_virtualiz_3') ?></p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="./img/imgMain/icon/icon-vmware.png" alt="" width="50" height="50">
+              </div>
+              <div>
+                <h3>VMWare</h3>
+                <p><?php echo constant('page_index_virtualiz_4') ?></p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Call To Action 2 Section -->
+    <section id="call-to-action-2" class="call-to-action-2 section dark-background">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3><?php echo constant('page_index_contact_1') ?></h3>
+              <p><?php echo constant('page_index_contact_2') ?></p>
+              <a class="cta-btn" href="#"><?php echo constant('page_index_contact_3') ?></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Call To Action 2 Section -->
 
     <!-- Clients Section -->
     <section id="clients" class="clients section">
