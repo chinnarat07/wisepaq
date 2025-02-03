@@ -51,6 +51,12 @@ define('page_index_slide_1', 'Global leader in third-party logistics');
 define('page_index_slide_2', 'Offering customized, turnkey solutions for your logistics needs.');
 define('page_index_slide_3', 'Focus on designing customized, turnkey solutions.');
 
+define('page_index_virtualiz_1','The Hyper-Converged Infrastructure (HCI) solution developed by Sangfor is a Software-defined Data Center solution that is easy to use through a single console. It integrates the capabilities of Compute, Storage, Networking, and Security into a single software suite, providing Data Center services for all levels of organizations, from small businesses to large enterprises.');
+define('page_index_virtualiz_2','Nutanix is a software and cloud-related hardware company that specializes in storage management and network management, as well as designing complete solutions. The company’s main product is Hyper-Converged Infrastructure (HCI). In addition, Nutanix offers HCI for server racks and various tools that help users manage and control systems easily and efficiently.');
+define('page_index_virtualiz_3','Microsoft systems are a set of products and services developed by Microsoft, including the Windows operating system, Microsoft Office software, the Azure cloud platform, and other tools that help with data management, collaboration, and the use of technology in organizations and daily life.');
+define('page_index_virtualiz_4','VMware is a virtualization software that allows you to create and manage multiple virtual machines on a single piece of hardware. It helps users create and manage virtual systems on a single server, maximizing resource efficiency, reducing costs, and increasing flexibility in IT system management.');
+
+
 
 
 //about.php
