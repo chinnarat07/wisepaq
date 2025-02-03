@@ -196,7 +196,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
-                <img src="" alt="" width="50" height="50">
+                <img src="./img/imgMain/icon/icon-sangfor.png" alt="" width="50" height="50">
               </div>
               <div>
                 <h3>Sangfor HCI</h3>
@@ -209,7 +209,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
-                <i class="bi bi-diagram-3"></i>
+              <img src="./img/imgMain/icon/icon-nutanix.png" alt="" width="45" height="45">
               </div>
               <div>
                 <h3>Nutanix</h3>
@@ -222,7 +222,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
-                <i class="bi bi-easel"></i>
+              <img src="./img/imgMain/icon/icon-microsoft.png" alt="" width="45" height="45">
               </div>
               <div>
                 <h3>Microsoft</h3>
@@ -235,7 +235,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
-                <i class="bi bi-clipboard-data"></i>
+              <img src="./img/imgMain/icon/icon-vmware.png" alt="" width="50" height="50">
               </div>
               <div>
                 <h3>VMWare</h3>
