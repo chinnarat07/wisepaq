@@ -29,6 +29,7 @@ define('page_footer_0','สงวนลิขสิทธิ์  &copy; '.date("
 
 
 //index.php
+define('welcome','ยินดีต้อนรับสู่');
 define('page_index_button_1','หน้าหลัก');
 define('page_index_button_2','เกี่ยวกับ');
 define('page_index_button_3','วิสัยทัศน์ พันธกิจ');

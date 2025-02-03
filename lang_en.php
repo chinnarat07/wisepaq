@@ -28,6 +28,7 @@ define('page_footer_0','&copy;' .date("Y"). 'Wisepaq, All Right Reserved.');
 //define('page_footer_10','Contact Us');
 
 //index.php
+define('welcome','WELCOME TO ');
 define('page_index_button_1','Home');
 define('page_index_button_2','About');
 define('page_index_button_3','Vision Mission');

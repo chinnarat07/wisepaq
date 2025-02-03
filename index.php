@@ -18,7 +18,7 @@
               </div>
 
               <h1 class="mb-4">
-                WELCOME TO <br>
+                <?php echo constant("welcome") ?><br>
                 <span class="accent-text">WISEPAQ</span>
               </h1>
               <?php
