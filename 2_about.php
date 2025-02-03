@@ -142,7 +142,7 @@
                             }
                         ?>
                                 <div class="col-md-6 col-lg-4 col-xl-3 fadeInUp d-flex " data-wow-delay="0.1s">
-                                    <div class="service-item  rounded p-4 d-flex flex-column w-100 shadow-lg">
+                                    <div class="service-item text-center rounded p-4 d-flex flex-column w-100 shadow-lg">
                                         <div class="blog-item flex-grow-1">
                                             <div class="blog-img overflow-hidden" style="position: relative;">
                                                 <img src="<?php echo "admin@WSP//images/" . $the_post_image; ?>" class="img-fluid" style="object-fit: cover; height: 200px; width: 100%;" alt="">
