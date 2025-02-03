@@ -818,7 +818,7 @@ section,
 .about .about-title {
   font-size: 2.5rem;
   margin-bottom: .5rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -2274,6 +2274,7 @@ section,
 }
 
 
+
 /*** Spinner ***/
 #spinner {
   opacity: 0;
@@ -2335,10 +2336,12 @@ are {
 }
 
 .btn.btn-primary:hover {
-  background: var(--bs-white) !important;
-  color: var(--bs-primary) !important;
+  background: #5b5b5b !important;
+  color: #ffffff !important;
+  border: 1px solid #5b5b5b; /* เพิ่มขอบให้ชัดเจน */
+  box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.2); /* ปรับเงาให้ดูลึกขึ้น */
+  transform: translateY(-3px); /* ทำให้ปุ่มยกตัวขึ้นเล็กน้อย */
 }
-
 .btn.btn-light {
   background: var(--bs-light) !important;
   color: var(--bs-primary) !important;
@@ -2798,4 +2801,5 @@ are {
   border-radius: 10px;
 
 }
+
 

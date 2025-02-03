@@ -22,7 +22,7 @@
                 <span class="accent-text">WISEPAQ</span>
               </h1>
               <?php
-              $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=2 and tbl_categories.cat_id=14";
+              $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id where tbl_categories.cat_page=1 and tbl_categories.cat_id=1";
               $fetch_posts_data = mysqli_query($connection, $query);
               while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
                 $the_post_id = $Row['post_id'];
@@ -172,7 +172,7 @@
               </div>
               <div>
                 <h3>Sangfor HCI</h3>
-                <p><?php echo constant('page_index_virtualiz_1')?></p>
+                <!-- <p><?php echo constant('page_index_virtualiz_1')?></p> -->
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -185,7 +185,7 @@
               </div>
               <div>
                 <h3>Nutanix</h3>
-                <p><?php echo constant('page_index_virtualiz_2')?></p>
+                <!-- <p><?php echo constant('page_index_virtualiz_2')?></p> -->
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -198,7 +198,7 @@
               </div>
               <div>
                 <h3>Microsoft</h3>
-                <p><?php echo constant('page_index_virtualiz_3')?></p>
+                <!-- <p><?php echo constant('page_index_virtualiz_3')?></p> -->
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -211,7 +211,7 @@
               </div>
               <div>
                 <h3>VMWare</h3>
-                <p><?php echo constant('page_index_virtualiz_4')?></p>
+                <!-- <p><?php echo constant('page_index_virtualiz_4')?></p> -->
                 <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>

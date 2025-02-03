@@ -13,7 +13,7 @@
              <br>
              <h2 class="display-4 mb-2">SOFTWARE DEVELOP</h2>
              <h2 class="fs-3 mb-4"><?php echo constant('page_software_11') ?></h2>
-             <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_2') ?></button>
+             <button type="button" class="btn btn-primary m-1 bn-system" ><?php echo constant('page_software_2') ?></button>
              <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_3') ?></button>
              <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_4') ?></button>
              <button type="button" class="btn btn-primary m-1"><?php echo constant('page_software_5') ?></button>
