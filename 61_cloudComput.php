@@ -26,17 +26,15 @@
                     }
                 ?>
 
-                    <div class="rounded service-item text-center p-4 flex-column align-items-center mt-5">
+                    <div class="rounded-4 service-item text-center p-4 flex-column align-items-center mt-5">
 
                         <div class="blog-item">
                             <img src="<?php echo "admin@WSP//images/" . $the_post_image; ?>" class="img-fluid" style="object-fit:cover;" alt="">
                         </div>
 
                         <br>
-                        <h2 class="display-6 mb-4"><?php echo $the_post_title ?></h2>
-                        <div class="rounded ">
-                            <p class="fs-4 mb-4"><?php echo $the_post_content ?></p>
-                        </div>
+                        <h2 class="display-6 mb-4 fw-bold"><?php echo $the_post_title ?></h2>
+                        <p class="fs-4 mb-4"><?php echo $the_post_content ?></p>
                         <br>
                     </div>
             </div>

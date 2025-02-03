@@ -33,12 +33,12 @@
                              <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
                          </div>
                          <div class="p-4">
-                             <div class="d-flex mb-3">
+                             <div class=" mb-3">
                                  <small class="me-3"><i class="fas fa-building text-primary me-2"></i><?php echo $post_subtitle ?></small>
                                  <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
                              </div>
                              <h4 class="mb-3"><?php echo $the_post_title ?></h4>
-                             <div><?php echo $the_post_content ?></div>
+                             <h2><?php echo $the_post_content ?></h2>
                              <!-- <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a> -->
                          </div>
                      </div>
