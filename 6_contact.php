@@ -6,7 +6,7 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Contact</h2>
-            <p class="mb-5 fs-5"><?php echo constant('page_contact_2') ?></p>
+            <p class="mb-5 fs-5"><?php echo constant('page_contact_1') ?></p>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -14,8 +14,8 @@
             <div class="row g-4 g-lg-5">
                 <div class="col-lg-5">
                     <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Contact Info</h3>
-                        <p >Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+                        <h3><?php echo constant('page_contact_2')?></h3>
+                        <!-- <p >Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p> -->
 
                         <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                             <div class="icon-box">
@@ -32,7 +32,7 @@
                                 <i class="bi bi-telephone"></i>
                             </div>
                             <div class="content">
-                                <h4><?php echo constant('page_contact_1') ?></h4>
+                                <h4><?php echo constant('page_contact_4') ?></h4>
                                 <p><?php echo constant('page_footer_3') ?></p>
                                 <p>081-935-9559</p>
                                 <p>089-615-5559</p>
@@ -44,7 +44,7 @@
                                 <i class="bi bi-envelope"></i>
                             </div>
                             <div class="content">
-                                <h4><?php echo constant('page_contact_4') ?></h4>
+                                <h4><?php echo constant('page_contact_5') ?></h4>
                                 <p><?php echo constant('page_footer_4') ?></p>
                             </div>
                         </div>
@@ -53,8 +53,8 @@
 
                 <div class="col-lg-7">
                     <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-                        <h3>Get In Touch</h3>
-                        <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+                        <h3><?php echo constant('page_contact_6') ?></h3>
+                        <!-- <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p> -->
 
                         <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
                             <div class="row gy-4">
@@ -80,7 +80,7 @@
                                     <div class="error-message"></div>
                                     <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                                    <button type="submit" class="btn"><?php echo constant('page_contact_8') ?></button>
+                                    <button type="submit" class="btn"><?php echo constant('page_contact_11') ?></button>
                                 </div>
 
                             </div>

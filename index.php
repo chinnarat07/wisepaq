@@ -96,7 +96,7 @@
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="feature-box green">
               <i class="bi bi-cloud-check"></i>
-              <h4>Cloud Computing</h4>
+              <h4>ClOUD COMPUTING</h4>
               <p><?php echo constant('page_index_solution_3')?></p>
             </div>
           </div><!-- End Feature Borx-->
@@ -126,7 +126,7 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="display-4 mb-4"><?php echo constant('page_index_activity_1') ?></h2>
             <p class="mb-4"><?php echo constant('page_index_activity_2') ?></p>
-            <a href="#" class="btn btn-cta"><?php echo constant('page_index_activity_3') ?></a>
+            <a href="3_activity.php" class="btn btn-cta"><?php echo constant('page_index_activity_3') ?></a>
           </div>
 
           <!-- Abstract Background Elements -->
@@ -252,7 +252,7 @@
             <div class="text-center">
               <h3><?php echo constant('page_index_contact_1') ?></h3>
               <p><?php echo constant('page_index_contact_2') ?></p>
-              <a class="cta-btn" href="#"><?php echo constant('page_index_contact_3') ?></a>
+              <a class="cta-btn" href="6_contact.php"><?php echo constant('page_index_contact_3') ?></a>
             </div>
           </div>
         </div>

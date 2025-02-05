@@ -174,17 +174,20 @@ define('page_security_6', 'A system that encrypts data to protect it from unauth
 define('page_security_7', 'A system that monitors and analyzes network traffic to detect and respond to security incidents, ensuring the security of your network and data.');
 
 //contact.php
-define('page_contact_1', 'Phone Number');
-define('page_contact_2', 'If you have any questions or we can support your business.');
-define('page_contact_3', 'Name');
-define('page_contact_4', 'Email Address');
-define('page_contact_5', 'Subject');
-define('page_contact_6', 'Message');
-define('page_contact_7', 'Leave a message here');
-define('page_contact_8', 'Send Message');
-define('page_contact_9', 'Contact Information');
-define('page_contact_10', 'Address');
-define('page_contact_11', 'Phone');
+
+define('page_contact_1', 'If you have any questions or we can support your business.');
+define('page_contact_2', 'Contact Info');
+define('page_contact_3', 'Contact Information');
+define('page_contact_4', 'Phone Number');
+define('page_contact_5', 'Email Address');
+
+define('page_contact_6', 'Get In Touch');
+define('page_contact_7', 'Your Name');
+define('page_contact_8', 'Your Email');
+define('page_contact_9', 'Subject');
+define('page_contact_10', 'Message');
+define('page_contact_11', 'Send Message');
+
 
 /*Nav*/
 define('nav_title_intro', 'Introduction');
