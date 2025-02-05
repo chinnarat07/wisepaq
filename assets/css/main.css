@@ -2805,4 +2805,16 @@ are {
   transition-timing-function: linear !important;
 }
 
+/* Service Product*/
+.service-content{
+  padding-left: 0px;
+}
+.service-content ul{
+  list-style: none;
+  padding-left: 14.8px;
+ 
+}
+.service-content ul li{
+  padding-bottom: 10px;
+}
 

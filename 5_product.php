@@ -28,12 +28,13 @@
 
              
                                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="service-item text-left rounded p-4 d-flex flex-column w-100 shadow-lg">
+                                    <div class="service-item text-left rounded-3 p-4 d-flex flex-column w-100 h-100 shadow-lg">
                                         <div class="blog-item flex-grow-1">
-                                            <div class="blog-img overflow-hidden" style="position: relative;">
-                                                <img src="<?php echo "admin@WSP/images/" . $the_post_image; ?>" class="img-fluid" style="object-fit: cover; height: auto; width: auto;" alt="">
+                                            <div class="blog-img overflow-hidden d-flex justify-content-center mt-2" style="position: relative;">
+                                                <img src="<?php echo "admin@WSP/images/" . $the_post_image; ?>" class="img-fluid " style="object-fit: cover; height: auto; width: auto;" alt="">
                                             </div>
-                                            <div class="service-content" style="height:420px">
+                                            <hr>
+                                            <div class="service-content" >
                                                 <p class="mb-0"><?php echo $the_post_content; ?></p>
                                             </div>
                                         </div>

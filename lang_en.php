@@ -28,10 +28,6 @@ define('page_footer_0','&copy;' .date("Y"). 'Wisepaq, All Right Reserved.');
 //define('page_footer_10','Contact Us');
 
 //index.php
-<<<<<<< HEAD
-define('welcome','WELCOME TO ');
-=======
->>>>>>> 208f5477173654db165055342d39e06565b9812c
 define('page_index_button_1','Home');
 define('page_index_button_2','About');
 define('page_index_button_3','Vision Mission');
@@ -104,92 +100,6 @@ define('page_vision_2','Be known and trusted as a business partner providing tra
 define('page_vision_3','From receiving the originating product to delivering the product to the destination customer (Door To Door) and Cross border');
 define('page_vision_4','A complete solution for every customer in every global business. With highly committed and experienced employees. perfect service');
 define('page_vision_5','operational excellence and modern technology We upgrade your transportation to keep up with changes in the business world.');
-<<<<<<< HEAD
-
-define('page_mission_1','Mission');
-define('page_mission_2','Is a logistics service provider with expertise in cross border transportation services.');
-define('page_mission_3','With many forms of continuous transport and complete customs procedures');
-define('page_mission_4','Help customers transport goods at an affordable price, quickly and safely with our seamless transportation network.');
-define('page_mission_5','And can provide advice on transportation services and customs procedures by our team of personnel with expertise and experience of more than 30 years.');
-
-
-
-
-//service.php
-define('page_service_1','Our Services');
-define('page_service_2','Best Logistic Services');
-define('page_service_3','Air Freight');
-define('page_service_4','Services for importing and exporting products domestically and abroad. Services include direct flights and connecting flights to destinations around the world.');
-define('page_service_5','Ocean Freight');
-define('page_service_6','Providing transportation services for both Full Container Load (FCL) and Less than Container Load (LCL), covering ports on all continents.');
-define('page_service_7','Land Transport');
-define('page_service_8','Cross-border trucking service (Cross Border Service) to countries in Indochina, including Burma and Laos.');
-define('page_service_9','Cargo Storage');
-define('page_service_10','Complete warehouse management service with WMS system, controlling product picking and distribution.');
-
-//cloudComput.php
-define('page_cloudComput_1','CLOUD COMPUTING');
-define('page_cloudComput_2','We provide cloud computing services to help businesses store, manage, and process data more efficiently and securely.');
-define('page_cloudComput_3','Computer resources through the internet, such as servers and software, without the need to invest in hardware. It allows access to data from anywhere and helps save costs.');
-define('page_cloudComput_4','A service that provides cloud storage space where users can upload, download, and store data from anywhere with an internet connection.');
-
-
-
-//software.php
-define('page_software_1','We have a team to develop websites and programs in various formats as required.');
-define('page_software_2','Ship System');
-define('page_software_3','Parts System');
-define('page_software_4','Factory System');
-define('page_software_5','ERP');
-define('page_software_6','DEPOT System');
-define('page_software_7','Hospital Registration System');
-define('page_software_8','Dormitory System');
-define('page_software_9','Nabour System');
-define('page_software_10','ETC.');
-define('page_software_11','What We Have');
-
-//outsource.php 
-define('page_outsource_1','Outsourcing services or hiring temporary employees, whether on a monthly, annual, or per-task basis, involves contracting a company or individual with specific knowledge, skills, and expertise in certain areas to perform a task. This could either be for the entire task or just a part of it. The key point is that it should not affect the overall operations of your company.');
-define('page_outsource_2','Outsource Services Since 2009');
-define('page_outsource_3','With over 10 years of experience in providing outsourced services, we help businesses connect technology and enhance operational efficiency.');
-define('page_outsource_4','Over 200 licenses');
-define('page_outsource_5','We proudly support over 200 outsource licenses, helping businesses enhance efficiency and streamline operations.');
-
-//itsupport.php
-define('page_itsupport_1','IT SUPPORT');
-define('page_itsupport_2','We provide products and technologies tailored to various businesses, along with the best services for our customers.');
-define('page_itsupport_3','A system that connects mobile phones to an internal telephone system (PBX), allowing calls to be made and received through mobile networks, which helps reduce communication costs.');
-define('page_itsupport_4','A telephone system that uses the internet to transmit voice instead of traditional phone lines, enabling cheaper and more convenient calls.');
-define('page_itsupport_5','A telephone system that uses IP (Internet Protocol) technology to manage internal phone calls within an organization, making it easier and more affordable to make and receive calls.');
-define('page_itsupport_6','A system used for multi-party phone or video conferences, allowing multiple participants to join a meeting at the same time.');
-define('page_itsupport_7','A system that records all phone calls, which can be used for future reference or auditing purposes.');
-define('page_itsupport_8','Software used to create a VOIP-based telephone system (similar to an IPBX) within an organization, including features like conferencing, voice recording, and call management.');
-define('page_itsupport_9','Broadcasting radio signals over the internet instead of traditional radio waves, allowing radio stations to reach a global audience.');
-define('page_itsupport_10','COMMUNICATION');
-define('page_itsupport_11','The central system that switches and routes calls between telephone networks and VoIP users. This specific system will evaluate the best way to route multiple simultaneous calls. Its efficiency allows business users to share limited resources.');
-
-//security.php
-define('page_security_1','SECURITY');
-define('page_security_2','We provide a wide range of security services to protect your business from cyber threats and ensure the safety of your data.');
-define('page_security_3','We provide CCTV, Firewall, Fingerprint scan, Face scan, Palm scan, and Fire Alarm systems.');
-define('page_security_4','A system that protects computer systems and networks from unauthorized access, attacks, or damage, ensuring the confidentiality, integrity, and availability of data.');
-define('page_security_5','A system that detects, prevents, and responds to cyber threats, including malware, ransomware, and phishing attacks, to protect your data and systems.');
-define('page_security_6','A system that encrypts data to protect it from unauthorized access, ensuring that only authorized users can read or modify the data.');
-define('page_security_7','A system that monitors and analyzes network traffic to detect and respond to security incidents, ensuring the security of your network and data.');
-
-//contact.php
-define('page_contact_1','Phone Number');
-define('page_contact_2','If you have any questions or we can support your business.');
-define('page_contact_3','Name');
-define('page_contact_4','Email Address');
-define('page_contact_5','Subject');
-define('page_contact_6','Message');
-define('page_contact_7','Leave a message here');
-define('page_contact_8','Send Message');
-define('page_contact_9','Contact Information');
-define('page_contact_10','Address');
-define('page_contact_11','Phone');
-=======
 
 define('page_mission_1','Mission');
 define('page_mission_2','Is a logistics service provider with expertise in cross border transportation services.');
@@ -264,7 +174,6 @@ define('page_contact_7','Leave a message here');
 define('page_contact_8','Send Message');
 
 
->>>>>>> 208f5477173654db165055342d39e06565b9812c
 
 
 
@@ -312,8 +221,4 @@ define('fotter_whoami_phone','Phone');
 define('fotter_whoami_email','Email');
 define('fotter_website','Web')
 
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 208f5477173654db165055342d39e06565b9812c
