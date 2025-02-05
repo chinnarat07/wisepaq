@@ -153,7 +153,7 @@ if (isset($_GET["edit"], $_POST["update_category"])) {
                     </thead>
                     <tbody>
                         <?php
-                        $query = "SELECT * FROM tbl_categories";
+                        $query = "SELECT * FROM tbl_categories";                        ;
                         $fetch_data = mysqli_query($connection, $query);
                         while ($Row = mysqli_fetch_assoc($fetch_data)) {
                             echo "<tr>

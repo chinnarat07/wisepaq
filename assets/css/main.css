@@ -513,7 +513,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 40px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -531,7 +531,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -1422,7 +1422,7 @@ section,
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
+  width: 70px;
   height: 12px;
   opacity: 1;
   background-color: color-mix(in srgb, var(--default-color), transparent 80%);
@@ -2800,6 +2800,9 @@ are {
   display: block;
   border-radius: 10px;
 
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
 }
 
 

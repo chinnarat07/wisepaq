@@ -1,17 +1,17 @@
  <?php include("./includes/header.php") ?>
 
- <div class="text-center mx-auto wow fadeInUp section-title mt-4" data-wow-delay="0.1s" style="max-width: 800px;">
+ <div class="text-center mx-auto wow fadeInUp section-title mt-5" data-wow-delay="0.1s" style="max-width: 800px;">
     <h2 class="display-5 mb-4">CLOUD COMPUTING</h2>
     <p class="mb-0 fs-5"><?php echo constant('page_cloudComput_3') ?></p>
  </div>
 
     <!-- product Start -->
-    <div class="container-fluid service">
+    <div class="container-fluid service" style="height: 50rem;">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 80%;">
             <div class="row g-1 justify-content-center">
 
                 <?php
-                $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=6";
+                $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=6 AND tbl_categories.cat_id=6 AND tbl_posts.post_status='Published'";
                 $fetch_posts_data = mysqli_query($connection, $query);
                 while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
                     $the_post_id = $Row['post_id'];

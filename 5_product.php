@@ -10,7 +10,7 @@
          <div class="row g-5">
 
              <?php
-                $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=5";
+                $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=5 AND tbl_categories.cat_id=5 AND tbl_posts.post_status='Published'";
                 $fetch_posts_data = mysqli_query($connection, $query);
                 while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
                     $the_post_id = $Row['post_id'];

@@ -12,17 +12,8 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-              <div class="company-badge mb-4">
-                <i class="bi bi-gear-fill me-2"></i>
-                Working for your success
-              </div>
-
-              <h1 class="mb-4">
-                <?php echo constant("welcome") ?><br>
-                <span class="accent-text">WISEPAQ</span>
-              </h1>
               <?php
-              $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id where tbl_categories.cat_page=1 and tbl_categories.cat_id=1";
+              $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id where tbl_categories.cat_page=1 AND tbl_categories.cat_id=1 AND tbl_posts.post_status='Published'";
               $fetch_posts_data = mysqli_query($connection, $query);
               while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
                 $the_post_id = $Row['post_id'];
@@ -56,7 +47,7 @@
         </div>
 
         <?php
-        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=1 and tbl_categories.cat_id=15";
+        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=1 AND tbl_categories.cat_id=15 AND tbl_posts.post_status='Published'";
         $fetch_posts_data = mysqli_query($connection, $query);
         while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
           $the_post_id = $Row['post_id'];
@@ -88,33 +79,33 @@
 
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="feature-box orange">
-              <i class="bi bi-award"></i>
-              <h4>Corporis voluptates</h4>
-              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              <i class="bi bi-gear"></i>
+              <h4>ENGINEERING</h4>
+              <p><?php echo constant('page_index_solution_1')?></p>
             </div>
           </div><!-- End Feature Borx-->
 
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="feature-box blue">
-              <i class="bi bi-patch-check"></i>
-              <h4>Explicabo consectetur</h4>
-              <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+              <i class="bi bi-reception-4"></i>
+              <h4>NETWORK SOLUTIONS</h4>
+              <p><?php echo constant('page_index_solution_2')?></p>
             </div>
           </div><!-- End Feature Borx-->
 
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="feature-box green">
-              <i class="bi bi-sunrise"></i>
-              <h4>Ullamco laboris</h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+              <i class="bi bi-cloud-check"></i>
+              <h4>Cloud Computing</h4>
+              <p><?php echo constant('page_index_solution_3')?></p>
             </div>
           </div><!-- End Feature Borx-->
 
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="feature-box red">
               <i class="bi bi-shield-check"></i>
-              <h4>Labore consequatur</h4>
-              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+              <h4>SECURITY</h4>
+              <p><?php echo constant('page_index_solution_4')?></p>
             </div>
           </div><!-- End Feature Borx-->
 
@@ -124,104 +115,6 @@
 
     </section><!-- /Features Cards Section -->
 
-    <!-- Features 2 Section -->
-    <section id="features-2" class="features-2 section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-
-
-      </div>
-
-    </section><!-- /Features 2 Section -->
-
-    <!-- Call To Action 2 Section -->
-    <section id="call-to-action-2" class="call-to-action-2 section dark-background">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>Call To Action</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a class="cta-btn" href="#">Call To Action</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Call To Action 2 Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>VIRTUALIZATION</h2>
-        <p>What We Can Do</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <img src="./img/imgMain/icon/icon-sangfor.png" alt="" width="50" height="50">
-              </div>
-              <div>
-                <h3>Sangfor HCI</h3>
-                <p><?php echo constant('page_index_virtualiz_1')?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-              <img src="./img/imgMain/icon/icon-nutanix.png" alt="" width="45" height="45">
-              </div>
-              <div>
-                <h3>Nutanix</h3>
-                <p><?php echo constant('page_index_virtualiz_2')?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-              <img src="./img/imgMain/icon/icon-microsoft.png" alt="" width="45" height="45">
-              </div>
-              <div>
-                <h3>Microsoft</h3>
-                <p><?php echo constant('page_index_virtualiz_3')?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-              <img src="./img/imgMain/icon/icon-vmware.png" alt="" width="50" height="50">
-              </div>
-              <div>
-                <h3>VMWare</h3>
-                <p><?php echo constant('page_index_virtualiz_4')?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
 
 
     <!-- Call To Action Section -->
@@ -231,9 +124,9 @@
 
         <div class="row content justify-content-center align-items-center position-relative">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="display-4 mb-4">Maecenas tempus tellus eget condimentum</h2>
-            <p class="mb-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
-            <a href="#" class="btn btn-cta">Call To Action</a>
+            <h2 class="display-4 mb-4"><?php echo constant('page_index_activity_1') ?></h2>
+            <p class="mb-4"><?php echo constant('page_index_activity_2') ?></p>
+            <a href="#" class="btn btn-cta"><?php echo constant('page_index_activity_3') ?></a>
           </div>
 
           <!-- Abstract Background Elements -->
@@ -279,77 +172,113 @@
 
     </section><!-- /Call To Action Section -->
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>VIRTUALIZATION</h2>
+        <p>What We Can Do</p>
+      </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="partner/123.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/1245.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/140344_3-Photoroom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/452.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/456.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/6004705.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/7-qfq487cd0wnzpi4svq7ihj0nh5kng90g0g8h0tgi08-Photoroom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/ais-logo - Copy2-Photoroom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/Aruba_Networks-Logo.wine (1).png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/bitdefender1-Photoroom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/extreme_partner_network - Copy-Photoroom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/Fortinet-Logo.wine.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/ais-Photoroom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/kaspersky-rebranding-in-details-1-Photoroom (1).png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/Logitech-Logo-Photoroom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/Nutanix-Logo.wine (1).png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/SolarWinds-Logo.wine-Photoroom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/sophos-firewall-Photoroom (2) (1).png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/symphony1-Photoroom (1).png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/veritas6808-Photoroom (1) (1).png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/vmwar-300x300 (1)-Photoroom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/WALLIX_Logo_Site (1).png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="partner/watchguard-cyber-security-company.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
+        <div class="row g-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="./img/imgMain/icon/icon-sangfor.png" alt="" width="50" height="50">
+              </div>
+              <div>
+                <h3>Sangfor HCI</h3>
+                <p><?php echo constant('page_index_virtualiz_1') ?></p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="./img/imgMain/icon/icon-nutanix.png" alt="" width="45" height="45">
+              </div>
+              <div>
+                <h3>Nutanix</h3>
+                <p><?php echo constant('page_index_virtualiz_2') ?></p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="./img/imgMain/icon/icon-microsoft.png" alt="" width="45" height="45">
+              </div>
+              <div>
+                <h3>Microsoft</h3>
+                <p><?php echo constant('page_index_virtualiz_3') ?></p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="./img/imgMain/icon/icon-vmware.png" alt="" width="50" height="50">
+              </div>
+              <div>
+                <h3>VMWare</h3>
+                <p><?php echo constant('page_index_virtualiz_4') ?></p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
         </div>
 
       </div>
 
-    </section><!-- /Clients Section -->
+    </section><!-- /Services Section -->
 
+    <!-- Call To Action 2 Section -->
+    <section id="call-to-action-2" class="call-to-action-2 section dark-background">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3><?php echo constant('page_index_contact_1') ?></h3>
+              <p><?php echo constant('page_index_contact_2') ?></p>
+              <a class="cta-btn" href="#"><?php echo constant('page_index_contact_3') ?></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Call To Action 2 Section -->
+
+    <?php
+        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=1 AND tbl_categories.cat_id=17 AND tbl_posts.post_status='Published'";
+        $fetch_posts_data = mysqli_query($connection, $query);
+        while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
+          $the_post_id = $Row['post_id'];
+          $the_post_image = $Row['post_image'];
+          if ($_SESSION['lang'] == 'en') {
+
+            $the_post_title = base64_decode($Row['post_title']);
+            $the_post_content = base64_decode($Row['post_content']);
+          } else {
+            $the_post_title = base64_decode($Row['post_title_thai']);
+            $the_post_content = base64_decode($Row['post_content_thai']);
+          }
+        ?>
+          <div>
+            <?php echo $the_post_content; ?>
+          </div>
+        <?php } ?>
   </main>
 
   <!-- Footer Start -->

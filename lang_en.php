@@ -28,7 +28,6 @@ define('page_footer_0','&copy;' .date("Y"). 'Wisepaq, All Right Reserved.');
 //define('page_footer_10','Contact Us');
 
 //index.php
-define('welcome','WELCOME TO ');
 define('page_index_button_1','Home');
 define('page_index_button_2','About');
 define('page_index_button_3','Vision Mission');
@@ -56,8 +55,18 @@ define('page_index_virtualiz_2','Nutanix is a software and cloud-related hardwar
 define('page_index_virtualiz_3','Microsoft systems are a set of products and services developed by Microsoft, including the Windows operating system, Microsoft Office software, the Azure cloud platform, and other tools that help with data management, collaboration, and the use of technology in organizations and daily life.');
 define('page_index_virtualiz_4','VMware is a virtualization software that allows you to create and manage multiple virtual machines on a single piece of hardware. It helps users create and manage virtual systems on a single server, maximizing resource efficiency, reducing costs, and increasing flexibility in IT system management.');
 
+define('page_index_solution_1','We offer engineering solutions that help organizations improve their infrastructure and enhance workflow efficiency, enabling scalability and increased productivity.');
+define('page_index_solution_2','We provide end-to-end network solutions tailored to the specific needs of your organization, ensuring seamless connectivity without disrupting operations.');
+define('page_index_solution_3','Take your business to the next level of modernity and efficiency! Access data and applications anytime, anywhere. Scale your operations as needed, reduce costs, enhance performance, and drive your business towards unlimited success');
+define('page_index_solution_4','We provide protection for your team with advanced technologies that enable seamless collaboration in a secure environment.');
 
+define('page_index_activity_1','We at Wisepaq focus on providing excellent service and offering the best solutions for our customers.');
+define('page_index_activity_2',"At Wisepaq, we are committed to providing the highest quality service and fully meeting our customers' needs. We don’t just focus on offering the best products and solutions, but also prioritize creating a positive experience for our customers through efficient support and attentive care at every step of their journey with us.");
+define('page_index_activity_3','View Activity');
 
+define('page_index_contact_1',"Let's build the future together.");
+define('page_index_contact_2',"Let's collaborate to create new opportunities that will lead your business to sustainable success, growing with us every step of the way. We have the tools and solutions that will help you break through boundaries.");
+define('page_index_contact_3','Contact Us');
 
 //about.php
 define('page_about_title_sm','LEARN ABOUT US');
@@ -123,16 +132,7 @@ define('page_cloudComput_4','A service that provides cloud storage space where u
 
 //software.php
 define('page_software_1','We have a team to develop websites and programs in various formats as required.');
-define('page_software_2','Ship System');
-define('page_software_3','Parts System');
-define('page_software_4','Factory System');
-define('page_software_5','ERP');
-define('page_software_6','DEPOT System');
-define('page_software_7','Hospital Registration System');
-define('page_software_8','Dormitory System');
-define('page_software_9','Nabour System');
-define('page_software_10','ETC.');
-define('page_software_11','What We Have');
+
 
 //outsource.php 
 define('page_outsource_1','Outsourcing services or hiring temporary employees, whether on a monthly, annual, or per-task basis, involves contracting a company or individual with specific knowledge, skills, and expertise in certain areas to perform a task. This could either be for the entire task or just a part of it. The key point is that it should not affect the overall operations of your company.');

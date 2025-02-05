@@ -3,10 +3,10 @@
         <div class="container-fluid bg-white text-dark footer mt-0 wow fadeIn " data-wow-delay="0.1s ">
             <div class="container pt-5 pb-2">
                 <div class="row g-5 ">
-                    <div class="col-lg-3 col-md-6 py-lg-5" >
-                        <div class="shadow pb-5 pt-3" style=" border-radius: 50%; border: 2px  solid rgb(208, 206, 206);">
-                        <a href="index.php">
-                            <img src="img/wisepaq.jpg" alt="" class="mx-auto d-block " style="margin-top: 1rem; width:110px ;height:110px;">
+                    <div class="col-lg-3 col-md-6 py-lg-5 px-0 d-flex justify-content-center" >
+                        <div class="shadow pb-3 pt-3" style=" border-radius: 50%; border: 2px  solid rgb(208, 206, 206); height:16rem; width:20rem;">
+                        <a href="index.php" class="text-wrap ">
+                            <img src="img/wisepaq.jpg" alt="" class="mx-auto d-block " style="margin-top: 2rem; width:110px ;height:110px;">
                             <p class="text-dark mt-2  fw-bold p-0 text-center" ><?php echo constant('page_footer_1.1') ?></p>
                         </a>
                         </div>
@@ -19,14 +19,14 @@
                         <p class="mb-2 "><i class="fa fa-envelope me-3 text-primary"></i><?php echo constant('page_footer_4') ?></p>
                         <p class="mb-2 "><i class="fab fa-line me-3 text-primary"></i><?php echo constant('page_footer_4.1') ?></p>
                         <div class="d-flex ">
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/Wisepaqbusiness/" target="_blank">
-                                <i class="bi bi-facebook"></i></a>
+                            <a class="btn btn-outline-light btn-social " href="https://www.facebook.com/Wisepaqbusiness/" target="_blank">
+                                <i class="bi bi-facebook fs-4 mt-1"></i></a>
                                 <a class="btn btn-outline-light btn-social" href="https://x.com/Wisepaq" target="_blank">
-                                <i class="bi bi-twitter-x"></i></a>
+                                <i class="bi bi-twitter-x fs-4 mt-1"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://youtube.com/@wisepaq-business?feature=shared" target="_blank">
-                                <i class="bi bi-youtube"></i></a>
+                                <i class="bi bi-youtube fs-4 mt-1"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/peraphol/" target="_blank">
-                                <i class="bi bi-instagram"></i></a>
+                                <i class="bi bi-instagram fs-4 mt-1"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6  ps-5">

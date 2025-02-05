@@ -44,7 +44,7 @@
     <!-- content outsource Start -->
     <div class="container">
         <?php
-        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=8";
+        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=8 AND tbl_categories.cat_id=8 AND tbl_posts.post_status='Published'";
         $fetch_posts_data = mysqli_query($connection, $query);
         $counter = 1; // ตัวแปรสำหรับนับลูป
         while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {

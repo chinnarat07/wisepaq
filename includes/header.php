@@ -18,7 +18,7 @@ include "./includes/db.php";
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <?php
   $current_page = basename($_SERVER['PHP_SELF']);
-  $query_title = "SELECT * FROM menu";
+  $query_title = "SELECT * FROM tbl_menu";
   $fetch_data = mysqli_query($connection, $query_title);
 
   // ค่าเริ่มต้น
@@ -37,7 +37,7 @@ include "./includes/db.php";
       }
 
       // ดึงเมนูย่อย
-      $query_sub = "SELECT * FROM menu_dd WHERE id_menu = $menu_id";
+      $query_sub = "SELECT * FROM tbl_menu_dd WHERE id_menu = $menu_id";
       $fetch_data_sub = mysqli_query($connection, $query_sub);
 
       if (mysqli_num_rows($fetch_data_sub) > 0) {
@@ -118,8 +118,8 @@ include "./includes/db.php";
           <small>02-119-5300</small>
         </div>
         <div class="h-100 d-inline-flex align-items-center ">
-          <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/Wisepaqbusiness/" target="_blank"><i class="bi bi-facebook"></i></a>
-          <a class="btn btn-sm-square bg-white text-primary me-1" href="https://x.com/Wisepaq" target="_blank"><i class="bi bi-twitter-x" ></i></a>
+          <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/Wisepaqbusiness/" target="_blank"><i class="bi bi-facebook "></i></a>
+          <a class="btn btn-sm-square bg-white text-primary me-1" href="https://x.com/Wisepaq" target="_blank"><i class="bi bi-twitter-x " ></i></a>
           <a class="btn btn-sm-square bg-white text-primary me-1" href="https://youtube.com/@wisepaq-business?feature=shared" target="_blank"><i class="bi bi-youtube"></i></a>
           <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/peraphol/" target="_blank"><i class="bi bi-instagram"></i></a>
         </div>
@@ -138,7 +138,7 @@ include "./includes/db.php";
       <div class="navbar-nav ms-auto p-4 p-lg-0">
         <?php
         $current_page = basename($_SERVER['PHP_SELF']);
-        $query = "SELECT * FROM menu";
+        $query = "SELECT * FROM tbl_menu";
         $fetch_data = mysqli_query($connection, $query);
 
         if (mysqli_num_rows($fetch_data) == 0) {
@@ -153,7 +153,7 @@ include "./includes/db.php";
             } else {
               $menu_title = $Row_menu['menuTH'];
             }
-            $query_sub = "SELECT * FROM menu_dd WHERE id_menu = $menu_id";
+            $query_sub = "SELECT * FROM tbl_menu_dd WHERE id_menu = $menu_id";
             $fetch_data_sub = mysqli_query($connection, $query_sub);
 
             if (mysqli_num_rows($fetch_data_sub) == 0) {

@@ -1,6 +1,6 @@
 <?php include("./includes/header.php") ?>
 
-<div class="text-center mx-auto wow fadeInUp section-title mt-4" data-wow-delay="0.1s" style="max-width: 800px;">
+<div class="text-center mx-auto wow fadeInUp section-title mt-5" data-wow-delay="0.1s" style="max-width: 800px;">
     <h2 class="display-5 mb-4">OUR SOLUTIONS</h2>
     <p class="mb-0 fs-5"><?php echo constant('page_solution_2') ?></p>
  </div>
@@ -8,7 +8,7 @@
  <!-- Solution content Start -->
         <div class="container">
                 <?php
-                $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id where tbl_categories.cat_page=4";
+                $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id where tbl_categories.cat_page=4 AND tbl_categories.cat_id=4 AND tbl_posts.post_status='Published'";
                 $fetch_posts_data = mysqli_query($connection, $query);
                 $counter = 1; // ตัวแปรสำหรับนับลูป
                 while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
