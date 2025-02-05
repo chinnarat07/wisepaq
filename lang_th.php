@@ -156,6 +156,9 @@ define('page_contact_5','หัวข้อ');
 define('page_contact_6','ข้อความ');
 define('page_contact_7','ฝากข้อความไว้ที่นี่');
 define('page_contact_8','ส่งข้อความ');
+define('page_contact_9','ที่อยู่');
+define('page_contact_10','เบอร์โทรศัพท์');
+define('page_contact_11','อีเมล์');
 
 
 //vision.php

@@ -6,7 +6,7 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Contact</h2>
-            <p><?php echo constant('page_contact_2') ?></p>
+            <p class="mb-5 fs-5"><?php echo constant('page_contact_2') ?></p>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -15,7 +15,7 @@
                 <div class="col-lg-5">
                     <div class="info-box" data-aos="fade-up" data-aos-delay="200">
                         <h3>Contact Info</h3>
-                        <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+                        <p >Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
 
                         <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                             <div class="icon-box">
