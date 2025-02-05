@@ -148,17 +148,23 @@ define('page_security_6','ซอฟต์แวร์ที่ใช้ในก
 define('page_security_7','บริการ DDoS Protection');
 
 //contact.php
-define('page_contact_1','เบอร์ติดต่อ');
-define('page_contact_2','หากคุณมีคำถามหรือเราสามารถสนับสนุนธุรกิจของคุณ');
-define('page_contact_3','ชื่อ');
-define('page_contact_4','อีเมล์ติดต่อ');
-define('page_contact_5','หัวข้อ');
-define('page_contact_6','ข้อความ');
-define('page_contact_7','ฝากข้อความไว้ที่นี่');
-define('page_contact_8','ส่งข้อความ');
-define('page_contact_9','ที่อยู่');
-define('page_contact_10','เบอร์โทรศัพท์');
-define('page_contact_11','อีเมล์');
+
+
+define('page_contact_1','หากคุณมีคำถามหรือเราสามารถสนับสนุนธุรกิจของคุณ');
+define('page_contact_2','ข้อมูลติดต่อ');
+define('page_contact_3','ที่อยู่');
+define('page_contact_4','เบอร์ติดต่อ');
+define('page_contact_5','อีเมล์ติดต่อ');
+
+define('page_contact_6','ติดต่อเรา');
+define('page_contact_7','ชื่อติดต่อ');
+define('page_contact_8','อีเมล์ติดต่อ');
+define('page_contact_9','เรื่องที่จะติดต่อ');
+define('page_contact_10','รายละเอียด');
+define('page_contact_11','ส่งข้อความ');
+
+
+
 
 
 //vision.php
