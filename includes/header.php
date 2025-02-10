@@ -27,8 +27,14 @@ include "./includes/db.php";
     while ($Row_menu = mysqli_fetch_assoc($fetch_data)) {
       $menu_id = $Row_menu['id_menu'];
       $link = basename($Row_menu['link']); // ใช้ basename() เพื่อลดปัญหาพาธ
-      $menu_title = ($_SESSION['lang'] == 'en') ? $Row_menu['name'] . " | WISEPAQ" : $Row_menu['menuTH'] . " | WISEPAQ";
-
+      // $menu_title = ($_SESSION['lang'] == 'en') ? $Row_menu['name'] . " | WISEPAQ" : $Row_menu['menuTH'] . " | WISEPAQ";
+      if ($_SESSION['lang'] == 'en') {
+        $menu_title =  $Row_menu['name'] . " | WISEPAQ";
+      } elseif ($_SESSION['lang'] == 'th') {
+        $menu_title =  $Row_menu['menuTH'] . " | WISEPAQ";
+      } else {
+        $menu_title =  $Row_menu['menuCN'] . " | WISEPAQ";
+      }
       // ตรวจสอบว่าหน้าปัจจุบันตรงกับเมนูหลักหรือไม่
       if ($current_page == "index.php") {
         $page_title = "WISEPAQ | วางระบบ Network | Thailand";
@@ -43,8 +49,14 @@ include "./includes/db.php";
       if (mysqli_num_rows($fetch_data_sub) > 0) {
         while ($Row_sub = mysqli_fetch_assoc($fetch_data_sub)) {
           $link_sub = basename($Row_sub['link_dd']);
-          $menu_title_sub = ($_SESSION['lang'] == 'en') ? $Row_sub['name_dd'] . " | WISEPAQ" : $Row_sub['menuTH_dd'] . " | WISEPAQ";
-
+          // $menu_title_sub = ($_SESSION['lang'] == 'en') ? $Row_sub['name_dd'] . " | WISEPAQ" : $Row_sub['menuTH_dd'] . " | WISEPAQ";
+          if ($_SESSION['lang'] == 'en') {
+            $menu_title_sub = $Row_sub['name_dd'] . " | WISEPAQ";
+          } elseif ($_SESSION['lang'] == 'th') {
+            $menu_title_sub = $Row_sub['menuTH_dd'] . " | WISEPAQ";
+          } else {
+            $menu_title_sub = $Row_sub['menuCN_dd'] . " | WISEPAQ";
+          }
           // ตรวจสอบว่าหน้าปัจจุบันตรงกับเมนูย่อยหรือไม่
           if ($current_page == $link_sub) {
             $page_title = $menu_title_sub;
@@ -128,8 +140,8 @@ include "./includes/db.php";
   </div>
   <!-- Topbar End -->
 
-  <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm rounded-0 p-0">
-    <div class="container-fluid container-xl d-flex justify-content-between align-items-center px-0">
+  <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm p-0 rounded-4">
+    <div class="container-fluid container-xl d-flex justify-content-between align-items-center ">
 
       <!-- Logo -->
       <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -143,7 +155,7 @@ include "./includes/db.php";
       </button>
 
       <!-- Navbar Menu -->
-      <nav class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+      <nav class="collapse navbar-collapse justify-content-center " id="navbarCollapse">
         <ul class="navbar-nav ">
           <?php
           // ดึงข้อมูลเมนูจากฐานข้อมูล
@@ -159,11 +171,11 @@ include "./includes/db.php";
               $link = $Row_menu['link'];
               if ($_SESSION['lang'] == 'en') {
                 $menu_title = $Row_menu['name'];
-            } elseif ($_SESSION['lang'] == 'th') {
+              } elseif ($_SESSION['lang'] == 'th') {
                 $menu_title = $Row_menu['menuTH'];
-            } else {
+              } else {
                 $menu_title = $Row_menu['menuCN'];
-            }
+              }
 
               // ตรวจสอบเมนูย่อย
               $query_sub = "SELECT * FROM tbl_menu_dd WHERE id_menu = $menu_id";
@@ -180,12 +192,12 @@ include "./includes/db.php";
                 while ($Row_sub = mysqli_fetch_assoc($fetch_data_sub)) {
                   $link_sub = $Row_sub['link_dd'];
                   if ($_SESSION['lang'] == 'en') {
-                    $menu_title_sub = $Row_sub['menu_dd'];
-                } elseif ($_SESSION['lang'] == 'th') {
+                    $menu_title_sub = $Row_sub['name_dd'];
+                  } elseif ($_SESSION['lang'] == 'th') {
                     $menu_title_sub = $Row_sub['menuTH_dd'];
-                } else {
+                  } else {
                     $menu_title_sub = $Row_sub['menuCN_dd'];
-                }
+                  }
                   echo '<li><a href="' . $link_sub . '" class="dropdown-item">' . $menu_title_sub . '</a></li>';
                 }
                 echo '</ul></li>';
@@ -195,21 +207,27 @@ include "./includes/db.php";
           ?>
         </ul>
         <div class="mobile-lang">
-        <div class="btn-group btn-group-toggle me-4 w-100 nav-mobile-lang" data-toggle="buttons">
-          <label class="btn btn-primary text-light ps-0 fs-6 <?php if ($_SESSION['lang'] == 'th') {
-                                                                echo 'active';
-                                                              } ?>">
-            <input type="radio" style="appearance: none;" id='select_lang' onchange="change_lang(this.value)" autocomplete="off" value="th">
-            <img src="img/flag.png" alt="TH Flag" style="width: 23px; height: 23px; margin-left: 5px; object-fit:cover;"> TH
-          </label>
-          <label class="btn btn-primary text-light ps-1 fs-6 <?php if ($_SESSION['lang'] == 'en') {
-                                                                echo 'active';
-                                                              } ?>">
-            <input type="radio" style="appearance: none;" id='select_lang' onchange="change_lang(this.value)" autocomplete="off" value="en">
-            <img src="img/united-kingdom.png" alt="EN Flag" style="width: 23px; height: 23px; margin-left: 0px; object-fit:cover;"> EN
-          </label>
+          <div class="btn-group btn-group-toggle me-4 nav-mobile-lang w-100" data-toggle="buttons">
+            <label class="btn btn-primary text-light ps-0 fs-6 <?php if ($_SESSION['lang'] == 'th') {
+                                                                  echo 'active';
+                                                                } ?>">
+              <input type="radio" style="appearance: none;" id='select_lang' onchange="change_lang(this.value)" autocomplete="off" value="th">
+              <img src="img/flag.png" alt="TH Flag" style="width: 23px; height: 23px; margin-left: 5px; object-fit:cover;"> TH
+            </label>
+            <label class="btn btn-primary text-light ps-1 fs-6 <?php if ($_SESSION['lang'] == 'en') {
+                                                                  echo 'active';
+                                                                } ?>">
+              <input type="radio" style="appearance: none;" id='select_lang' onchange="change_lang(this.value)" autocomplete="off" value="en">
+              <img src="img/united-kingdom.png" alt="EN Flag" style="width: 23px; height: 23px; margin-left: 0px; object-fit:cover;"> EN
+            </label>
+            <label class="btn btn-primary text-light ps-1 fs-6 <?php if ($_SESSION['lang'] == 'cn') {
+                                                                  echo 'active';
+                                                                } ?>">
+              <input type="radio" style="appearance: none;" id='select_lang' onchange="change_lang(this.value)" autocomplete="off" value="cn">
+              <img src="img/china.png" alt="CN Flag" style="width: 23px; height: 23px; margin-left: 0px; object-fit:cover;"> CN
+            </label>
+          </div>
         </div>
-      </div>
       </nav>
 
       <!-- Language Selector -->
