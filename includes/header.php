@@ -157,7 +157,13 @@ include "./includes/db.php";
             while ($Row_menu = mysqli_fetch_assoc($fetch_data)) {
               $menu_id = $Row_menu['id_menu'];
               $link = $Row_menu['link'];
-              $menu_title = ($_SESSION['lang'] == 'en') ? $Row_menu['name'] : $Row_menu['menuTH'];
+              if ($_SESSION['lang'] == 'en') {
+                $menu_title = $Row_menu['name'];
+            } elseif ($_SESSION['lang'] == 'th') {
+                $menu_title = $Row_menu['menuTH'];
+            } else {
+                $menu_title = $Row_menu['menuCN'];
+            }
 
               // ตรวจสอบเมนูย่อย
               $query_sub = "SELECT * FROM tbl_menu_dd WHERE id_menu = $menu_id";
@@ -168,12 +174,18 @@ include "./includes/db.php";
                 echo '<li class="nav-item"><a href="' . $link . '" class="nav-link">' . $menu_title . '</a></li>';
               } else {
                 // มีเมนูย่อย
-                echo '<li class="nav-item dropdown">
+                echo '<li class="nav-item dropdown border-0">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">' . $menu_title . '</a>
                     <ul class="dropdown-menu">';
                 while ($Row_sub = mysqli_fetch_assoc($fetch_data_sub)) {
                   $link_sub = $Row_sub['link_dd'];
-                  $menu_title_sub = ($_SESSION['lang'] == 'en') ? $Row_sub['name_dd'] : $Row_sub['menuTH_dd'];
+                  if ($_SESSION['lang'] == 'en') {
+                    $menu_title_sub = $Row_sub['menu_dd'];
+                } elseif ($_SESSION['lang'] == 'th') {
+                    $menu_title_sub = $Row_sub['menuTH_dd'];
+                } else {
+                    $menu_title_sub = $Row_sub['menuCN_dd'];
+                }
                   echo '<li><a href="' . $link_sub . '" class="dropdown-item">' . $menu_title_sub . '</a></li>';
                 }
                 echo '</ul></li>';
