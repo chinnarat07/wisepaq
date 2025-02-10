@@ -19,10 +19,12 @@
                         $the_post_title = base64_decode($Row['post_title']);
                         $the_post_content = base64_decode($Row['post_content']);
                         $post_subtitle = base64_decode($Row['post_subtitle']);
-                    } else {
+                    } elseif ($_SESSION['lang'] == 'th'){
                         $the_post_title = base64_decode($Row['post_title_thai']);
                         $the_post_content = base64_decode($Row['post_content_thai']);
-                        $post_subtitle = isset($Row['post_subtitle_thai']) ? base64_decode($Row['post_subtitle_thai']) : '';
+                    } else {
+                        $the_post_title = base64_decode($Row['post_title_china']);
+                        $the_post_content = base64_decode($Row['post_content_china']);
                     }
                 ?>
 

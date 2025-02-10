@@ -152,8 +152,10 @@ include "./includes/db.php";
               $link = $Row_menu['link'];
               if ($_SESSION['lang'] == 'en') {
                 $menu_title = $Row_menu['name'];
-              } else {
+              } elseif ($_SESSION['lang'] == 'th'){
                 $menu_title = $Row_menu['menuTH'];
+              }else {
+                $menu_title = $Row_menu['menuCN'];
               }
               $query_sub = "SELECT * FROM tbl_menu_dd WHERE id_menu = $menu_id";
               $fetch_data_sub = mysqli_query($connection, $query_sub);
@@ -179,8 +181,10 @@ include "./includes/db.php";
                       $link_sub = $Row_sub['link_dd'];
                       if ($_SESSION['lang'] == 'en') {
                         $menu_title_sub = $Row_sub['name_dd'];
-                      } else {
+                      } elseif ($_SESSION['lang'] == 'th'){
                         $menu_title_sub = $Row_sub['menuTH_dd'];
+                      }else {
+                        $menu_title_sub = $Row_sub['menuCN_dd'];
                       }
                     ?>
                       <a href="<?php echo $link_sub; ?>" class="dropdown-item text-uppercase  text-dark  py-2   <?php echo ($current_page == basename($link_sub)) ? 'active' : ''; ?>">

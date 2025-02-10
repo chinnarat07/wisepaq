@@ -3,15 +3,15 @@
         <div class="container-fluid bg-white text-dark footer mt-0 wow fadeIn " data-wow-delay="0.1s ">
             <div class="container pt-5 pb-2">
                 <div class="row g-5 ">
-                    <div class="col-lg-3 col-md-6 py-lg-5 px-0 d-flex justify-content-center" >
+                    <!-- <div class="col-lg-3 col-md-6 py-lg-5 px-0 d-flex justify-content-center" >
                         <div class="shadow pb-3 pt-3" style=" border-radius: 50%; border: 2px  solid rgb(208, 206, 206); height:16rem; width:20rem;">
                         <a href="index.php" class="text-wrap ">
                             <img src="img/wisepaq.jpg" alt="" class="mx-auto d-block " style="margin-top: 2rem; width:110px ;height:110px;">
                             <p class="text-dark mt-2  fw-bold p-0 text-center" ><?php echo constant('page_footer_1.1') ?></p>
                         </a>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6  ps-5">
+                    </div> -->
+                    <div class="col-lg-4 col-md-6  ps-5">
                         <h1 class="text-dark mb-4 "><?php echo constant('page_footer_5') ?></h1>
                         <p class="mb-2 "><i class="fa fa-map-marker-alt me-3 text-primary"></i><?php echo constant('page_footer_2') ?></p>
                         <p class="mb-2 "><i class="fa fa-phone-alt me-3 text-primary"></i><?php echo constant('page_footer_3') ?></p>
@@ -29,7 +29,7 @@
                                 <i class="bi bi-instagram fs-4 mt-1"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6  ps-5">
+                    <div class="col-lg-4 col-md-6  ps-5">
                         <h1 class="text-dark mb-4"><?php echo constant('page_footer_6') ?></h1>
                         <?php
                         $query = "SELECT * FROM quick_link";
@@ -55,7 +55,7 @@
                         }
                         ?>
                     </div>
-                    <div class="col-lg-3 col-md-6 ps-5 ">
+                    <div class="col-lg-4 col-md-6 ps-5 ">
                         <h1 class="text-dark mb-4"><?php echo constant('page_footer_7') ?></h1>
                         <?php
                         $query = "SELECT * FROM popular_link";

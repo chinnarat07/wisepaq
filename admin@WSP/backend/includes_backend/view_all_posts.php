@@ -147,14 +147,15 @@ if (isset($_POST["apply"])) {
                 $the_posts_pin = $Row['post_pin'];
                 $the_post_title = base64_decode($Row['post_title']);
                 $the_post_title_thai = base64_decode($Row['post_title_thai']);
-
+                $the_post_title_china = base64_decode($Row['post_title_china']);
 
                 echo "<tr>"; ?>
                 <td><input type='checkbox' name='checkBoxArray[]' value='<?php echo $the_post_id ?>'></td>
             <?php
                 echo "<td>{$Row['post_id']}</td>
                     <td><a href='../post.php?lang=en&p_id=$the_post_id'>{$the_post_title}</a>
-                     / <a href='../post.php?lang=th&p_id=$the_post_id'>{$the_post_title_thai}</a>";
+                     / <a href='../post.php?lang=th&p_id=$the_post_id'>{$the_post_title_thai}</a>
+                    / <a href='../post.php?lang=cn&p_id=$the_post_id'>{$the_post_title_china}</a></td>";
 
                 $cat_id = $Row['post_category_id'];
                 $query = "SELECT * FROM tbl_categories WHERE cat_id=$cat_id";
@@ -162,9 +163,6 @@ if (isset($_POST["apply"])) {
                 while ($Cat = mysqli_fetch_assoc($fetch_cat_data)) {
                     $cat_title = $Cat["cat_title"];
                     $cat_title_thai = $Cat["cat_title_thai"];
-                    $date_data =  $Row['post_date'];
-                    $date = new DateTime($date_data ); 
-                    $date_DMY = $date->format('d/m/Y');
                     if (isset($cat_title)) {
                         echo "<td>$cat_title / $cat_title_thai</td>";
                         // echo "<td>$cat_title_thai</td>";
@@ -179,7 +177,7 @@ if (isset($_POST["apply"])) {
                 }
 
                 echo "<td><img src='../images/{$Row['post_image']}' alt='image' width='150px' height='65px' style='object-fit: cover; text-align:center;'></td>
-                    <td>{$date_DMY}</td>
+                    <td>{$Row['post_date']}</td>
                     <td class='text-center'>
                         <a href='posts.php?source=edit_post&p_id=$the_post_id'><i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i></a> | 
                         <a onClick=\"javascript: return confirm('Are you sure you want to delete'); \" href='posts.php?deletePost=$the_post_id&image=$the_post_image'><i class='fa fa-trash-o fa-lg' aria-hidden='true'></i></a> 

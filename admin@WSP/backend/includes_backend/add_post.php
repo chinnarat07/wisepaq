@@ -3,8 +3,10 @@
 if (isset($_POST['create_post'])) {
     $post_title = base64_encode($_POST['title']);
     $post_title_thai = base64_encode($_POST['title_thai']);
+    $post_title_china = base64_encode($_POST['title_china']);
     $post_subtitle = base64_encode($_POST['subtitle']);
     $post_subtitle_thai = base64_encode($_POST['subtitle_thai']);
+    $post_subtitle_china = base64_encode($_POST['subtitle_china']);
     $post_link_url = $_POST['link_url'];
     $post_category_id = $_POST['post_category'];
     $post_status = $_POST['post_status'];
@@ -17,14 +19,15 @@ if (isset($_POST['create_post'])) {
 
     $post_content = base64_encode($_POST['post_content']);
     $post_content_thai = base64_encode($_POST['post_content_thai']);
+    $post_content_china = base64_encode($_POST['post_content_china']);
     $post_date = date("Y-m-d H:i:s");  // date('d-m-y');
     $post_comemnt_id = 0;
 
     move_uploaded_file($post_image_temp, "../images/$post_image");
 
     // Add new Post.
-    $query = "INSERT INTO tbl_posts(post_category_id, post_title, post_title_thai, post_date, post_image, post_content, post_content_thai, post_status,post_subtitle,post_subtitle_thai,post_link,post_pin) ";
-    $query .= "VALUES({$post_category_id}, '{$post_title}', '{$post_title_thai}','{$post_date}', '{$post_image}', '{$post_content}', '{$post_content_thai}',  '{$post_status}','{$post_subtitle}','{$post_subtitle_thai}','{$post_link_url}','{$post_pin}')";
+    $query = "INSERT INTO tbl_posts(post_category_id, post_title, post_title_thai,post_title_china, post_date, post_image, post_content, post_content_thai, post_status,post_subtitle,post_subtitle_thai,post_subtitle_china,post_link,post_pin) ";
+    $query .= "VALUES({$post_category_id}, '{$post_title}', '{$post_title_thai}','{$post_title_china}', '{$post_date}', '{$post_image}', '{$post_content}', '{$post_content_thai}',  '{$post_status}','{$post_subtitle}','{$post_subtitle_thai}','{$post_subtitle_china}','{$post_link_url}','{$post_pin}')";
     $create_post_query = mysqli_query($connection, $query);
     $the_post_id = mysqli_insert_id($connection);
     if (!$create_post_query) {
@@ -75,7 +78,7 @@ if (isset($_POST['create_post'])) {
         <label for="post_category">Post Category</label>
         <select class="form-control" name="post_category" id="post_category">
             <?php
-            $query = "SELECT * FROM tbl_categories ORDER BY cat_page ASC ";
+            $query = "SELECT * FROM tbl_categories";
             $fetch_data = mysqli_query($connection, $query);
             while ($Row = mysqli_fetch_assoc($fetch_data)) {
                 $cat_id = $Row["cat_id"];
@@ -147,8 +150,30 @@ if (isset($_POST['create_post'])) {
             CKEDITOR.dtd.$removeEmpty['span'] = false;
 
             CKEDITOR.replace('editor2');
+
         </script>
     </div>
+    <div class="form-group  col-lg-6">
+        <label for="title">[ภาษาจีน] Post Title</label>
+        <input type="text" class="form-control" name="title_china">
+    </div>
+    <div class="form-group  col-lg-6">
+        <label for="subtitle">[ภาษาจีน] Post subtitle</label>
+        <input type="text" class="form-control" name="subtitle_china">
+    </div>
+    <div class="form-group col-lg-12">
+        <label id="my-ckeditor" for="post_content_thai">[ภาษาจีน] Post Content</label>
+        <textarea id="editor3" name="post_content_china" class="form-control">
+         นี่คือเนื้อหาตัวอย่างบางส่วน.
+        </textarea>
+        <script>
+            CKEDITOR.dtd.$removeEmpty['i'] = false;
+            CKEDITOR.dtd.$removeEmpty['span'] = false;
+
+            CKEDITOR.replace('editor3');
+        </script>
+    </div>
+
     <div class="form-group col-lg-12">
         <input type="submit" class="btn btn-primary" name="create_post" value="Publish">
     </div>

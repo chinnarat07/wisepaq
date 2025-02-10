@@ -4,8 +4,10 @@ if (isset($_POST['update_post'], $_GET['p_id'])) {
 
     $post_title = base64_encode($_POST['title']);
     $post_title_thai = base64_encode($_POST['title_thai']);
+    $post_title_china = base64_encode($_POST['title_china']);
     $post_subtitle = base64_encode($_POST['subtitle']);
     $post_subtitle_thai = base64_encode($_POST['subtitle_thai']);
+    $post_subtitle_china = base64_encode($_POST['subtitle_china']);
     $post_link_url = $_POST['link_url'];
     $post_category_id = $_POST['post_category'];
     $post_status = $_POST['post_status'];
@@ -13,6 +15,7 @@ if (isset($_POST['update_post'], $_GET['p_id'])) {
 
     $post_content = base64_encode($_POST['post_content']);
     $post_content_thai = base64_encode($_POST['post_content_thai']);
+    $post_content_china = base64_encode($_POST['post_content_china']);
     $post_date = date("Y-m-d H:i:s"); //date('d-m-y');    
 
     $post_image_old = $_POST['post_image_old'];
@@ -34,14 +37,17 @@ if (isset($_POST['update_post'], $_GET['p_id'])) {
     $query .= "post_category_id='$post_category_id', ";
     $query .= "post_title='$post_title', ";
     $query .= "post_title_thai='$post_title_thai', ";
+    $query .= "post_title_china='$post_title_china', ";
     $query .= "post_subtitle='$post_subtitle', ";
     $query .= "post_subtitle_thai='$post_subtitle_thai', ";
+    $query .= "post_subtitle_china='$post_subtitle_china', ";
     $query .= "post_link='$post_link_url', ";
     $query .= "post_pin='$post_pin', ";
     $query .= "post_date='$post_date', ";
     $query .= !empty($post_image) ? "post_image='$post_image', " : null;
     $query .= "post_content='$post_content', ";
     $query .= "post_content_thai='$post_content_thai', ";
+    $query .= "post_content_china='$post_content_china', ";
     $query .= "post_status='$post_status' ";
     $query .= "WHERE post_id=$the_post_id";
 
@@ -65,8 +71,10 @@ if (isset($_GET['p_id'])) {
         $post_id = $Row['post_id'];
         $post_title = base64_decode($Row['post_title']);
         $post_title_thai = base64_decode($Row['post_title_thai']);
+        $post_title_china = base64_decode($Row['post_title_china']);
         $post_subtitle = base64_decode($Row['post_subtitle']);
         $post_subtitle_thai = base64_decode($Row['post_subtitle_thai']);
+        $post_subtitle_china = base64_decode($Row['post_subtitle_china']);
         $post_link_url = $Row['post_link'];
         $post_category_id = $Row['post_category_id'];
         $post_status = $Row['post_status'];
@@ -76,6 +84,7 @@ if (isset($_GET['p_id'])) {
         $post_date = $Row['post_date'];
         $post_content = base64_decode($Row['post_content']);
         $post_content_thai = base64_decode($Row['post_content_thai']);
+        $post_content_china = base64_decode($Row['post_content_china']);
         ?>
         <form action="" method="post" enctype="multipart/form-data">
             <!--                        <div class="form-group">
@@ -121,7 +130,7 @@ if (isset($_GET['p_id'])) {
                 <label for="post_category">Post Category ID</label>
                 <select class="form-control" name="post_category" id="post_category">
                     <?php
-                    $query = "SELECT * FROM tbl_categories ORDER BY cat_page ASC";
+                    $query = "SELECT * FROM tbl_categories";
                     $fetch_data = mysqli_query($connection, $query);
                     while ($Row = mysqli_fetch_assoc($fetch_data)) {
                         $cat_id = $Row["cat_id"];
@@ -197,7 +206,25 @@ if (isset($_GET['p_id'])) {
                     CKEDITOR.replace('editor2');
                 </script>
             </div>
-
+            <div class="form-group  col-lg-6">
+                <label for="title">[ภาษาจีน] Post Title</label>
+                <input type="text" class="form-control" value="<?php echo $post_title_china; ?>" name="title_china">
+            </div>
+            <div class="form-group  col-lg-6">
+                <label for="subtitle">[ภาษาจีน] Post subtitle</label>
+                <input type="text" class="form-control" value="<?php echo $post_subtitle_china; ?>" name="subtitle_china">
+            </div>
+            <div class="form-group col-lg-12">
+                <label id="my-ckeditor" for="post_content_caina">[ภาษาจีน] Post Content</label>
+                <textarea id="editor3" name="post_content_china" class="form-control">
+                         <?php echo $post_content_china; ?>
+                </textarea>
+                <script>
+                    CKEDITOR.dtd.$removeEmpty['i'] = false;
+                    CKEDITOR.dtd.$removeEmpty['span'] = false;
+                    CKEDITOR.replace('editor3');
+                </script>
+            </div>
 
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" name="update_post" value="Update">
