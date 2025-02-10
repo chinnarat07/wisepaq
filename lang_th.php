@@ -4,7 +4,7 @@ define('web_label_changelang','ภาษา');
 define('web_option_select','ไทย');
 define('web_theme_title','Tema Estellar');
 define('web_theme_message','<p>Este solo es otra gratuita y responsiva plantilla<br /> editada por <a target="_blank" href="https://github.com/irenteria0617"><strong>@Ismael</strong></a> desarrollada por <a target="_blank" href="https://html5up.net">HTML5 UP</a>.</p>');
-
+define('work_time','จ. - ศ. : 08.30น. - 17.00น.');
 define('address','เอส เอส พี ทาวเวอร์ 2 ชั้น19 ถนน ณ ระนอง เขตคลองเตย กรุงเทพมหานคร 10110');
 
 //footer

@@ -44,8 +44,10 @@
                                 //                        $menu_title = $Row['name'];
                                 if ($_SESSION['lang'] == 'en') {
                                     $menu_title = $Row['nameFQ'];
-                                } else {
+                                } elseif ($_SESSION['lang'] == 'th') {
                                     $menu_title = $Row['menuTH'];
+                                } else {
+                                    $menu_title = $Row['menuCN'];
                                 }
                                 $link = $Row['linkFQ'];
                         ?>
@@ -70,8 +72,10 @@
                                 //                        $menu_title = $Row['name'];
                                 if ($_SESSION['lang'] == 'en') {
                                     $menu_title = $Row['nameFP'];
-                                } else {
+                                } elseif ($_SESSION['lang'] == 'th') {
                                     $menu_title = $Row['menuTH'];
+                                } else {
+                                    $menu_title = $Row['menuCN'];
                                 }
                                 $link = $Row['linkFP'];
                         ?>

@@ -4,7 +4,7 @@ define('web_label_changelang', 'Langue');  //Change language
 define('web_option_select', 'English');  //Select a option
 define('web_theme_title', 'Stellar Theme');
 define('web_theme_message', '<p>Just another free, fully responsive site template<br /> edited by <a href="https://github.com/irenteria0617"><strong>@Ismael</strong></a> developed by <a target="_blank" href="https://html5up.net">HTML5 UP</a>.</p>');
-
+define('work_time','Mon - Fri : 08.30 AM - 05.00 PM');
 define('address', 'SSP Tower 2, 19th Floor, Na Ranong Road, Klongtoey Bangkok, Thailand 10110');
 
 //footer

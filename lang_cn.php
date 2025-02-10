@@ -4,7 +4,7 @@ define('web_label_changelang', '语言');  // Change language
 define('web_option_select', '英文');  // Select an option
 define('web_theme_title', 'Stellar主题');
 define('web_theme_message', '<p>另一个免费的、完全响应的网站模板<br />由<a href="https://github.com/irenteria0617"><strong>@Ismael</strong></a>编辑，由<a target="_blank" href="https://html5up.net">HTML5 UP</a>开发。</p>');
-
+define('work_time','周一至周五：早上8:30 - 下午5:00');
 define('address', 'SSP Tower 2, 19层, Na Ranong Road, Klongtoey Bangkok, 泰国 10110');
 
 //footer

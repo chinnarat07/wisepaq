@@ -109,7 +109,7 @@ include "./includes/db.php";
         </div>
         <div class="h-100 d-inline-flex align-items-center py-3">
           <small class="far fa-clock text-primary me-2"></small>
-          <small>Mon - Fri : 08.30 AM - 17.00 PM</small>
+          <small><?php echo constant('work_time'); ?></small>
         </div>
       </div>
       <div class="col-lg-5 px-5 text-end">
@@ -127,18 +127,26 @@ include "./includes/db.php";
     </div>
   </div>
   <!-- Topbar End -->
-  <header class="navbar navbar-expand-lg navbar-light bg-white  sticky-top shadow-sm rounded-lg-0 rounded-pill   p-0 ">
-    <div class="container-fluid container-xl position-relative ">
-      <a href="index.php" class="navbar-brand d-flex align-items-center  px-4 px-lg-5">
-        <img src="img/wisepaq.jpg" alt="" width="50" height="50" style="margin-right: 5px;">
-        <h4 class="m-0 ">WISEPAQ</h4>
+
+  <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm rounded-0 p-0">
+    <div class="container-fluid container-xl d-flex justify-content-between align-items-center px-0">
+
+      <!-- Logo -->
+      <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <img src="img/wisepaq.jpg" alt="" width="50" height="50" class="me-2">
+        <h4 class="m-0">WISEPAQ</h4>
       </a>
-      <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+
+      <!-- Toggle Button (Mobile) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <nav class="collapse navbar-collapse " id="navbarCollapse">
-        <div class="navbar-nav p-4 p-lg-0">
+
+      <!-- Navbar Menu -->
+      <nav class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+        <ul class="navbar-nav ">
           <?php
+          // ดึงข้อมูลเมนูจากฐานข้อมูล
           $current_page = basename($_SERVER['PHP_SELF']);
           $query = "SELECT * FROM tbl_menu";
           $fetch_data = mysqli_query($connection, $query);
@@ -148,71 +156,34 @@ include "./includes/db.php";
           } else {
             while ($Row_menu = mysqli_fetch_assoc($fetch_data)) {
               $menu_id = $Row_menu['id_menu'];
-              // $menu_title = ($_SESSION['lang'] == 'en') ? $Row_menu['menu_name'] : $Row_menu['menu_name_thai'];
               $link = $Row_menu['link'];
-              if ($_SESSION['lang'] == 'en') {
-                $menu_title = $Row_menu['name'];
-              } elseif ($_SESSION['lang'] == 'th'){
-                $menu_title = $Row_menu['menuTH'];
-              }else {
-                $menu_title = $Row_menu['menuCN'];
-              }
+              $menu_title = ($_SESSION['lang'] == 'en') ? $Row_menu['name'] : $Row_menu['menuTH'];
+
+              // ตรวจสอบเมนูย่อย
               $query_sub = "SELECT * FROM tbl_menu_dd WHERE id_menu = $menu_id";
               $fetch_data_sub = mysqli_query($connection, $query_sub);
 
               if (mysqli_num_rows($fetch_data_sub) == 0) {
                 // ไม่มีเมนูย่อย
-          ?>
-                <a href="<?php echo $link; ?>" class="nav-item nav-link  <?php echo ($current_page == basename($link)) ? 'active' : ''; ?>">
-                  <?php echo $menu_title; ?>
-                </a>
-              <?php
+                echo '<li class="nav-item"><a href="' . $link . '" class="nav-link">' . $menu_title . '</a></li>';
               } else {
                 // มีเมนูย่อย
-              ?>
-                <div class="nav-item dropdown">
-                  <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <?php echo $menu_title; ?>
-                  </a>
-                  <div class="dropdown-menu  m-0 ps-2 py-0">
-                    <?php
-                    while ($Row_sub = mysqli_fetch_assoc($fetch_data_sub)) {
-                      // $menu_title_sub = ($_SESSION['lang'] == 'en') ? $Row_sub['menu_subname'] : $Row_sub['menu_subname_thai'];
-                      $link_sub = $Row_sub['link_dd'];
-                      if ($_SESSION['lang'] == 'en') {
-                        $menu_title_sub = $Row_sub['name_dd'];
-                      } elseif ($_SESSION['lang'] == 'th'){
-                        $menu_title_sub = $Row_sub['menuTH_dd'];
-                      }else {
-                        $menu_title_sub = $Row_sub['menuCN_dd'];
-                      }
-                    ?>
-                      <a href="<?php echo $link_sub; ?>" class="dropdown-item text-uppercase  text-dark  py-2   <?php echo ($current_page == basename($link_sub)) ? 'active' : ''; ?>">
-                        <?php echo $menu_title_sub; ?>
-                      </a>
-                    <?php
-                    }
-                    ?>
-                  </div>
-                </div>
-          <?php
+                echo '<li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">' . $menu_title . '</a>
+                    <ul class="dropdown-menu">';
+                while ($Row_sub = mysqli_fetch_assoc($fetch_data_sub)) {
+                  $link_sub = $Row_sub['link_dd'];
+                  $menu_title_sub = ($_SESSION['lang'] == 'en') ? $Row_sub['name_dd'] : $Row_sub['menuTH_dd'];
+                  echo '<li><a href="' . $link_sub . '" class="dropdown-item">' . $menu_title_sub . '</a></li>';
+                }
+                echo '</ul></li>';
               }
             }
           }
           ?>
-          <!-- Language selector -->
-          <!-- <li class="nav-item">
-                  <select id="select_lang" onchange="change_lang(this.value)" class="form-select form-select-sm" style="font-size: 10px;">
-                    <option value="" selected disabled hidden><?php echo constant("web_option_select"); ?></option>
-                    <option value="th">ไทย</option>
-                    <option value="en">English</option>
-                  </select>
-                </li> -->
-          <!-- test -->
-        </div>
-      </nav>
-      <!-- <div class="mobile-lang ">
-        <div class="btn-group btn-group-toggle me-4 nav-mobile-lang" data-toggle="buttons">
+        </ul>
+        <div class="mobile-lang">
+        <div class="btn-group btn-group-toggle me-4 w-100 nav-mobile-lang" data-toggle="buttons">
           <label class="btn btn-primary text-light ps-0 fs-6 <?php if ($_SESSION['lang'] == 'th') {
                                                                 echo 'active';
                                                               } ?>">
@@ -226,8 +197,11 @@ include "./includes/db.php";
             <img src="img/united-kingdom.png" alt="EN Flag" style="width: 23px; height: 23px; margin-left: 0px; object-fit:cover;"> EN
           </label>
         </div>
-      </div> -->
-      <div class="pc-lang my-auto me-4">
+      </div>
+      </nav>
+
+      <!-- Language Selector -->
+      <div class="d-none d-lg-block">
         <div class="text-box" id="dropdown">
           <span class="text-content">
             <img id="selected-flag" src="img/flag.png" alt="TH Flag" class="lang-select">
@@ -235,23 +209,25 @@ include "./includes/db.php";
           </span>
           <i class="arrow"></i>
           <ul class="dropdown-menu-lang">
-            <li data-lang="th" data-flag="img/flag.png" id="th" onclick="change_lang('th')">
+            <li data-lang="th" onclick="change_lang('th')">
               <img src="img/flag.png" alt="TH Flag" class="lang-option">
               <span>TH</span>
             </li>
-            <li data-lang="en" data-flag="img/united-kingdom.png" id="en" onclick="change_lang('en')">
+            <li data-lang="en" onclick="change_lang('en')">
               <img src="img/united-kingdom.png" alt="EN Flag" class="lang-option">
               <span>EN</span>
             </li>
-            <li data-lang="cn" data-flag="img/china.png" id="cn" onclick="change_lang('cn')">
+            <li data-lang="cn" onclick="change_lang('cn')">
               <img src="img/china.png" alt="CN Flag" class="lang-option">
               <span>CN</span>
             </li>
           </ul>
         </div>
       </div>
+
     </div>
   </header>
+
   <!-- End Navber -->
   <script>
     $(document).ready(function() {
