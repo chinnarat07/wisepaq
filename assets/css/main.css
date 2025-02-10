@@ -246,7 +246,9 @@ h6 {
     margin-left: 8px;
     
 }
-
+.navbar{
+  height: 4rem;
+}
 .navbar-light .navbar-nav .nav-link {
     margin-right: 25px;
     padding: 25px 0;
@@ -281,14 +283,18 @@ h6 {
         margin-right: 0;
         padding: 10px 0;
     }
-
     .navbar-light .navbar-nav {
         border-top: 1px solid #EEEEEE;
     }
-
     .nav-mobile-lang{
-        width: 100%;
-    }
+      width: 100%;
+  }
+  .pc-lang{
+    display: none ;
+}
+  .mobile-lang{
+    display: block;
+}
 }
 
 .navbar-light .navbar-brand,
@@ -333,16 +339,6 @@ h6 {
 .mobile-lang{
     display: none;
 }
-/* ดรอปดาวน์สำหรับหน้าจอเล็ก */
-@media (max-width:900px) {
-    
-    .pc-lang{
-        display: none ;
-    }
-    .mobile-lang{
-        display: block;
-    }
-}
 
 .under-link a:hover{
     text-decoration: underline ;
@@ -353,6 +349,7 @@ h6 {
 }
 }
 
+/* ----------------------------------------------------------- */
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/

@@ -29,12 +29,12 @@
                     <div class="rounded-4 service-item text-center p-4 flex-column align-items-center mt-5">
 
                         <div class="blog-item">
-                            <img src="<?php echo "admin@WSP//images/" . $the_post_image; ?>" class="img-fluid" style="object-fit:cover;" alt="">
+                            <img src="<?php echo "admin@WSP//images/" . $the_post_image; ?>" class="img-fluid" style="object-fit:contran; width:100% height:auto" alt="">
                         </div>
 
                         <br>
                         <h2 class="display-6 mb-4 fw-bold"><?php echo $the_post_title ?></h2>
-                        <p class="fs-4 mb-4"><?php echo $the_post_content ?></p>
+                        <div class="mb-4" style="font-size: 15px;"><?php echo $the_post_content ?></div>
                         <br>
                     </div>
             </div>
