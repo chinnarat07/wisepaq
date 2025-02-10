@@ -1,6 +1,6 @@
  <?php include("./includes/header.php") ?>
 
- <div class="text-center mx-auto wow fadeInUp section-title mt-5" data-wow-delay="0.1s" style="max-width: 800px;">
+ <div class="text-center mx-auto wow fadeInUp section-title mt-5" data-wow-delay="0.1s" style="max-width: auto;">
     <h2 class="display-5 mb-4">CLOUD COMPUTING</h2>
     <p class="mb-0 fs-5"><?php echo constant('page_cloudComput_3') ?></p>
  </div>

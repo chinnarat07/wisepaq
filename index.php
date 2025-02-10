@@ -128,7 +128,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row content justify-content-center align-items-center position-relative">
-          <div class="col-lg-8 mx-auto text-center">
+          <div class="col-lg-9 mx-auto text-center">
             <h2 class="display-4 mb-4"><?php echo constant('page_index_activity_1') ?></h2>
             <p class="mb-4"><?php echo constant('page_index_activity_2') ?></p>
             <a href="3_activity.php" class="btn btn-cta"><?php echo constant('page_index_activity_3') ?></a>
