@@ -206,7 +206,7 @@ include "./includes/db.php";
           }
           ?>
         </ul>
-        <div class="mobile-lang">
+        <!-- <div class="mobile-lang">
           <div class="btn-group btn-group-toggle me-4 nav-mobile-lang w-100" data-toggle="buttons">
             <label class="btn btn-primary text-light ps-0 fs-6 <?php if ($_SESSION['lang'] == 'th') {
                                                                   echo 'active';
@@ -227,11 +227,9 @@ include "./includes/db.php";
               <img src="img/china.png" alt="CN Flag" style="width: 23px; height: 23px; margin-left: 0px; object-fit:cover;"> CN
             </label>
           </div>
-        </div>
-      </nav>
-
-      <!-- Language Selector -->
-      <div class="d-none d-lg-block">
+        </div> -->
+             <!-- Language Selector -->
+      <div class=" d-lg-none">
         <div class="text-box" id="dropdown">
           <span class="text-content">
             <img id="selected-flag" src="img/flag.png" alt="TH Flag" class="lang-select">
@@ -254,6 +252,32 @@ include "./includes/db.php";
           </ul>
         </div>
       </div>
+      </nav>
+             <!-- Language Selector -->
+             <div class="d-none d-lg-block">
+        <div class="text-box" id="dropdown">
+          <span class="text-content">
+            <img id="selected-flag" src="img/flag.png" alt="TH Flag" class="lang-select">
+            <span id="current-language">TH</span>
+          </span>
+          <i class="arrow"></i>
+          <ul class="dropdown-menu-lang">
+            <li data-lang="th" onclick="change_lang('th')">
+              <img src="img/flag.png" alt="TH Flag" class="lang-option">
+              <span>TH</span>
+            </li>
+            <li data-lang="en" onclick="change_lang('en')">
+              <img src="img/united-kingdom.png" alt="EN Flag" class="lang-option">
+              <span>EN</span>
+            </li>
+            <li data-lang="cn" onclick="change_lang('cn')">
+              <img src="img/china.png" alt="CN Flag" class="lang-option">
+              <span>CN</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+     
 
     </div>
   </header>

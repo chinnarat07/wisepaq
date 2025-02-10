@@ -2171,7 +2171,7 @@ section,
   display: inline-block;
   border: 2px solid rgb(214, 208, 208); /* กรอบรอบข้อความ */
   padding: 8px 6.25rem 2px 6px; /* ปรับขนาดของกล่อง */
-  margin-left: 25px;
+  /* margin-left: 25px; */
   border-radius: 10px;
   cursor: pointer;
 }
