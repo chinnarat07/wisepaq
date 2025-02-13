@@ -268,6 +268,10 @@ h6 {
     border-radius: 0 0 5px 5px ;
     border: .1px  solid #c7c7c7 !important;
     border-top: 1px  solid #ffffff !important;
+    
+}
+.dropdown-item{
+  text-transform: uppercase;
 }
 .dropdown-item:hover  {
     color: var(--primary) !important;
@@ -2203,7 +2207,7 @@ section,
   top: 100%;
   left: 0;
   border: 2px solid #ccc;
-  background-color: #e8e8e8c6;
+  background-color: #e8e8e8;
   list-style-type: none;
   margin: 0;
   margin-top: 5px;

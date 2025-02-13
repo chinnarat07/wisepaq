@@ -14,39 +14,43 @@
                 while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
                     $the_post_id = $Row['post_id'];
                     $the_post_image = $Row['post_image'];
-                    if ($_SESSION['lang'] == 'en') {
-                        $the_post_title = base64_decode($Row['post_title']);
-                        $the_post_content = base64_decode($Row['post_content']);
-                        $post_subtitle = base64_decode($Row['post_subtitle']);
-                    } elseif ($_SESSION['lang'] == 'th'){
-                        $the_post_title = base64_decode($Row['post_title_thai']);
-                        $the_post_content = base64_decode($Row['post_content_thai']);
-                    } else {
-                        $the_post_title = base64_decode($Row['post_title_china']);
-                        $the_post_content = base64_decode($Row['post_content_china']);
+                    $lang = $_SESSION['lang'];
+                    switch ($lang) {
+                        case 'en':
+                            $the_post_title = base64_decode($Row['post_title']);
+                            $the_post_content = base64_decode($Row['post_content']);
+                            break;
+                        case 'cn':
+                            $the_post_title = base64_decode($Row['post_title_china']);
+                            $the_post_content = base64_decode($Row['post_content_china']);
+                            break;
+                        default:
+                            $the_post_title = base64_decode($Row['post_title_thai']);
+                            $the_post_content = base64_decode($Row['post_content_thai']);
+                            break;
                     }
                 ?>
 
-             
-                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="service-item text-left rounded-3 p-4 d-flex flex-column w-100 h-100 shadow-lg">
-                                        <div class="blog-item flex-grow-1">
-                                            <div class="blog-img overflow-hidden d-flex justify-content-center mt-2" style="position: relative;">
-                                                <img src="<?php echo "admin@WSP/images/" . $the_post_image; ?>" class="img-fluid " style="object-fit: cover; height: auto; width: auto;" alt="">
-                                            </div>
-                                            <hr>
-                                            <div class="service-content" >
-                                                <p class="mb-0"><?php echo $the_post_content; ?></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-             
-             
 
-             
-             
-             
+                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                     <div class="service-item text-left rounded-3 p-4 d-flex flex-column w-100 h-100 shadow-lg">
+                         <div class="blog-item flex-grow-1">
+                             <div class="blog-img overflow-hidden d-flex justify-content-center mt-2" style="position: relative;">
+                                 <img src="<?php echo "admin@WSP/images/" . $the_post_image; ?>" class="img-fluid " style="object-fit: cover; height: auto; width: auto;" alt="">
+                             </div>
+                             <hr>
+                             <div class="service-content">
+                                 <p class="mb-0"><?php echo $the_post_content; ?></p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+
+
+
+
+
              <?php } ?>
          </div>
      </div>

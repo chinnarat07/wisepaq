@@ -4,7 +4,7 @@ session_start();
 if (isset($_GET['lang'])) {
   $_SESSION['lang'] = $_GET['lang'];
 } elseif (!isset($_SESSION['lang'])) {
-  $_SESSION['lang'] = 'en';
+  $_SESSION['lang'] = 'th';
 }
 include('lang_' . $_SESSION['lang'] . '.php');
 include "./includes/db.php";
@@ -28,18 +28,26 @@ include "./includes/db.php";
       $menu_id = $Row_menu['id_menu'];
       $link = basename($Row_menu['link']); // ใช้ basename() เพื่อลดปัญหาพาธ
       // $menu_title = ($_SESSION['lang'] == 'en') ? $Row_menu['name'] . " | WISEPAQ" : $Row_menu['menuTH'] . " | WISEPAQ";
-      if ($_SESSION['lang'] == 'en') {
-        $menu_title =  $Row_menu['name'] . " | WISEPAQ";
-      } elseif ($_SESSION['lang'] == 'th') {
-        $menu_title =  $Row_menu['menuTH'] . " | WISEPAQ";
-      } else {
-        $menu_title =  $Row_menu['menuCN'] . " | WISEPAQ";
+      $title_lang = $_SESSION['lang'];
+      switch ($title_lang) {
+        case 'en':
+          $menu_title =  $Row_menu['name'] . " | WISEPAQ";
+          $menu_title_upper = strtoupper($menu_title);
+          break;
+        case 'cn':
+          $menu_title =  $Row_menu['menuCN'] . " | WISEPAQ";
+          $menu_title_upper = strtoupper($menu_title);
+          break;
+        default:
+          $menu_title =  $Row_menu['menuTH'] . " | WISEPAQ";
+          $menu_title_upper = strtoupper($menu_title);
+          break;
       }
       // ตรวจสอบว่าหน้าปัจจุบันตรงกับเมนูหลักหรือไม่
       if ($current_page == "index.php") {
         $page_title = "WISEPAQ | วางระบบ Network | Thailand";
       } elseif ($current_page == $link) {
-        $page_title = $menu_title;
+        $page_title = $menu_title_upper;
       }
 
       // ดึงเมนูย่อย
@@ -50,16 +58,24 @@ include "./includes/db.php";
         while ($Row_sub = mysqli_fetch_assoc($fetch_data_sub)) {
           $link_sub = basename($Row_sub['link_dd']);
           // $menu_title_sub = ($_SESSION['lang'] == 'en') ? $Row_sub['name_dd'] . " | WISEPAQ" : $Row_sub['menuTH_dd'] . " | WISEPAQ";
-          if ($_SESSION['lang'] == 'en') {
-            $menu_title_sub = $Row_sub['name_dd'] . " | WISEPAQ";
-          } elseif ($_SESSION['lang'] == 'th') {
-            $menu_title_sub = $Row_sub['menuTH_dd'] . " | WISEPAQ";
-          } else {
-            $menu_title_sub = $Row_sub['menuCN_dd'] . " | WISEPAQ";
+          $title_sub_lang = $_SESSION['lang'];
+          switch ($title_sub_lang) {
+            case 'en':
+              $menu_title_sub = $Row_sub['name_dd'] . " | WISEPAQ";
+              $menu_title_sub_upper = strtoupper($menu_title_sub );
+              break;
+            case 'cn':
+              $menu_title_sub = $Row_sub['menuCN_dd'] . " | WISEPAQ";
+              $menu_title_sub_upper = strtoupper($menu_title_sub );
+              break;
+            default:
+              $menu_title_sub = $Row_sub['menuTH_dd'] . " | WISEPAQ";
+              $menu_title_sub_upper = strtoupper($menu_title_sub );
+              break;
           }
           // ตรวจสอบว่าหน้าปัจจุบันตรงกับเมนูย่อยหรือไม่
           if ($current_page == $link_sub) {
-            $page_title = $menu_title_sub;
+            $page_title = $menu_title_sub_upper;
           }
         }
       }
@@ -182,7 +198,7 @@ include "./includes/db.php";
 
               if (mysqli_num_rows($fetch_data_sub) == 0) {
                 // ไม่มีเมนูย่อย
-                echo '<li class="nav-item"><a href="' . $link . '" class="nav-link">' . $menu_title . '</a></li>';
+                echo '<li class="nav-item"><a href="' . $link . '" class="nav-link ' . (($current_page == basename($link)) ? 'active' : '') . '">' . $menu_title . '</a></li>';
               } else {
                 // มีเมนูย่อย
                 echo '<li class="nav-item dropdown border-0">
@@ -197,7 +213,7 @@ include "./includes/db.php";
                   } else {
                     $menu_title_sub = $Row_sub['menuCN_dd'];
                   }
-                  echo '<li><a href="' . $link_sub . '" class="dropdown-item">' . $menu_title_sub . '</a></li>';
+                  echo '<li><a href="' . $link_sub . '" class="dropdown-item ' . (($current_page == basename($link_sub)) ? 'active' : '') . '">' . $menu_title_sub . '</a></li>';
                 }
                 echo '</ul></li>';
               }
@@ -300,25 +316,44 @@ include "./includes/db.php";
 
     (function() {
       // ตรวจสอบว่าใน localStorage มีการบันทึกภาษาไว้หรือไม่
-      const lang = localStorage.getItem("lang");
+      const lang = localStorage.getItem("lang") || "th";
 
       // อัปเดตข้อความและธงตามภาษาที่เลือก
       const currentLanguage = document.getElementById("current-language");
       const selectedFlag = document.getElementById("selected-flag");
 
-      if (lang === "en") {
-        currentLanguage.textContent = "EN";
-        selectedFlag.src = "img/united-kingdom.png";
-        selectedFlag.alt = "EN Flag";
-      } else if (lang === "cn") {
-        currentLanguage.textContent = "CN";
-        selectedFlag.src = "img/china.png";
-        selectedFlag.alt = "CN Flag";
-      } else {
-        currentLanguage.textContent = "TH";
-        selectedFlag.src = "img/flag.png";
-        selectedFlag.alt = "TH Flag";
+      switch (lang) {
+        case "en":
+          currentLanguage.textContent = "EN";
+          selectedFlag.src = "img/united-kingdom.png";
+          selectedFlag.alt = "EN Flag";
+          break;
+        case "cn":
+          currentLanguage.textContent = "CN";
+          selectedFlag.src = "img/china.png";
+          selectedFlag.alt = "CN Flag";
+          break;
+        default:
+          currentLanguage.textContent = "TH";
+          selectedFlag.src = "img/flag.png";
+          selectedFlag.alt = "TH Flag";
+          break;
+
       }
+
+      // if (lang === "en") {
+      //   currentLanguage.textContent = "EN";
+      //   selectedFlag.src = "img/united-kingdom.png";
+      //   selectedFlag.alt = "EN Flag";
+      // } else if (lang === "cn") {
+      //   currentLanguage.textContent = "CN";
+      //   selectedFlag.src = "img/china.png";
+      //   selectedFlag.alt = "CN Flag";
+      // } else {
+      //   currentLanguage.textContent = "TH";
+      //   selectedFlag.src = "img/flag.png";
+      //   selectedFlag.alt = "TH Flag";
+      // }
     })();
   </script>
 

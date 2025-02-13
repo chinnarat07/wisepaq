@@ -18,15 +18,20 @@
               while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
                 $the_post_id = $Row['post_id'];
                 $the_post_image = $Row['post_image'];
-                if ($_SESSION['lang'] == 'en') {
-                  $the_post_title = base64_decode($Row['post_title']);
-                  $the_post_content = base64_decode($Row['post_content']);
-                } elseif ($_SESSION['lang'] == 'th'){
-                  $the_post_title = base64_decode($Row['post_title_thai']);
-                  $the_post_content = base64_decode($Row['post_content_thai']);
-              } else {
-                  $the_post_title = base64_decode($Row['post_title_china']);
-                  $the_post_content = base64_decode($Row['post_content_china']);
+                $lang = $_SESSION['lang'];
+                switch ($lang) {
+                  case 'en':
+                      $the_post_title = base64_decode($Row['post_title']);
+                      $the_post_content = base64_decode($Row['post_content']);
+                      break;
+                  case 'cn':
+                      $the_post_title = base64_decode($Row['post_title_china']);
+                      $the_post_content = base64_decode($Row['post_content_china']);
+                      break;
+                  default:
+                      $the_post_title = base64_decode($Row['post_title_thai']);
+                      $the_post_content = base64_decode($Row['post_content_thai']);
+                      break;
               }
               ?>
 
@@ -54,16 +59,20 @@
         while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
           $the_post_id = $Row['post_id'];
           $the_post_image = $Row['post_image'];
-          if ($_SESSION['lang'] == 'en') {
-
-            $the_post_title = base64_decode($Row['post_title']);
-            $the_post_content = base64_decode($Row['post_content']);
-          } elseif ($_SESSION['lang'] == 'th'){
-            $the_post_title = base64_decode($Row['post_title_thai']);
-            $the_post_content = base64_decode($Row['post_content_thai']);
-        } else {
-            $the_post_title = base64_decode($Row['post_title_china']);
-            $the_post_content = base64_decode($Row['post_content_china']);
+          $lang = $_SESSION['lang'];
+          switch ($lang) {
+            case 'en':
+                $the_post_title = base64_decode($Row['post_title']);
+                $the_post_content = base64_decode($Row['post_content']);
+                break;
+            case 'cn':
+                $the_post_title = base64_decode($Row['post_title_china']);
+                $the_post_content = base64_decode($Row['post_content_china']);
+                break;
+            default:
+                $the_post_title = base64_decode($Row['post_title_thai']);
+                $the_post_content = base64_decode($Row['post_content_thai']);
+                break;
         }
         ?>
           <div>
@@ -86,7 +95,7 @@
             <div class="feature-box orange">
               <i class="bi bi-gear"></i>
               <h4>ENGINEERING</h4>
-              <p><?php echo constant('page_index_solution_1')?></p>
+              <p><?php echo constant('page_index_solution_1') ?></p>
             </div>
           </div><!-- End Feature Borx-->
 
@@ -94,7 +103,7 @@
             <div class="feature-box blue">
               <i class="bi bi-reception-4"></i>
               <h4>NETWORK SOLUTIONS</h4>
-              <p><?php echo constant('page_index_solution_2')?></p>
+              <p><?php echo constant('page_index_solution_2') ?></p>
             </div>
           </div><!-- End Feature Borx-->
 
@@ -102,7 +111,7 @@
             <div class="feature-box green">
               <i class="bi bi-cloud-check"></i>
               <h4>ClOUD COMPUTING</h4>
-              <p><?php echo constant('page_index_solution_3')?></p>
+              <p><?php echo constant('page_index_solution_3') ?></p>
             </div>
           </div><!-- End Feature Borx-->
 
@@ -110,7 +119,7 @@
             <div class="feature-box red">
               <i class="bi bi-shield-check"></i>
               <h4>SECURITY</h4>
-              <p><?php echo constant('page_index_solution_4')?></p>
+              <p><?php echo constant('page_index_solution_4') ?></p>
             </div>
           </div><!-- End Feature Borx-->
 
@@ -266,27 +275,31 @@
     </section><!-- /Call To Action 2 Section -->
 
     <?php
-        $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=1 AND tbl_categories.cat_id=17 AND tbl_posts.post_status='Published'";
-        $fetch_posts_data = mysqli_query($connection, $query);
-        while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
-          $the_post_id = $Row['post_id'];
-          $the_post_image = $Row['post_image'];
-          if ($_SESSION['lang'] == 'en') {
-
+    $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id   where tbl_categories.cat_page=1 AND tbl_categories.cat_id=17 AND tbl_posts.post_status='Published'";
+    $fetch_posts_data = mysqli_query($connection, $query);
+    while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
+      $the_post_id = $Row['post_id'];
+      $the_post_image = $Row['post_image'];
+      $lang = $_SESSION['lang'];
+      switch ($lang) {
+        case 'en':
             $the_post_title = base64_decode($Row['post_title']);
             $the_post_content = base64_decode($Row['post_content']);
-          } elseif ($_SESSION['lang'] == 'th'){
-            $the_post_title = base64_decode($Row['post_title_thai']);
-            $the_post_content = base64_decode($Row['post_content_thai']);
-        } else {
+            break;
+        case 'cn':
             $the_post_title = base64_decode($Row['post_title_china']);
             $the_post_content = base64_decode($Row['post_content_china']);
-        }
-        ?>
-          <div>
-            <?php echo $the_post_content; ?>
-          </div>
-        <?php } ?>
+            break;
+        default:
+            $the_post_title = base64_decode($Row['post_title_thai']);
+            $the_post_content = base64_decode($Row['post_content_thai']);
+            break;
+    }
+    ?>
+      <div>
+        <?php echo $the_post_content; ?>
+      </div>
+    <?php } ?>
   </main>
 
   <!-- Footer Start -->
