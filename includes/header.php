@@ -99,7 +99,6 @@ include "./includes/db.php";
   <!-- <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/js/main.js"></script>
 
   <!-- =======================================================
   * Template Name: iLanding
@@ -141,11 +140,11 @@ include "./includes/db.php";
   <!-- Topbar End -->
 
   <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm p-0 rounded-4">
-    <div class="container-fluid container-xl d-flex justify-content-between align-items-center ">
+    <div class="container-fluid container-xl  ">
 
       <!-- Logo -->
-      <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <img src="img/wisepaq.jpg" alt="" width="50" height="50" class="me-2">
+      <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-3">
+        <img src="img/wisepaq.jpg" alt="" width="60" height="60" class="me-2">
         <h4 class="m-0">WISEPAQ</h4>
       </a>
 
@@ -155,7 +154,7 @@ include "./includes/db.php";
       </button>
 
       <!-- Navbar Menu -->
-      <nav class="collapse navbar-collapse justify-content-center " id="navbarCollapse">
+      <nav class="collapse navbar-collapse justify-content-end " id="navbarCollapse">
         <ul class="navbar-nav ">
           <?php
           // ดึงข้อมูลเมนูจากฐานข้อมูล
@@ -228,9 +227,8 @@ include "./includes/db.php";
             </label>
           </div>
         </div> -->
-             <!-- Language Selector -->
-      <div class=" d-lg-none">
-        <div class="text-box" id="dropdown">
+        <!-- Language Selector -->
+        <div class="text-box mx-lg-4 mt-2 mt-lg-0" id="dropdown">
           <span class="text-content">
             <img id="selected-flag" src="img/flag.png" alt="TH Flag" class="lang-select">
             <span id="current-language">TH</span>
@@ -239,45 +237,22 @@ include "./includes/db.php";
           <ul class="dropdown-menu-lang">
             <li data-lang="th" onclick="change_lang('th')">
               <img src="img/flag.png" alt="TH Flag" class="lang-option">
-              <span>TH</span>
+              <span>Thailand</span>
             </li>
             <li data-lang="en" onclick="change_lang('en')">
               <img src="img/united-kingdom.png" alt="EN Flag" class="lang-option">
-              <span>EN</span>
+              <span>English</span>
             </li>
             <li data-lang="cn" onclick="change_lang('cn')">
               <img src="img/china.png" alt="CN Flag" class="lang-option">
-              <span>CN</span>
+              <span>China</span>
             </li>
           </ul>
         </div>
-      </div>
       </nav>
-             <!-- Language Selector -->
-             <div class="d-none d-lg-block">
-        <div class="text-box" id="dropdown">
-          <span class="text-content">
-            <img id="selected-flag" src="img/flag.png" alt="TH Flag" class="lang-select">
-            <span id="current-language">TH</span>
-          </span>
-          <i class="arrow"></i>
-          <ul class="dropdown-menu-lang">
-            <li data-lang="th" onclick="change_lang('th')">
-              <img src="img/flag.png" alt="TH Flag" class="lang-option">
-              <span>TH</span>
-            </li>
-            <li data-lang="en" onclick="change_lang('en')">
-              <img src="img/united-kingdom.png" alt="EN Flag" class="lang-option">
-              <span>EN</span>
-            </li>
-            <li data-lang="cn" onclick="change_lang('cn')">
-              <img src="img/china.png" alt="CN Flag" class="lang-option">
-              <span>CN</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-     
+      <!-- Language Selector -->
+
+
 
     </div>
   </header>
@@ -315,63 +290,36 @@ include "./includes/db.php";
 
         change_lang(lang);
       });
-
-      function change_lang(value) {
-        localStorage.setItem("lang", value);
-        window.location.replace("?lang=" + value);
-      }
-
-      // โหลดค่าภาษาที่บันทึกไว้ใน localStorage (ถ้าไม่มีให้ใช้ "th" เป็นค่าเริ่มต้น)
-      let savedLang = localStorage.getItem("lang") || "th";
-
-      // กำหนดค่าให้ current-language และ selected-flag ตามภาษาที่เลือก
-      $("#current-language").text(savedLang.toUpperCase());
-
-      let flagSrc = "img/flag.png"; // ค่าเริ่มต้นเป็นธงไทย
-
-      if (savedLang === "en") {
-        flagSrc = "img/united-kingdom.png";
-      } else if (savedLang === "cn") {
-        flagSrc = "img/china.png";
-      }
-      // อัปเดตรูปธง
-      $("#selected-flag").attr("src", flagSrc);
-
     });
   </script>
   <script>
-    // ฟังก์ชันในการเปลี่ยนภาษา
     function change_lang(value) {
-      // เก็บข้อมูลภาษาที่เลือกลงใน localStorage
       localStorage.setItem("lang", value);
-
-      // เปลี่ยน URL เพื่อให้ระบบ backend รู้
       window.location.replace("?lang=" + value);
     }
 
-    // ฟังก์ชันในการโหลดภาษาเมื่อโหลดหน้าใหม่
-    window.onload = function() {
+    (function() {
       // ตรวจสอบว่าใน localStorage มีการบันทึกภาษาไว้หรือไม่
-      const lang = localStorage.getItem("lang") || 'th'; // ใช้ 'th' เป็นค่าเริ่มต้น
+      const lang = localStorage.getItem("lang");
 
       // อัปเดตข้อความและธงตามภาษาที่เลือก
       const currentLanguage = document.getElementById("current-language");
       const selectedFlag = document.getElementById("selected-flag");
 
-      if (lang === "th") {
-        currentLanguage.textContent = "TH";
-        selectedFlag.src = "img/flag.png";
-        selectedFlag.alt = "TH Flag";
-      } else if (lang === "en") {
+      if (lang === "en") {
         currentLanguage.textContent = "EN";
         selectedFlag.src = "img/united-kingdom.png";
         selectedFlag.alt = "EN Flag";
-      } else {
+      } else if (lang === "cn") {
         currentLanguage.textContent = "CN";
         selectedFlag.src = "img/china.png";
         selectedFlag.alt = "CN Flag";
+      } else {
+        currentLanguage.textContent = "TH";
+        selectedFlag.src = "img/flag.png";
+        selectedFlag.alt = "TH Flag";
       }
-    }
+    })();
   </script>
 
   <script>

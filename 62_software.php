@@ -44,24 +44,24 @@
 
     <div class="container">
 
-       <div class="d-flex justify-content-center">
+       <div class="d-flex justify-content-center" style="width: auto;">
 
           <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
 
              <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                <a class="nav-link active show px-1 fs-6" data-bs-toggle="tab" data-bs-target="#features-tab-1">
                    <h4>WISEPAQ FWD</h4>
                 </a>
              </li><!-- End tab nav item -->
 
              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                <a class="nav-link px-1 fs-6" data-bs-toggle="tab" data-bs-target="#features-tab-2">
                    <h4>OPEATION</h4>
                 </a><!-- End tab nav item -->
 
              </li>
              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                <a class="nav-link px-1 fs-6" data-bs-toggle="tab" data-bs-target="#features-tab-3">
                    <h4>ACCOUNT READY</h4>
                 </a>
              </li><!-- End tab nav item -->

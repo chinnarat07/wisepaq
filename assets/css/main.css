@@ -40,7 +40,7 @@
   --nav-hover-color: #0d83fd; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-color: #004993; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #0d83fd; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -247,7 +247,7 @@ h6 {
     
 }
 .navbar{
-  height: 4rem;
+  height: 4.8rem;
 }
 .navbar-light .navbar-nav .nav-link {
     margin-right: 25px;
@@ -311,6 +311,7 @@ h6 {
     margin: auto;
     opacity: 0.96;
 }
+
 .navbar-toggler{
     border: 0px;
 }
@@ -333,6 +334,7 @@ h6 {
         opacity: 1;  
     }
 }
+
 .mobile-lang{
     display: none;
 }
@@ -344,7 +346,6 @@ h6 {
 .service-item:hover .i-service {
     display: none; /* ซ่อนไอคอนเมื่อเมาส์อยู่บน .service-item */
 }
-
 }
 
 /* ----------------------------------------------------------- */
@@ -2202,7 +2203,7 @@ section,
   top: 100%;
   left: 0;
   border: 2px solid #ccc;
-  background-color: white;
+  background-color: #e8e8e8c6;
   list-style-type: none;
   margin: 0;
   margin-top: 5px;
@@ -2211,10 +2212,10 @@ section,
   border-radius: 5px;
 }
 
-.dropdown-menu-lang li:first-child{
+.dropdown-menu-lang li:nth-child(odd) {
   padding: 10px;
   cursor: pointer;
-  background-color: #e8e8e8c6;
+  background-color: white;
 }
 
 .dropdown-menu-lang li{

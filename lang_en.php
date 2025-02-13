@@ -1,9 +1,5 @@
 <?php
 /*Web general*/
-define('web_label_changelang', 'Langue');  //Change language
-define('web_option_select', 'English');  //Select a option
-define('web_theme_title', 'Stellar Theme');
-define('web_theme_message', '<p>Just another free, fully responsive site template<br /> edited by <a href="https://github.com/irenteria0617"><strong>@Ismael</strong></a> developed by <a target="_blank" href="https://html5up.net">HTML5 UP</a>.</p>');
 define('work_time','Mon - Fri : 08.30 AM - 05.00 PM');
 define('address', 'SSP Tower 2, 19th Floor, Na Ranong Road, Klongtoey Bangkok, Thailand 10110');
 
@@ -167,13 +163,7 @@ define('page_itsupport_10', 'COMMUNICATION');
 define('page_itsupport_11', 'The central system that switches and routes calls between telephone networks and VoIP users. This specific system will evaluate the best way to route multiple simultaneous calls. Its efficiency allows business users to share limited resources.');
 
 //security.php
-define('page_security_1', 'SECURITY');
-define('page_security_2', 'We provide a wide range of security services to protect your business from cyber threats and ensure the safety of your data.');
-define('page_security_3', 'We provide CCTV, Firewall, Fingerprint scan, Face scan, Palm scan, and Fire Alarm systems.');
-define('page_security_4', 'A system that protects computer systems and networks from unauthorized access, attacks, or damage, ensuring the confidentiality, integrity, and availability of data.');
-define('page_security_5', 'A system that detects, prevents, and responds to cyber threats, including malware, ransomware, and phishing attacks, to protect your data and systems.');
-define('page_security_6', 'A system that encrypts data to protect it from unauthorized access, ensuring that only authorized users can read or modify the data.');
-define('page_security_7', 'A system that monitors and analyzes network traffic to detect and respond to security incidents, ensuring the security of your network and data.');
+define('page_security_1', 'We provide CCTV, Firewall, Fingerprint scan, Face scan, Palm scan, and Fire Alarm systems.');
 
 //contact.php
 
@@ -191,45 +181,5 @@ define('page_contact_10', 'Message');
 define('page_contact_11', 'Send Message');
 
 
-/*Nav*/
-define('nav_title_intro', 'Introduction');
-define('nav_title_first', 'First Section');
-define('nav_title_second', 'Second Section');
-define('nav_title_getstart', 'Get Started');
 
-/*Constants for Intro*/
-define('intro_title', 'Title for Introduction');
-define('intro_body', 'Some text for Introduction, and more text, a lot text. Some text for Introduction, and more text, a lot text. Some text for Introduction, and more text, a lot text.');
-define('intro_btn', 'Learn More');
-
-/*Constants for Firt section*/
-define('first_title', 'Title for First Section');
-define('first_body', 'Some text for First Section, and more text, a lot text. Some text for First Section, and more text, a lot text. Some text for First Section, and more text, a lot text.');
-define('first_btn', 'Learn More');
-
-/*Constants for Second section*/
-define('second_title', 'Title for Second Section');
-define('second_body', 'Some text for Second Section, and more text, a lot text. Some text for Second Section, and more text, a lot text. Some text for Second Section, and more text, a lot text.');
-/*Constants sub*/
-define('second_li_code', 'Source Code');
-define('second_li_files', 'Files');
-define('second_li_estadistic', 'Estadistic');
-define('second_li_pc', 'Computer');
-define('second_li_diamond', 'Diamond');
-define('second_btn', 'Learn More');
-
-/*Constants for Get Started*/
-define('getstarted_title', 'Title for Get Started');
-define('getstarted_body', 'Some text for Get Started, and more text, a lot text. Some text for Get Started, and more text, a lot text. Some text for Get Started, and more text, a lot text.');
-define('getstarted_btn', 'Learn More');
-define('getstarted_btn_getstart', 'Get Started!');
-
-/*Constants for Footer*/
-define('fotter_whoami_btn', 'Learn More');
-
-define('fotter_whoami_postalmail', 'Postal Mail');
-define('fotter_whoami_address', 'Address');
-define('fotter_whoami_phone', 'Phone');
-define('fotter_whoami_email', 'Email');
-define('fotter_website', 'Web');
 ?>

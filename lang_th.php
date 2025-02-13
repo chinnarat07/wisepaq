@@ -1,9 +1,5 @@
 <?php
 /*Web general*/
-define('web_label_changelang','ภาษา');
-define('web_option_select','ไทย');
-define('web_theme_title','Tema Estellar');
-define('web_theme_message','<p>Este solo es otra gratuita y responsiva plantilla<br /> editada por <a target="_blank" href="https://github.com/irenteria0617"><strong>@Ismael</strong></a> desarrollada por <a target="_blank" href="https://html5up.net">HTML5 UP</a>.</p>');
 define('work_time','จ. - ศ. : 08.30น. - 17.00น.');
 define('address','เอส เอส พี ทาวเวอร์ 2 ชั้น19 ถนน ณ ระนอง เขตคลองเตย กรุงเทพมหานคร 10110');
 
@@ -139,16 +135,10 @@ define('page_itsupport_10','COMMUNICATION');
 define('page_itsupport_11','ระบบกลางที่สลับและกำหนดเส้นทางการโทรระหว่างเครือข่ายโทรศัพท์และผู้ใช้ VoIP ระบบเฉพาะนี้จะประเมินวิธีที่ดีที่สุดในการกำหนดเส้นทางการโทรหลายสายพร้อมกัน ประสิทธิภาพช่วยให้ผู้ใช้ทางธุรกิจสามารถแบ่งปันทรัพยากรที่จำกัด');
 
 //security.php
-define('page_security_1','บริการ SECURITY');
-define('page_security_2','เรามุ่งเน้นการปกป้องระบบของลูกค้าให้ปลอดภัยจากการเข้าถึงที่ไม่ได้รับอนุญาต การโจมตี หรือการเสียหาย');
-define('page_security_3','เราให้บริการระบบ CCTV, Firewall, Finger scan, Face scan, Palm scan, Fire Alarm');
-define('page_security_4','ระบบที่ใช้ในการป้องกันการเข้าถึงที่ไม่ได้รับอนุญาตเข้าสู่ระบบของลูกค้า โดยจะตรวจสอบและควบคุมการเข้าถึงที่ไม่ได้รับอนุญาต');
-define('page_security_5','บริการ Antivirus');
-define('page_security_6','ซอฟต์แวร์ที่ใช้ในการตรวจสอบและกำจัดไวรัสที่อาจเข้ามาทำความเสียหายกับระบบของลูกค้า โดยจะทำการสแกนไฟล์ที่อาจมีไวรัสอยู่');
-define('page_security_7','บริการ DDoS Protection');
+define('page_security_1','เราให้บริการระบบ CCTV, Firewall, Finger scan, Face scan, Palm scan, Fire Alarm');
+
 
 //contact.php
-
 
 define('page_contact_1','หากคุณมีคำถามหรือเราสามารถสนับสนุนธุรกิจของคุณ');
 define('page_contact_2','ข้อมูลติดต่อ');
@@ -163,65 +153,4 @@ define('page_contact_9','เรื่องที่จะติดต่อ');
 define('page_contact_10','รายละเอียด');
 define('page_contact_11','ส่งข้อความ');
 
-
-
-
-//vision.php
-define('page_vision_1','วิสัยทัศน์');
-define('page_vision_2','เป็นที่รู้จักและไว้วางใจในฐานะพันธมิตรทางธุรกิจที่ให้บริการขนส่ง (โลจิสติกส์)');
-define('page_vision_3','ตั้งแต่การรับสินค้าต้นทางจนถึงการส่งมอบสินค้าถึงลูกค้าปลายทาง (Door To Door) และข้ามพรมแดน');
-define('page_vision_4','โซลูชั่นที่สมบูรณ์แบบสำหรับลูกค้าทุกคนในทุกธุรกิจทั่วโลก ด้วยพนักงานที่มีความมุ่งมั่นและมีประสบการณ์สูง บริการที่สมบูรณ์แบบ');
-define('page_vision_5','ความเป็นเลิศในการดำเนินงานและเทคโนโลยีที่ทันสมัย ​​เรายกระดับการขนส่งของคุณให้ทันกับการเปลี่ยนแปลงในโลกธุรกิจ');
-
-define('page_mission_1','พันธกิจ');
-define('page_mission_2','เป็นผู้ให้บริการโลจิสติกส์ที่มีความเชี่ยวชาญด้านบริการขนส่งข้ามพรมแดน');
-define('page_mission_3','ด้วยการขนส่งต่อเนื่องหลายรูปแบบและพิธีการทางศุลกากรที่ครบถ้วน');
-define('page_mission_4','ช่วยให้ลูกค้าขนส่งสินค้าในราคาที่เหมาะสม รวดเร็วและปลอดภัยด้วยเครือข่ายการขนส่งที่ราบรื่นของเรา');
-define('page_mission_5','และสามารถให้คำแนะนำด้านบริการขนส่งและพิธีการทางศุลกากรโดยทีมงานบุคลากรของเราที่มีความเชี่ยวชาญและประสบการณ์มากกว่า 30 ปี');
-
-
-
-
-
-/*Nav*/
-define('nav_title_intro','Introduccion');
-define('nav_title_first','Primera Seccion');
-define('nav_title_second','Segunda Seccion');
-define('nav_title_getstart','Empecemos');
-
-/*Constants for Intro*/
-define('intro_title','Titulo para Introduccion');
-define('intro_body','Algo de texto para Introduccion, y mas texto, y mas texto. Algo de texto para Introduccion, y mas texto, y mas texto. Algo de texto para Introduccion, y mas texto, y mas texto.');
-define('intro_btn','Leer mas');
-
-/*Constants for Firt section*/
-define('first_title','Titulo para Primera Seccion');
-define('first_body','Algo de texto para Primera Seccion, y mas texto, y mas texto. Algo de texto para Primera Seccion, y mas texto, y mas texto. Algo de texto para Primera Seccion, y mas texto, y mas texto.');
-define('first_btn','Leer mas');
-
-/*Constants for Segunda Seccion*/
-define('second_title','Titulo para Segunda Seccion');
-define('second_body','Algo de texto para Segunda Seccion, y mas texto, y mas texto. Algo de texto para Segunda Seccion, y mas texto, y mas texto. Algo de texto para Segunda Seccion, y mas texto, y mas texto.');
-    /*Constants sub*/
-    define('second_li_code','Codigo Fuente');
-    define('second_li_files','Archivos');
-    define('second_li_estadistic','Estatistica');
-    define('second_li_pc','Computadora');
-    define('second_li_diamond','Diamante');
-define('second_btn','Leer mas');
-
-/*Constants for Empecemos*/
-define('getstarted_title','Titulo para Empecemos');
-define('getstarted_body','Algo de texto para Empecemos, y mas texto, y mas texto. Algo de texto para Empecemos, y mas texto, y mas texto. Algo de texto para Empecemos, y mas texto, y mas texto.');
-define('getstarted_btn','Leer mas');
-define('getstarted_btn_getstart','Empecemos!');
-
-/*Constants for Footer*/
-define('fotter_whoami_btn','Leer mas');
-
-define('fotter_whoami_postalmail','Direccion Postal');
-define('fotter_whoami_address','Direccion');
-define('fotter_whoami_phone','Telefono');
-define('fotter_whoami_email','Correo');
-define('fotter_website','Web')
 ?>

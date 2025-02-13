@@ -1,9 +1,5 @@
 <?php
 /*Web general*/
-define('web_label_changelang', '语言');  // Change language
-define('web_option_select', '英文');  // Select an option
-define('web_theme_title', 'Stellar主题');
-define('web_theme_message', '<p>另一个免费的、完全响应的网站模板<br />由<a href="https://github.com/irenteria0617"><strong>@Ismael</strong></a>编辑，由<a target="_blank" href="https://html5up.net">HTML5 UP</a>开发。</p>');
 define('work_time','周一至周五：早上8:30 - 下午5:00');
 define('address', 'SSP Tower 2, 19层, Na Ranong Road, Klongtoey Bangkok, 泰国 10110');
 
@@ -157,16 +153,9 @@ define('page_itsupport_10', '通信');
 define('page_itsupport_11', '一个中央系统，用于在电话网络和VoIP用户之间切换和路由电话。此系统将评估多通话同时路由的最佳方式。其高效性使企业用户可以共享有限的资源。');
 
 //security.php
-define('page_security_1', '安全');
-define('page_security_2', '我们提供一系列安全服务，以保护您的企业免受网络威胁，并确保数据的安全。');
-define('page_security_3', '我们提供闭路电视（CCTV）、防火墙、指纹扫描、人脸扫描、掌纹扫描和火灾警报系统。');
-define('page_security_4', '一个保护计算机系统和网络免受未经授权访问、攻击或损坏的系统，确保数据的机密性、完整性和可用性。');
-define('page_security_5', '一个检测、预防和响应网络威胁的系统，包括恶意软件、勒索病毒和网络钓鱼攻击，保护您的数据和系统。');
-define('page_security_6', '一个加密数据以保护其免受未经授权访问的系统，确保只有授权用户可以读取或修改数据。');
-define('page_security_7', '一个监控和分析网络流量以检测和响应安全事件的系统，确保您的网络和数据安全。');
+define('page_security_1', '我们提供闭路电视（CCTV）、防火墙、指纹扫描、人脸扫描、掌纹扫描和火灾警报系统。');
 
 //contact.php
-
 define('page_contact_1', '如果您有任何问题，或我们可以支持您的业务。');
 define('page_contact_2', '联系信息');
 define('page_contact_3', '联系方式');
@@ -180,45 +169,4 @@ define('page_contact_9', '主题');
 define('page_contact_10', '留言');
 define('page_contact_11', '发送消息');
 
-/*Nav*/
-define('nav_title_intro', '介绍');
-define('nav_title_first', '第一部分');
-define('nav_title_second', '第二部分');
-define('nav_title_getstart', '开始使用');
-
-/*Constants for Intro*/
-define('intro_title', '介绍标题');
-define('intro_body', '介绍的一些文本，还有更多的文本，很多文本。介绍的一些文本，还有更多的文本，很多文本。介绍的一些文本，还有更多的文本，很多文本。');
-define('intro_btn', '了解更多');
-
-/*Constants for Firt section*/
-define('first_title', '第一部分标题');
-define('first_body', '第一部分的一些文本，还有更多的文本，很多文本。第一部分的一些文本，还有更多的文本，很多文本。第一部分的一些文本，还有更多的文本，很多文本。');
-define('first_btn', '了解更多');
-
-/*Constants for Second section*/
-define('second_title', '第二部分标题');
-define('second_body', '第二部分的一些文本，还有更多的文本，很多文本。第二部分的一些文本，还有更多的文本，很多文本。第二部分的一些文本，还有更多的文本，很多文本。');
-/*Constants sub*/
-define('second_li_code', '源代码');
-define('second_li_files', '文件');
-define('second_li_estadistic', '统计');
-define('second_li_pc', '计算机');
-define('second_li_diamond', '钻石');
-define('second_btn', '了解更多');
-
-/*Constants for Get Started*/
-define('getstarted_title', '开始使用标题');
-define('getstarted_body', '开始使用的一些文本，还有更多的文本，很多文本。开始使用的一些文本，还有更多的文本，很多文本。开始使用的一些文本，还有更多的文本，很多文本。');
-define('getstarted_btn', '了解更多');
-define('getstarted_btn_getstart', '开始使用！');
-
-/*Constants for Footer*/
-define('fotter_whoami_btn', '了解更多');
-
-define('fotter_whoami_postalmail', '邮政邮件');
-define('fotter_whoami_address', '地址');
-define('fotter_whoami_phone', '电话');
-define('fotter_whoami_email', '电子邮件');
-define('fotter_website', '网站');
 ?>

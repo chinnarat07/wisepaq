@@ -3,7 +3,7 @@
  
  <div class="text-center mx-auto wow fadeInUp section-title mt-5 " data-wow-delay="0.1s" style="max-width: 900px;">
     <h2 class="display-5 mb-4">SECURITY</h2>
-    <p class="mb-0 fs-5"><?php echo constant('page_security_3') ?></p>
+    <p class="mb-0 fs-5"><?php echo constant('page_security_1') ?></p>
  </div>
 
  <!-- Solution content Start -->
