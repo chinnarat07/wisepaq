@@ -44,7 +44,7 @@
                     <div class="image-wrapper">
                         <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
                             <img src="<?php echo "admin@WSP/images/" . $the_post_image; ?>" alt="Business Meeting" class="img-fluid main-image rounded-4 " style="height:11cm">
-                            <img src="assets/img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4 ">
+                            <img src="https://ckbox.cloud/b4d6cbdf0ce5ece78c1c/assets/f2PJgV5asdj8/images/1024.webp" alt="Team Discussion" class="img-fluid small-image rounded-4 ">
                         </div>
                         <div class="experience-badge floating">
                             <h3>15+ <span><?php echo constant("page_about_years") ?></span></h3>
