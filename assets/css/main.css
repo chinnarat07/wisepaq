@@ -2218,10 +2218,14 @@ section,
 
 .dropdown-menu-lang li:nth-child(odd) {
   padding: 10px;
-  cursor: pointer;
   background-color: white;
 }
-
+.dropdown-menu-lang li:first-child{
+  border-radius: 5% 5% 0 0;
+}
+.dropdown-menu-lang li:last-child {
+  border-radius: 0 0 5% 5% ;
+} 
 .dropdown-menu-lang li{
   padding: 10px;
   cursor: pointer;

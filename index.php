@@ -202,12 +202,11 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
-                <img src="./img/imgMain/icon/icon-sangfor.png" alt="" width="50" height="50">
+                <img src="./img/img-icon/icon-sangfor.png" alt="" width="50" height="50">
               </div>
               <div>
                 <h3>Sangfor HCI</h3>
                 <p><?php echo constant('page_index_virtualiz_1') ?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Card -->
@@ -215,12 +214,11 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
-                <img src="./img/imgMain/icon/icon-nutanix.png" alt="" width="45" height="45">
+                <img src="./img/img-icon/icon-nutanix.png" alt="" width="45" height="45">
               </div>
               <div>
                 <h3>Nutanix</h3>
                 <p><?php echo constant('page_index_virtualiz_2') ?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Card -->
@@ -228,12 +226,11 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
-                <img src="./img/imgMain/icon/icon-microsoft.png" alt="" width="45" height="45">
+                <img src="./img/img-icon/icon-microsoft.png" alt="" width="45" height="45">
               </div>
               <div>
                 <h3>Microsoft</h3>
                 <p><?php echo constant('page_index_virtualiz_3') ?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Card -->
@@ -241,12 +238,11 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
-                <img src="./img/imgMain/icon/icon-vmware.png" alt="" width="50" height="50">
+                <img src="./img/img-icon/icon-vmware.png" alt="" width="50" height="50">
               </div>
               <div>
                 <h3>VMWare</h3>
                 <p><?php echo constant('page_index_virtualiz_4') ?></p>
-                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Card -->

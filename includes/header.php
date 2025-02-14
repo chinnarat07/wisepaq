@@ -160,7 +160,7 @@ include "./includes/db.php";
 
       <!-- Logo -->
       <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-3">
-        <img src="img/wisepaq.jpg" alt="" width="60" height="60" class="me-2">
+        <img src="img/logo/wisepaq.jpg" alt="" width="60" height="60" class="me-2">
         <h4 class="m-0">WISEPAQ</h4>
       </a>
 
@@ -246,21 +246,21 @@ include "./includes/db.php";
         <!-- Language Selector -->
         <div class="text-box mx-lg-4 mt-2 mt-lg-0" id="dropdown">
           <span class="text-content">
-            <img id="selected-flag" src="img/flag.png" alt="TH Flag" class="lang-select">
+            <img id="selected-flag" src="img/flag/thailand.png" alt="TH Flag" class="lang-select">
             <span id="current-language">TH</span>
           </span>
           <i class="arrow"></i>
           <ul class="dropdown-menu-lang">
             <li data-lang="th" onclick="change_lang('th')">
-              <img src="img/flag.png" alt="TH Flag" class="lang-option">
+              <img src="img/flag/thailand.png" alt="TH Flag" class="lang-option">
               <span>Thailand</span>
             </li>
             <li data-lang="en" onclick="change_lang('en')">
-              <img src="img/united-kingdom.png" alt="EN Flag" class="lang-option">
+              <img src="img/flag/english.png" alt="EN Flag" class="lang-option">
               <span>English</span>
             </li>
             <li data-lang="cn" onclick="change_lang('cn')">
-              <img src="img/china.png" alt="CN Flag" class="lang-option">
+              <img src="img/flag/china.png" alt="CN Flag" class="lang-option">
               <span>China</span>
             </li>
           </ul>
@@ -316,8 +316,9 @@ include "./includes/db.php";
 
     (function() {
       // ตรวจสอบว่าใน localStorage มีการบันทึกภาษาไว้หรือไม่
-      const lang = localStorage.getItem("lang") || "th";
-
+      
+      // const lang = localStorage.getItem("lang") || "th";
+      const lang = "<?php echo $_SESSION['lang']; ?>";
       // อัปเดตข้อความและธงตามภาษาที่เลือก
       const currentLanguage = document.getElementById("current-language");
       const selectedFlag = document.getElementById("selected-flag");
@@ -325,20 +326,19 @@ include "./includes/db.php";
       switch (lang) {
         case "en":
           currentLanguage.textContent = "EN";
-          selectedFlag.src = "img/united-kingdom.png";
+          selectedFlag.src = "img/flag/english.png";
           selectedFlag.alt = "EN Flag";
           break;
         case "cn":
           currentLanguage.textContent = "CN";
-          selectedFlag.src = "img/china.png";
+          selectedFlag.src = "img/flag/china.png";
           selectedFlag.alt = "CN Flag";
           break;
         default:
           currentLanguage.textContent = "TH";
-          selectedFlag.src = "img/flag.png";
+          selectedFlag.src = "img/flag/thailand.png";
           selectedFlag.alt = "TH Flag";
           break;
-
       }
 
       // if (lang === "en") {

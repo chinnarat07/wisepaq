@@ -107,7 +107,7 @@ if (isset($_POST["apply"])) {
             <tr>
                 <th><input type='checkbox' id='selectAllBoxes' onclick="selectAll(this)"></th>
                 <th style="width:40px;padding-right:0;"><a href="#" id="sort-asc-id">ID <i class="fa fa-sort-asc " aria-hidden="true"></i></a><a href="#" id="sort-desc-id" style="display: none;">ID <i class="fa fa-sort-desc " aria-hidden="true"></i></a></th>
-                <th style="width: 300px;">Title[EN] / Title[TH]</th>
+                <th style="width: 300px;">Title[EN] / Title[TH] / Title[CH]</th>
                 <!-- <th style="width: 150px;">[ภาษาไทย] Title</th> -->
                 <th style="width: 300px;">Category[EN] / Category[TH]</th>
                 <!-- <th style="width: 150px;">[ภาษาไทย] Category</th> -->
@@ -148,14 +148,19 @@ if (isset($_POST["apply"])) {
                 $the_post_title = base64_decode($Row['post_title']);
                 $the_post_title_thai = base64_decode($Row['post_title_thai']);
                 $the_post_title_china = base64_decode($Row['post_title_china']);
+                $datetime_from_db = $Row['post_date'];
 
-                echo "<tr>"; ?>
+                $date = new DateTime($datetime_from_db);
+                $date_time = $date->format("d/m/Y");
+                ?>
                 <td><input type='checkbox' name='checkBoxArray[]' value='<?php echo $the_post_id ?>'></td>
             <?php
-                echo "<td>{$Row['post_id']}</td>
-                    <td><a href='../post.php?lang=en&p_id=$the_post_id'>{$the_post_title}</a>
-                     / <a href='../post.php?lang=th&p_id=$the_post_id'>{$the_post_title_thai}</a>
-                    / <a href='../post.php?lang=cn&p_id=$the_post_id'>{$the_post_title_china}</a></td>";
+                echo "<td>$the_post_id</td>
+                    <td><a href='../post.php?lang=en&p_id=$the_post_id'><i class='bi bi-search'></i>
+</i>
+$the_post_title</a><br>
+                     <a href='../post.php?lang=th&p_id=$the_post_id'><i class='bi bi-search'></i>$the_post_title_thai</a><br>
+                    <a href='../post.php?lang=cn&p_id=$the_post_id'><i class='bi bi-search'></i>$the_post_title_china</a></td>";
 
                 $cat_id = $Row['post_category_id'];
                 $query = "SELECT * FROM tbl_categories WHERE cat_id=$cat_id";
@@ -176,8 +181,8 @@ if (isset($_POST["apply"])) {
                     echo "<td></td>";
                 }
 
-                echo "<td><img src='../images/{$Row['post_image']}' alt='image' width='150px' height='65px' style='object-fit: cover; text-align:center;'></td>
-                    <td>{$Row['post_date']}</td>
+                echo "<td><img src='../images/$the_post_image ' alt='image' width='150px' height='auto' style='object-fit: contain; text-align:center; '></td>
+                    <td>$date_time</td>
                     <td class='text-center'>
                         <a href='posts.php?source=edit_post&p_id=$the_post_id'><i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i></a> | 
                         <a onClick=\"javascript: return confirm('Are you sure you want to delete'); \" href='posts.php?deletePost=$the_post_id&image=$the_post_image'><i class='fa fa-trash-o fa-lg' aria-hidden='true'></i></a> 

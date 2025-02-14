@@ -19,23 +19,26 @@ $errMessage = false;
 
         while ($Row = mysqli_fetch_assoc($select_all_posts_query)) {
             $post_id = $Row['post_id'];
-            if ($lang == 'en') {
-                $post_title =  base64_decode($Row['post_title']);
-                $post_subtitle =  base64_decode($Row['post_subtitle']);
-            } else {
-                $post_title =  base64_decode($Row['post_title_thai']);
-                $post_subtitle =  base64_decode($Row['post_subtitle_thai']);
+            switch ($lang ) {
+                case 'en':
+                    $post_title =  base64_decode($Row['post_title']);
+                    $post_subtitle =  base64_decode($Row['post_subtitle']);
+                    $post_content = base64_decode($Row['post_content']);
+                    break;
+                case 'cn':
+                    $post_title =  base64_decode($Row['post_title_china']);
+                    $post_subtitle =  base64_decode($Row['post_subtitle_china']);
+                    $post_content = base64_decode($Row['post_content_china']);
+                    break;
+                default:
+                    $post_title =  base64_decode($Row['post_title_thai']);
+                    $post_subtitle =  base64_decode($Row['post_subtitle_thai']);
+                    $post_content = base64_decode($Row['post_content_thai']);
+                    break;
             }
             $post_link_url = $Row['post_link'];
             $post_date = $Row['post_date'];
             $post_image = $Row['post_image'];
-
-            if ($lang == 'en') {
-                $post_content = base64_decode($Row['post_content']);
-            } else{
-                $post_content = base64_decode($Row['post_content_thai']);
-            } 
-
     ?>
             <div class="row">
                 <!-- Blog Post Content Column -->
