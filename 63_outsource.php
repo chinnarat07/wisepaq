@@ -8,7 +8,7 @@
 
          <div class="col-lg-12 wow fadeIn text-center align-items-center d-flex" data-wow-delay="0.1s">
              <div class="justify-content-center">
-                 <img class="img-fluid h-50 w-50 rounded " style="object-fit:cover;" src="./img/ImgWeb/ai-gen-1.jpg" alt="">
+                 <img class="img-fluid h-50 w-50 rounded " style="object-fit:cover;" src="https://ckbox.cloud/382e77cfc832c66adcfc/assets/4zEWhOGL6MkZ/images/1280.jpeg" alt="">
              </div>
          </div>
 
