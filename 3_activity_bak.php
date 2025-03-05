@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<?php include("./includes/header.php") ?>
 
-<body>
-
-    
-
-
-
-
-
-    <!-- Start Footer -->
-    <?php include("./includes/footer.php") ?>
-=======
 <?php include("./includes/header.php") ?>
 
 <body>
