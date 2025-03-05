@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
  <!-- ======= Sidebar ======= -->
  <aside id="sidebar" class="sidebar">
 

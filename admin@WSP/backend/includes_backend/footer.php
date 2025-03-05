@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">

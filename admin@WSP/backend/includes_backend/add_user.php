@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 if (isset($_POST['add_user'])) {
     $user_firstname = $_POST['firstname'];

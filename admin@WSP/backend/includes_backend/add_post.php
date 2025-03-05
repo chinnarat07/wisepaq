@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <script src="../ckeditor/ckeditor.js"></script>
 <?php
 if (isset($_POST['create_post'])) {

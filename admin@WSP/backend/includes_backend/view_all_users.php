@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 // Delete User.
 if (isset($_GET["delete"])) {

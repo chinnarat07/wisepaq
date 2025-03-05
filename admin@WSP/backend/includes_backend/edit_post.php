@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 if (isset($_POST['update_post'], $_GET['p_id'])) {
     $the_post_id = $_GET['p_id'];
