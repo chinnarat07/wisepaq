@@ -1,3 +1,19 @@
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable({
+            layout: {
+                topStart: {
+                    buttons: ['copy', 'excel', 'pdf', 'colvis']
+                }
+            },
+            columnDefs: [{
+                "orderable": false,
+                "targets": [0, 8]
+            }]
+        });
+    });
+</script>
+
 <?php
 // Delete Post.
 if (isset($_GET["deletePost"])) {
@@ -70,9 +86,9 @@ if (isset($_POST["apply"])) {
 ?>
 
 <form action="" method="POST">
-    <table class="table table-bordered table-hover" id="viewposts">
-        <div class="row">
-            <div class="col-sm-4">
+    <table id="example" class="display" style="width:100%">
+        <div class="row d-flex align-items-center">
+            <div class="col-4">
                 <select class="form-control" name="bulk_option">
                     <option value="">Select Options</option>
                     <option value="Published">Publish</option>
@@ -82,64 +98,29 @@ if (isset($_POST["apply"])) {
                     <option value="Delete">Delete</option>
                 </select>
             </div>
-            <div class="form-group col-xs-4">
+            <div class="col-7">
                 <input type="submit" class="btn btn-success" name="apply" value="Apply">
                 <a class="btn btn-primary" href="posts.php?source=add_post">Add New</a>
             </div>
         </div>
         <thead>
             <tr>
-                <th class="text-center">
-                    <a href="#"><i class="fa fa-reply" aria-hidden="true"></i></a>
-                </th>
-                <th colspan="8" style="text-align:end;">
-                    <div style="display: flex; justify-content: flex-end; align-items: center;">
-                        <span>Filter:</span>
-                        <select class="form-control" style="height:30px; width:25%; margin-left:10px;padding:4px 15px;" name="" id="">
-                            <option value="all">Select Category</option>
-                            <option value="service">Service</option>
-                            <option value="our-service">Our Service</option>
-                            <option value="about-us">About Us</option>
-                        </select>
-                    </div>
-                </th>
-            </tr>
-            <tr>
                 <th><input type='checkbox' id='selectAllBoxes' onclick="selectAll(this)"></th>
-                <th style="width:40px;padding-right:0;"><a href="#" id="sort-asc-id">ID <i class="fa fa-sort-asc " aria-hidden="true"></i></a><a href="#" id="sort-desc-id" style="display: none;">ID <i class="fa fa-sort-desc " aria-hidden="true"></i></a></th>
+                <th style="width:40px;">ID</th>
                 <th style="width: 300px;">Title[EN] / Title[TH] / Title[CH]</th>
                 <!-- <th style="width: 150px;">[ภาษาไทย] Title</th> -->
                 <th style="width: 300px;">Category[EN] / Category[TH]</th>
                 <!-- <th style="width: 150px;">[ภาษาไทย] Category</th> -->
-                <th><a href="#" id="sort-asc-status">Status <i class="fa fa-sort-asc " aria-hidden="true"></i></a><a href="#" id="sort-desc-status" style="display: none;">Status <i class="fa fa-sort-desc " aria-hidden="true"></i></a></th>
-                <th style="width:48px ;padding-right:0;"><a href="#" id="sort-asc-pin">Pin <i class="fa fa-sort-asc " aria-hidden="true"></i></a><a href="#" id="sort-desc-pin" style="display: none;">Pin <i class="fa fa-sort-desc " aria-hidden="true"></i></a></th>
+                <th>Status</th>
+                <th style="width:48px ;">Pin </th>
                 <th style="width:100px">Image</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-                // Sort asc and sort desc
-                $(document).ready(function() {
-                    const toggleSort = (ascId, descId) => {
-                        $(`#${ascId}`).on('click', function() {
-                            $(this).hide();
-                            $(`#${descId}`).show();
-                        });
-                        $(`#${descId}`).on('click', function() {
-                            $(this).hide();
-                            $(`#${ascId}`).show();
-                        });
-                    };
-                    toggleSort('sort-asc-id', 'sort-desc-id');
-                    toggleSort('sort-asc-status', 'sort-desc-status');
-                    toggleSort('sort-asc-pin', 'sort-desc-pin');
-                });
-            </script>
         </thead>
         <tbody>
             <?php
-            $query = "SELECT * FROM tbl_posts";
+            $query = "SELECT * FROM tbl_posts order by post_id desc";
             $fetch_posts_data = mysqli_query($connection, $query);
             while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
                 $the_post_id = $Row['post_id'];
@@ -152,7 +133,7 @@ if (isset($_POST["apply"])) {
 
                 $date = new DateTime($datetime_from_db);
                 $date_time = $date->format("d/m/Y");
-                ?>
+            ?>
                 <td><input type='checkbox' name='checkBoxArray[]' value='<?php echo $the_post_id ?>'></td>
             <?php
                 echo "<td>$the_post_id</td>
@@ -184,8 +165,8 @@ $the_post_title</a><br>
                 echo "<td><img src='../images/$the_post_image ' alt='image' width='150px' height='auto' style='object-fit: contain; text-align:center; '></td>
                     <td>$date_time</td>
                     <td class='text-center'>
-                        <a href='posts.php?source=edit_post&p_id=$the_post_id'><i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i></a> | 
-                        <a onClick=\"javascript: return confirm('Are you sure you want to delete'); \" href='posts.php?deletePost=$the_post_id&image=$the_post_image'><i class='fa fa-trash-o fa-lg' aria-hidden='true'></i></a> 
+                        <a href='posts.php?source=edit_post&p_id=$the_post_id'><i class='bi bi-pencil-square' aria-hidden='true'></i></a> | 
+                        <a onClick=\"javascript: return confirm('Are you sure you want to delete'); \" href='posts.php?deletePost=$the_post_id&image=$the_post_image'><i class='bi bi-trash' aria-hidden='true'></i></a> 
                     </td>
                 </tr>";
             }

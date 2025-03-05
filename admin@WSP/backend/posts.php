@@ -44,10 +44,10 @@ if (isset($_GET["edit"], $_POST["update_category"])) {
 // Delete Post.
 if (isset($_GET["deletePost"])) {
     $post_id = $_GET['deletePost'];
-    $post_image = $_GET['image'];  
+    $post_image = $_GET['image'];
     $query = "DELETE FROM tbl_posts WHERE post_id=$post_id";
     $delete_query = mysqli_query($connection, $query);
-    unlink('../images/'.$post_image);
+    unlink('../images/' . $post_image);
     header("Location: posts.php");
     if (!$delete_query) {
         die("Query Failed: " . mysqli_error($connection));
@@ -57,38 +57,36 @@ if (isset($_GET["deletePost"])) {
 
 ?>
 
-<div id="page-wrapper">
-    <div class="container-fluid">
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                    Welcome to 
-                    <small><?php echo $_SESSION['username'] ?></small>
+<main id="main" class="main">
+    <div class="card">
+        <div class="card-body">
+            <!-- Page Heading -->
+            <div class="pagetitle">
+                <h1 class="fs-1 pb-1 ps-4 py-5">
+                    Welcome to <span style="color: #578FCA;">POST</span>
                 </h1>
-            </div>
-            <div class="col-xs-12">
-                <?php
-                if (isset($_GET['source'])) {
-                    $source = $_GET['source'];
-                } else {
-                    $source = "";
-                }
-                switch ($source) {
-                    case 'add_post':
-                        include "./includes_backend/add_post.php";
-                        break;
-                    case 'edit_post':
-                        include "./includes_backend/edit_post.php";
-                        break;
-                    default:
-                        include "./includes_backend/view_all_posts.php";
-                        break;
-                }
-                ?>
-            </div>
+            </div><!-- End Page Title -->
+            <?php
+            if (isset($_GET['source'])) {
+                $source = $_GET['source'];
+            } else {
+                $source = "";
+            }
+            switch ($source) {
+                case 'add_post':
+                    include "./includes_backend/add_post.php";
+                    break;
+                case 'edit_post':
+                    include "./includes_backend/edit_post.php";
+                    break;
+                default:
+                    include "./includes_backend/view_all_posts.php";
+                    break;
+            }
+            ?>
         </div>
     </div>
-</div>
+    </div>
+</main>
 
 <?php include "includes_backend/footer.php" ?>

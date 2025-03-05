@@ -86,7 +86,7 @@ if (isset($_GET['p_id'])) {
         $post_content_thai = base64_decode($Row['post_content_thai']);
         $post_content_china = base64_decode($Row['post_content_china']);
         ?>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="post" enctype="multipart/form-data" class="row g-3">
             <!--                        <div class="form-group">
                                         <img src='../images/<?php echo $post_image ?>' alt='image' width='100px'>
                                         <input type="file" name="post_image">
@@ -94,10 +94,10 @@ if (isset($_GET['p_id'])) {
                                     </div>-->
             <!--x-->
             <div class="form-group col-lg-12">
-                <label for="post_image" class="d-block">Post Image</label>
+                <label for="post_image" class="d-block fw-bold ms-3">Post Image</label>
                 <div>
-                    <label for="post_image" class="upload-icon">
-                        <span style="margin-left: 8px ;">เลือกไฟล์รูปภาพ</span> <i class="fa fa-file-image-o" aria-hidden="true" style="font-size: 2.3rem;"></i>
+                    <label  for="post_image" class="upload-icon">
+                        <span style="margin-left: 8px;">เลือกไฟล์รูปภาพ</span> <i class="fa fa-file-image-o" aria-hidden="true" style="font-size: 2.3rem;"></i>
                     </label>
                     <input type="file" name="post_image" id="post_image" style="display: none;" accept="image/*">
                     <input type="hidden" id="post_image_old" name="post_image_old" value="<?php echo $post_image_old; ?>">
@@ -123,12 +123,12 @@ if (isset($_GET['p_id'])) {
                 });
             </script>
             <div class="form-group col-lg-12">
-                <label for="link">Link Url</label>
-                <input type="text" class="form-control" value="<?php echo $post_link_url ?>" name="link_url">
+                <label class="ms-3 fw-bold" for="link">Link Url</label>
+                <input type="text" class="form-control mt-2" value="<?php echo $post_link_url ?>" name="link_url">
             </div>
-            <div class="form-group col-lg-4">
-                <label for="post_category">Post Category ID</label>
-                <select class="form-control" name="post_category" id="post_category">
+            <div class="form-group col-lg-4 ">
+                <label class="ms-3 fw-bold " for="post_category">Post Category ID</label>
+                <select class="form-control mt-2" name="post_category" id="post_category">
                     <?php
                     $query = "SELECT * FROM tbl_categories";
                     $fetch_data = mysqli_query($connection, $query);
@@ -145,8 +145,8 @@ if (isset($_GET['p_id'])) {
                 </select>
             </div>
             <div class="form-group col-lg-4">
-                <label for="post_status">Post Status</label>
-                <select class="form-control" name="post_status" id="post_category">
+                <label class="ms-3 fw-bold" for="post_status">Post Status</label>
+                <select class="form-control mt-2" name="post_status" id="post_category">
                     <option value='<?php echo $post_status; ?>'><?php echo $post_status; ?></option>
                     <?php if ($post_status === "Published") { ?>
                         <option value='Draft'>Draft</option>
@@ -156,8 +156,8 @@ if (isset($_GET['p_id'])) {
                 </select>
             </div>
             <div class="form-group col-lg-4">
-                <label for="post_pin">Post Pin</label>
-                <select class="form-control" name="post_pin" id="post_category">
+                <label class="ms-3 fw-bold" for="post_pin">Post Pin</label>
+                <select class="form-control mt-2" name="post_pin" id="post_category">
                     <option value='<?php echo $post_pin; ?>'><?php echo ($post_pin === "1") ? "Important" : "Unimportant"; ?></option>
                     <?php if ($post_pin === "1") { ?>
                         <option value='0'>Unimportant</option>
@@ -167,16 +167,16 @@ if (isset($_GET['p_id'])) {
                 </select>
             </div>
             <div class="form-group  col-lg-6">
-                <label for="title">Post Title</label>
-                <input type="text" class="form-control" value="<?php echo $post_title; ?>" name="title">
+                <label class="ms-3 fw-bold" for="title">Post Title</label>
+                <input type="text" class="form-control mt-2" value="<?php echo $post_title; ?>" name="title">
             </div>
             <div class="form-group  col-lg-6">
-                <label for="subtitle">Post subtitle</label>
-                <input type="text" class="form-control" value="<?php echo $post_subtitle; ?>" name="subtitle">
+                <label class="ms-3 fw-bold" for="subtitle">Post subtitle</label>
+                <input type="text" class="form-control mt-2" value="<?php echo $post_subtitle; ?>" name="subtitle">
             </div>
             <div class="form-group col-lg-12">
-                <label id="my-ckeditor" for="post_content">Post Content</label>
-                <textarea id="editor" name="post_content" class="form-control">
+                <label id="my-ckeditor" class="ms-3 fw-bold mb-2" for="post_content">Post Content</label>
+                <textarea id="editor" name="post_content" class="form-control mt-2">
                     <?php echo $post_content; ?>
                 </textarea>
                 <script>
@@ -188,16 +188,16 @@ if (isset($_GET['p_id'])) {
                 </script>
             </div>
             <div class="form-group  col-lg-6">
-                <label for="title">[ภาษาไทย] Post Title</label>
-                <input type="text" class="form-control" value="<?php echo $post_title_thai; ?>" name="title_thai">
+                <label class="ms-3 fw-bold" for="title">[ภาษาไทย] Post Title</label>
+                <input type="text" class="form-control mt-2" value="<?php echo $post_title_thai; ?>" name="title_thai">
             </div>
             <div class="form-group  col-lg-6">
-                <label for="subtitle">[ภาษาไทย] Post subtitle</label>
-                <input type="text" class="form-control" value="<?php echo $post_subtitle_thai; ?>" name="subtitle_thai">
+                <label class="ms-3 fw-bold" for="subtitle">[ภาษาไทย] Post subtitle</label>
+                <input type="text" class="form-control mt-2" value="<?php echo $post_subtitle_thai; ?>" name="subtitle_thai">
             </div>
             <div class="form-group col-lg-12">
-                <label id="my-ckeditor" for="post_content_thai">[ภาษาไทย] Post Content</label>
-                <textarea id="editor2" name="post_content_thai" class="form-control">
+                <label id="my-ckeditor" class="ms-3 fw-bold mb-2" for="post_content_thai">[ภาษาไทย] Post Content</label>
+                <textarea id="editor2" name="post_content_thai" class="form-control mt-2">
                     <?php echo $post_content_thai; ?>
                 </textarea>
                 <script>
@@ -207,16 +207,16 @@ if (isset($_GET['p_id'])) {
                 </script>
             </div>
             <div class="form-group  col-lg-6">
-                <label for="title">[ภาษาจีน] Post Title</label>
-                <input type="text" class="form-control" value="<?php echo $post_title_china; ?>" name="title_china">
+                <label class="ms-3 fw-bold" for="title">[ภาษาจีน] Post Title</label>
+                <input type="text" class="form-control mt-2" value="<?php echo $post_title_china; ?>" name="title_china">
             </div>
             <div class="form-group  col-lg-6">
-                <label for="subtitle">[ภาษาจีน] Post subtitle</label>
-                <input type="text" class="form-control" value="<?php echo $post_subtitle_china; ?>" name="subtitle_china">
+                <label class="ms-3 fw-bold" for="subtitle">[ภาษาจีน] Post subtitle</label>
+                <input type="text" class="form-control mt-2" value="<?php echo $post_subtitle_china; ?>" name="subtitle_china">
             </div>
             <div class="form-group col-lg-12">
-                <label id="my-ckeditor" for="post_content_caina">[ภาษาจีน] Post Content</label>
-                <textarea id="editor3" name="post_content_china" class="form-control">
+                <label id="my-ckeditor" class="ms-3 fw-bold mb-2" for="post_content_caina">[ภาษาจีน] Post Content</label>
+                <textarea id="editor3" name="post_content_china" class="form-control mt-2">
                          <?php echo $post_content_china; ?>
                 </textarea>
                 <script>

@@ -169,4 +169,10 @@ define('page_contact_9', '主题');
 define('page_contact_10', '留言');
 define('page_contact_11', '发送消息');
 
+//activity.php
+define('page_activity_1', '活动新闻');
+define('page_activity_2', '新闻动态 更新动态');
+define('page_activity_3', '阅读更多');
+
+
 ?>

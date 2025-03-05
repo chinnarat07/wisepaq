@@ -1,11 +1,15 @@
 <!-- Start Change lang -->
 <?php
+ob_start();
 session_start();
+
+
 if (isset($_GET['lang'])) {
   $_SESSION['lang'] = $_GET['lang'];
 } elseif (!isset($_SESSION['lang'])) {
   $_SESSION['lang'] = 'th';
 }
+//echo $_SESSION['lang'];
 include('lang_' . $_SESSION['lang'] . '.php');
 include "./includes/db.php";
 ?>
@@ -33,14 +37,17 @@ include "./includes/db.php";
         case 'en':
           $menu_title =  $Row_menu['name'] . " | WISEPAQ";
           $menu_title_upper = strtoupper($menu_title);
+          $_SESSION['lang'] = 'en';
           break;
         case 'cn':
           $menu_title =  $Row_menu['menuCN'] . " | WISEPAQ";
           $menu_title_upper = strtoupper($menu_title);
+          $_SESSION['lang'] = 'cn';
           break;
         default:
           $menu_title =  $Row_menu['menuTH'] . " | WISEPAQ";
           $menu_title_upper = strtoupper($menu_title);
+          $_SESSION['lang'] = 'th';
           break;
       }
       // ตรวจสอบว่าหน้าปัจจุบันตรงกับเมนูหลักหรือไม่
@@ -183,13 +190,19 @@ include "./includes/db.php";
           } else {
             while ($Row_menu = mysqli_fetch_assoc($fetch_data)) {
               $menu_id = $Row_menu['id_menu'];
-              $link = $Row_menu['link'];
+             //= $link = $Row_menu['link'];
               if ($_SESSION['lang'] == 'en') {
                 $menu_title = $Row_menu['name'];
+                $_SESSION['lang'] = 'en';
+                $link = $Row_menu['link']."?lang=en";
               } elseif ($_SESSION['lang'] == 'th') {
                 $menu_title = $Row_menu['menuTH'];
+                $_SESSION['lang'] = 'th';
+                $link = $Row_menu['link']."?lang=th";             
               } else {
                 $menu_title = $Row_menu['menuCN'];
+                $_SESSION['lang'] = 'cn';
+                $link = $Row_menu['link']."?lang=cn";
               }
 
               // ตรวจสอบเมนูย่อย
@@ -205,13 +218,16 @@ include "./includes/db.php";
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">' . $menu_title . '</a>
                     <ul class="dropdown-menu">';
                 while ($Row_sub = mysqli_fetch_assoc($fetch_data_sub)) {
-                  $link_sub = $Row_sub['link_dd'];
+                 // $link_sub = $Row_sub['link_dd'];
                   if ($_SESSION['lang'] == 'en') {
                     $menu_title_sub = $Row_sub['name_dd'];
+                    $link_sub = $Row_sub['link_dd']."?lang=en";    
                   } elseif ($_SESSION['lang'] == 'th') {
                     $menu_title_sub = $Row_sub['menuTH_dd'];
+                    $link_sub = $Row_sub['link_dd']."?lang=th";     
                   } else {
                     $menu_title_sub = $Row_sub['menuCN_dd'];
+                    $link_sub = $Row_sub['link_dd']."?lang=cn";     
                   }
                   echo '<li><a href="' . $link_sub . '" class="dropdown-item ' . (($current_page == basename($link_sub)) ? 'active' : '') . '">' . $menu_title_sub . '</a></li>';
                 }

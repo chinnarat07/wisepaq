@@ -1,13 +1,27 @@
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      Copyright &copy; WISEPAQ <?php echo date("Y"); ?>
+    </div>
+  </footer>
+  <!-- ========= End Footer ========== -->
 
-<!-- /#wrapper -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="../vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/chart.js/chart.umd.js"></script>
+  <script src="../vendor/echarts/echarts.min.js"></script>
+  <script src="../vendor/quill/quill.js"></script>
+  <script src="../vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="../vendor/tinymce/tinymce.min.js"></script>
+  <script src="../vendor/php-email-form/validate.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="../js/main.js"></script>
 
-<!-- CKEditor 5 JavaScript -->
+  <!-- CKEditor 5 JavaScript -->
 <script>
     ClassicEditor
         .create(document.querySelector('#editor')).then(editor => {
@@ -33,17 +47,14 @@
         });
 </script>
 
-<!-- Select all check box JavaScript -->
 <script>
     function selectAll(source) {
-        // Get all checkboxes in the table
-        var checkboxes = document.querySelectorAll('#viewposts input[type="checkbox"]');
+    let checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = source.checked;
+    });
+}
 
-        // Set the "checked" property of each checkbox to the value of the "Select All" checkbox
-        for (var i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].checked = source.checked;
-        }
-    }
 </script>
 
 </body>

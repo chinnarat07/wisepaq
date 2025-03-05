@@ -42,8 +42,8 @@ if (isset($_GET["delete"])) {
                     <td>$user_lastname</td>
                     <td>$user_email</td>
                     <td class='text-center'>
-                            <a href='users.php?source=edit_user&user_id=$user_id'><i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i></a> </a> |
-                            <a onClick=\"javascript: return confirm('Are you sure you want to delete'); \" href='users.php?delete=$user_id'><i class='fa fa-trash-o fa-lg' aria-hidden='true'></i></a>
+                            <a href='users.php?source=edit_user&user_id=$user_id'><i class='bi bi-pencil-square' aria-hidden='true'></i></a> </a> |
+                            <a onClick=\"javascript: return confirm('Are you sure you want to delete'); \" href='users.php?delete=$user_id'><i class='bi bi-trash' aria-hidden='true'></i></a>
                      </td>
                 </tr>";
         }

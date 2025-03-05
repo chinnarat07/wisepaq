@@ -1,4 +1,4 @@
-<script src="./ckeditor/ckeditor.js"></script>
+<script src="../ckeditor/ckeditor.js"></script>
 <?php
 if (isset($_POST['create_post'])) {
     $post_title = base64_encode($_POST['title']);
@@ -26,8 +26,8 @@ if (isset($_POST['create_post'])) {
     move_uploaded_file($post_image_temp, "../images/$post_image");
 
     // Add new Post.
-    $query = "INSERT INTO tbl_posts(post_category_id, post_title, post_title_thai,post_title_china, post_date, post_image, post_content, post_content_thai, post_status,post_subtitle,post_subtitle_thai,post_subtitle_china,post_link,post_pin) ";
-    $query .= "VALUES({$post_category_id}, '{$post_title}', '{$post_title_thai}','{$post_title_china}', '{$post_date}', '{$post_image}', '{$post_content}', '{$post_content_thai}',  '{$post_status}','{$post_subtitle}','{$post_subtitle_thai}','{$post_subtitle_china}','{$post_link_url}','{$post_pin}')";
+    $query = "INSERT INTO tbl_posts(post_category_id, post_title, post_title_thai,post_title_china, post_date, post_image, post_content, post_content_thai, post_status,post_subtitle,post_subtitle_thai,post_subtitle_china,post_link,post_pin,post_content_china) ";
+    $query .= "VALUES({$post_category_id}, '{$post_title}', '{$post_title_thai}','{$post_title_china}', '{$post_date}', '{$post_image}', '{$post_content}', '{$post_content_thai}',  '{$post_status}','{$post_subtitle}','{$post_subtitle_thai}','{$post_subtitle_china}','{$post_link_url}','{$post_pin}','{$post_content_china}')";
     $create_post_query = mysqli_query($connection, $query);
     $the_post_id = mysqli_insert_id($connection);
     if (!$create_post_query) {
@@ -38,13 +38,12 @@ if (isset($_POST['create_post'])) {
     // echo "<p class='alert alert-success'>Post added successfully. <a href='../post.php?p_id=$the_post_id'>View Post</a></p>";
 }
 ?>
-
-<form action="" method="post" enctype="multipart/form-data">
-    <div class="form-group col-lg-12 ">
-        <label for="post_image" class="d-block">Post Image</label>
+<form action="" method="post" enctype="multipart/form-data" class="row g-3">
+    <div class="form-group col-md-12 ">
+        <label for="post_image" class="d-block fw-bold ms-3">Post Image</label>
         <div>
             <label for="post_image" class="upload-icon">
-                <span style="margin-left: 8px ;">เลือกไฟล์รูปภาพ</span> <i class="fa fa-file-image-o" aria-hidden="true" style="font-size: 2.3rem;"></i>
+                <span style="margin-left: 8px ;">เลือกไฟล์รูปภาพ</span> <i class="bi bi-file-image" aria-hidden="true" style="font-size: 1.3rem;"></i>
             </label>
         </div>
         <input type="file" name="post_image" id="post_image" style="display: none;" accept="image/*">
@@ -71,12 +70,12 @@ if (isset($_POST['create_post'])) {
     </script>
 
     <div class="form-group col-lg-12">
-        <label for="link">Link Url</label>
-        <input type="text" class="form-control" name="link_url">
+        <label for="link" class="ms-3 fw-bold">Link Url</label>
+        <input type="text" class="form-control mt-2" name="link_url">
     </div>
     <div class="form-group col-lg-4">
-        <label for="post_category">Post Category</label>
-        <select class="form-control" name="post_category" id="post_category">
+        <label  class="ms-3 fw-bold" for="post_category">Post Category</label>
+        <select class="form-control mt-2" name="post_category" id="post_category">
             <?php
             $query = "SELECT * FROM tbl_categories";
             $fetch_data = mysqli_query($connection, $query);
@@ -93,16 +92,16 @@ if (isset($_POST['create_post'])) {
         </select>
     </div>
     <div class="form-group col-lg-4">
-        <label for="post_status">Post Status</label>
-        <select class="form-control" name="post_status" id="post_category">
+        <label  class="ms-3 fw-bold" for="post_status">Post Status</label>
+        <select class="form-control mt-2" name="post_status" id="post_status">
             <option value='Draft'>Select Option</option>
             <option value='Published'>Published</option>
             <option value='Draft'>Draft</option>
         </select>
     </div>
     <div class="form-group col-lg-4">
-        <label for="post_pin">Post Pin</label>
-        <select class="form-control" name="post_pin" id="post_category">
+        <label  class="ms-3 fw-bold" for="post_pin">Post Pin</label>
+        <select class="form-control mt-2" name="post_pin" id="post_pin">
             <option value='0'>Select Option</option>
             <option value='1'>Important</option>
             <option value='0'>Unimportant</option>
@@ -110,15 +109,15 @@ if (isset($_POST['create_post'])) {
     </div>
 
     <div class="form-group  col-lg-6">
-        <label for="title">Post Title</label>
-        <input type="text" class="form-control" name="title">
+        <label  class="ms-3 fw-bold" for="title">Post Title</label>
+        <input type="text" class="form-control mt-2" name="title">
     </div>
     <div class="form-group  col-lg-6">
-        <label for="subtitle">Post subtitle</label>
-        <input type="text" class="form-control" name="subtitle">
+        <label  class="ms-3 fw-bold" for="subtitle">Post subtitle</label>
+        <input type="text" class="form-control mt-2" name="subtitle">
     </div>
     <div class="form-group col-lg-12">
-        <label id="my-ckeditor" for="post_content">Post Content</label>
+        <label id="my-ckeditor"  class="ms-3 fw-bold mb-2" for="post_content">Post Content</label>
         <textarea id="editor" name="post_content" class="form-control">
         This is some sample content.
         </textarea>
@@ -133,16 +132,16 @@ if (isset($_POST['create_post'])) {
         </script>
     </div>
     <div class="form-group  col-lg-6">
-        <label for="title">[ภาษาไทย] Post Title</label>
-        <input type="text" class="form-control" name="title_thai">
+        <label  class="ms-3 fw-bold" for="title">[ภาษาไทย] Post Title</label>
+        <input type="text" class="form-control mt-2" name="title_thai">
     </div>
     <div class="form-group  col-lg-6">
-        <label for="subtitle">[ภาษาไทย] Post subtitle</label>
-        <input type="text" class="form-control" name="subtitle_thai">
+        <label  class="ms-3 fw-bold" for="subtitle">[ภาษาไทย] Post subtitle</label>
+        <input type="text" class="form-control mt-2" name="subtitle_thai">
     </div>
     <div class="form-group col-lg-12">
-        <label id="my-ckeditor" for="post_content_thai">[ภาษาไทย] Post Content</label>
-        <textarea id="editor2" name="post_content_thai" class="form-control">
+        <label id="my-ckeditor"  class="ms-3 fw-bold mb-2" for="post_content_thai">[ภาษาไทย] Post Content</label>
+        <textarea id="editor2" name="post_content_thai" class="form-control ">
          นี่คือเนื้อหาตัวอย่างบางส่วน.
         </textarea>
         <script>
@@ -154,17 +153,17 @@ if (isset($_POST['create_post'])) {
         </script>
     </div>
     <div class="form-group  col-lg-6">
-        <label for="title">[ภาษาจีน] Post Title</label>
-        <input type="text" class="form-control" name="title_china">
+        <label  class="ms-3 fw-bold" for="title">[ภาษาจีน] Post Title</label>
+        <input type="text" class="form-control mt-2" name="title_china">
     </div>
     <div class="form-group  col-lg-6">
-        <label for="subtitle">[ภาษาจีน] Post subtitle</label>
-        <input type="text" class="form-control" name="subtitle_china">
+        <label  class="ms-3 fw-bold" for="subtitle">[ภาษาจีน] Post subtitle</label>
+        <input type="text" class="form-control mt-2" name="subtitle_china">
     </div>
     <div class="form-group col-lg-12">
-        <label id="my-ckeditor" for="post_content_thai">[ภาษาจีน] Post Content</label>
-        <textarea id="editor3" name="post_content_china" class="form-control">
-         นี่คือเนื้อหาตัวอย่างบางส่วน.
+        <label id="my-ckeditor"  class="ms-3 fw-bold mb-2" for="post_content_thai">[ภาษาจีน] Post Content</label>
+        <textarea id="editor3" name="post_content_china" class="form-control ">
+        这是一些示例内容。
         </textarea>
         <script>
             CKEDITOR.dtd.$removeEmpty['i'] = false;
@@ -174,7 +173,7 @@ if (isset($_POST['create_post'])) {
         </script>
     </div>
 
-    <div class="form-group col-lg-12">
+    <div class="form-group col-lg-12 mt-3">
         <input type="submit" class="btn btn-primary" name="create_post" value="Publish">
     </div>
 </form>

@@ -152,4 +152,9 @@ define('page_contact_9','เรื่องที่จะติดต่อ');
 define('page_contact_10','รายละเอียด');
 define('page_contact_11','ส่งข้อความ');
 
+//activity.php
+define('page_activity_1', 'ข่าวกิจกรรม');
+define('page_activity_2', 'ข่าวและกิจกรรม อัพเดตความเคลื่อนไหว');
+define('page_activity_3', 'อ่านเพิ่มเติม');
+
 ?>

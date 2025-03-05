@@ -15,7 +15,7 @@ if (isset($_POST['update_user'], $_GET['user_id'])) {
 
 
     // Engrypt Password.
-    $user_password =  md5($user_password); 
+    $user_password =  md5($user_password);
 
     // Update a User.
     $query = "UPDATE tbl_users SET ";
@@ -30,7 +30,7 @@ if (isset($_POST['update_user'], $_GET['user_id'])) {
     if (!$update_user_query) {
         die("Query Failed: " . mysqli_error($connection));
     }
-     header("Location: ../backend/index.php");
+    header("Location: ../backend/users.php");
 }
 ?>
 
@@ -47,37 +47,36 @@ if (isset($_GET['user_id'])) {
         $username = $Row['user_name'];
         $password = $Row['user_password'];
         $email = $Row['user_email'];
-        ?>
+?>
 
-        <form action="" method="post"  autocomplete="off">
+        <form action="" method="post" autocomplete="off">
 
             <div class="form-group">
-                <label for="firstname">Firstname</label>
-                <input type="text" class="form-control" name="firstname" value='<?php echo $firstname; ?>'>
+                <label for="firstname" class="ms-3 fw-bold">Firstname</label>
+                <input type="text" class="form-control mt-2" name="firstname" value='<?php echo $firstname; ?>'>
             </div>
 
-            <div class="form-group">
-                <label for="lastname">Lastname</label>
-                <input type="text" class="form-control" name="lastname" value='<?php echo $lastname; ?>'>
+            <div class="form-group mt-3">
+                <label for="lastname" class="ms-3 fw-bold">Lastname</label>
+                <input type="text" class="form-control mt-2" name="lastname" value='<?php echo $lastname; ?>'>
             </div>
 
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" name="username" value='<?php echo $username; ?>'>
+            <div class="form-group mt-3">
+                <label for="username" class="ms-3 fw-bold">Username</label>
+                <input type="text" class="form-control mt-2" name="username" value='<?php echo $username; ?>'>
             </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password"  class="form-control"  name="password"  autocomplete="new-password"   value='<?php echo $password; ?>'>
+            <div class="form-group mt-3">
+                <label for="password" class="ms-3 fw-bold">Password</label>
+                <input type="password" class="form-control mt-2" name="password" value='<?php echo $password; ?>'>
             </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" name="email" value='<?php echo $email; ?>'>
+            <div class="form-group mt-3">
+                <label for="email" class="ms-3 fw-bold">Email</label>
+                <input type="email" class="form-control mt-2" name="email" value='<?php echo $email; ?>'>
             </div>
 
-
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <input type="submit" class="btn btn-primary" name="update_user" value="Update User">
             </div>
         </form>

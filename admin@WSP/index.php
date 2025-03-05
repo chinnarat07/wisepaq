@@ -7,7 +7,7 @@ include "includes_admin/navigation.php";
 <!-- Page Content -->
 
 
-    <div  style="width:500px; margin:0 auto;">
+    <div  class="main" id="main">
         <?php
         include "includes_admin/sidebar.php"
         ?>

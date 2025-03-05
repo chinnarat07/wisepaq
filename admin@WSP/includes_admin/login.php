@@ -24,7 +24,6 @@ if (isset($_POST['login'])) {
 
             while ($Row = mysqli_fetch_array($select_user_query)) {
                 $user_id = $Row['user_id'];
-                $user_role = $Row['user_role'];
                 $user_name = $Row['user_name'];
                 $user_firstname = $Row['user_firstname'];
                 $user_lastname = $Row['user_lastname'];
