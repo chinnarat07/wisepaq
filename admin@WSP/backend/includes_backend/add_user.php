@@ -3,19 +3,19 @@ if (isset($_POST['add_user'])) {
     $user_firstname = $_POST['firstname'];
     $user_lastname = $_POST['lastname'];
     $user_name = $_POST['username'];
-    $user_password = md5($_POST['password']); 
+    $user_password = md5($_POST['password']);
     $user_email = $_POST['email'];
 
-        // Check exist user.
-         $user=1;
-        $queryExist = "SELECT EXISTS(SELECT * FROM tbl_users WHERE user_name = '$user_name') as user";
-         $fetch_data = mysqli_query($connection, $queryExist);
-              while ($Row = mysqli_fetch_assoc($fetch_data)) {
-                                  $user = $Row['user'];
-             }   
-        
-    if($user==0){
-    
+    // Check exist user.
+    $user = 1;
+    $queryExist = "SELECT EXISTS(SELECT * FROM tbl_users WHERE user_name = '$user_name') as user";
+    $fetch_data = mysqli_query($connection, $queryExist);
+    while ($Row = mysqli_fetch_assoc($fetch_data)) {
+        $user = $Row['user'];
+    }
+
+    if ($user == 0) {
+
         // Add new user.
         $query = "INSERT INTO tbl_users(user_firstname, user_lastname, user_name, user_password, user_email) ";
         $query .= "VALUES('{$user_firstname}', '{$user_lastname}', '{$user_name}', '{$user_password}', '{$user_email}')";
@@ -26,11 +26,9 @@ if (isset($_POST['add_user'])) {
         }
         header("Location: ../backend/index.php");
         echo "User Created " . "<a href='users.php'>View Users</a>";
-    }else{
-          echo "<script>alert('This user already in the system!');window.history.go(-1);</script>";           
+    } else {
+        echo "<script>alert('This user already in the system!');window.history.go(-1);</script>";
     }
-    
-    
 }
 
 

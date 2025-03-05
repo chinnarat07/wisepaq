@@ -85,7 +85,7 @@ if (isset($_GET['p_id'])) {
         $post_content = base64_decode($Row['post_content']);
         $post_content_thai = base64_decode($Row['post_content_thai']);
         $post_content_china = base64_decode($Row['post_content_china']);
-        ?>
+?>
         <form action="" method="post" enctype="multipart/form-data">
             <!--                        <div class="form-group">
                                         <img src='../images/<?php echo $post_image ?>' alt='image' width='100px'>
@@ -109,12 +109,12 @@ if (isset($_GET['p_id'])) {
             </div>
 
             <script>
-                document.getElementById('post_image').addEventListener('change', function (event) {
+                document.getElementById('post_image').addEventListener('change', function(event) {
                     const previewImage = document.getElementById('preview-image');
                     const file = event.target.files[0]; // ดึงไฟล์ที่เลือก
                     if (file) {
                         const reader = new FileReader();
-                        reader.onload = function (e) {
+                        reader.onload = function(e) {
                             previewImage.src = e.target.result; // แสดงรูปใน img
                             previewImage.style.display = 'block'; // ทำให้ img ปรากฏ
                         };
@@ -230,7 +230,7 @@ if (isset($_GET['p_id'])) {
                 <input type="submit" class="btn btn-primary" name="update_post" value="Update">
             </div>
         </form>
-        <?php
+<?php
     }
 }
 ?>

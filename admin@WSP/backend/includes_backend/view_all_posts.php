@@ -1,3 +1,14 @@
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable({
+            layout: {
+                topStart: {
+                    buttons: ['copy', 'excel', 'pdf', 'colvis']
+                }
+            }
+        });
+    });
+</script>
 <?php
 // Delete Post.
 if (isset($_GET["deletePost"])) {
@@ -70,7 +81,7 @@ if (isset($_POST["apply"])) {
 ?>
 
 <form action="" method="POST">
-    <table class="table table-bordered table-hover" id="viewposts">
+    <table id="example" class="display" style="width:100%">
         <div class="row">
             <div class="col-sm-4">
                 <select class="form-control" name="bulk_option">
@@ -117,29 +128,10 @@ if (isset($_POST["apply"])) {
                 <th>Date</th>
                 <th>Action</th>
             </tr>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-                // Sort asc and sort desc
-                $(document).ready(function() {
-                    const toggleSort = (ascId, descId) => {
-                        $(`#${ascId}`).on('click', function() {
-                            $(this).hide();
-                            $(`#${descId}`).show();
-                        });
-                        $(`#${descId}`).on('click', function() {
-                            $(this).hide();
-                            $(`#${ascId}`).show();
-                        });
-                    };
-                    toggleSort('sort-asc-id', 'sort-desc-id');
-                    toggleSort('sort-asc-status', 'sort-desc-status');
-                    toggleSort('sort-asc-pin', 'sort-desc-pin');
-                });
-            </script>
         </thead>
         <tbody>
             <?php
-            $query = "SELECT * FROM tbl_posts";
+            $query = "SELECT * FROM tbl_posts order by post_id desc";
             $fetch_posts_data = mysqli_query($connection, $query);
             while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {
                 $the_post_id = $Row['post_id'];
@@ -152,7 +144,7 @@ if (isset($_POST["apply"])) {
 
                 $date = new DateTime($datetime_from_db);
                 $date_time = $date->format("d/m/Y");
-                ?>
+            ?>
                 <td><input type='checkbox' name='checkBoxArray[]' value='<?php echo $the_post_id ?>'></td>
             <?php
                 echo "<td>$the_post_id</td>

@@ -9,7 +9,7 @@ include "includes_backend/navigation.php";
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Welcome to   <small><?php echo $_SESSION['username'] ?></small>
+                    Welcome to <small><?php echo $_SESSION['username'] ?></small>
                 </h1>
             </div>
             <div class="col-xs-12">

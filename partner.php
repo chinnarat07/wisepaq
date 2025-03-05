@@ -8,7 +8,7 @@
 <!-- Solution content Start -->
 <div class="container">
    <?php
-     $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id where tbl_categories.cat_page=1 AND tbl_categories.cat_id=18 AND tbl_posts.post_status='Published'";
+     $query = "SELECT * FROM tbl_posts inner join tbl_categories on tbl_categories.cat_id = tbl_posts.post_category_id where tbl_categories.cat_page=11 AND tbl_categories.cat_id=18 AND tbl_posts.post_status='Published'";
      $fetch_posts_data = mysqli_query($connection, $query);
      $counter = 1; // ตัวแปรสำหรับนับลูป
      while ($Row = mysqli_fetch_assoc($fetch_posts_data)) {

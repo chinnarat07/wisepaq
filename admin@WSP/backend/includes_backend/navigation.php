@@ -35,6 +35,19 @@
                     <a style="padding-left: 22px;" href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a>
                 </li>
                 <li>
+                    <a style="padding-left: 21px;" href="javascript:;" data-toggle="collapse" data-target="#activity-dropdown">
+                        <i class="fa fa-table"></i> Activity <i class="fa fa-fw fa-caret-down"></i>
+                    </a>
+                    <ul id="activity-dropdown" class="collapse">
+                        <li>
+                            <a href="activity.php?source=add_activity">Add Activity</a>
+                        </li>
+                        <li>
+                            <a href="activity.php">View Activity</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
                     <a style="padding-left: 21px;" href="javascript:;" data-toggle="collapse" data-target="#posts-dropdown">
                         <i class="fa fa-table"></i> Posts <i class="fa fa-fw fa-caret-down"></i>
                     </a>

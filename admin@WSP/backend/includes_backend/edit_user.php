@@ -15,7 +15,7 @@ if (isset($_POST['update_user'], $_GET['user_id'])) {
 
 
     // Engrypt Password.
-    $user_password =  md5($user_password); 
+    $user_password =  md5($user_password);
 
     // Update a User.
     $query = "UPDATE tbl_users SET ";
@@ -30,7 +30,7 @@ if (isset($_POST['update_user'], $_GET['user_id'])) {
     if (!$update_user_query) {
         die("Query Failed: " . mysqli_error($connection));
     }
-     header("Location: ../backend/index.php");
+    header("Location: ../backend/index.php");
 }
 ?>
 
@@ -47,9 +47,9 @@ if (isset($_GET['user_id'])) {
         $username = $Row['user_name'];
         $password = $Row['user_password'];
         $email = $Row['user_email'];
-        ?>
+?>
 
-        <form action="" method="post"  autocomplete="off">
+        <form action="" method="post" autocomplete="off">
 
             <div class="form-group">
                 <label for="firstname">Firstname</label>
@@ -68,7 +68,7 @@ if (isset($_GET['user_id'])) {
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password"  class="form-control"  name="password"  autocomplete="new-password"   value='<?php echo $password; ?>'>
+                <input type="password" class="form-control" name="password" autocomplete="new-password" value='<?php echo $password; ?>'>
             </div>
 
             <div class="form-group">

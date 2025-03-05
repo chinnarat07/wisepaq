@@ -180,6 +180,10 @@ define('page_contact_9', 'Subject');
 define('page_contact_10', 'Message');
 define('page_contact_11', 'Send Message');
 
+//activity.php
+define('page_activity_1', 'Activity news');
+define('page_activity_2', 'News and events Update the movement');
+define('page_activity_3', 'Read more');
 
 
 ?>

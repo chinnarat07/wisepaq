@@ -15,10 +15,10 @@ if (isset($_POST['update_profile'], $_SESSION['username'])) {
     // $post_image_temp = $_FILES['post_image']['tmp_name'];
     // move_uploaded_file($post_image_temp, "../images/$post_image");
 
-       
-        $password = md5($user_password); 
-    
-    
+
+    $password = md5($user_password);
+
+
     // Update a User.
     $query = "UPDATE tbl_users SET ";
     $query .= "user_firstname='$user_firstname', ";
@@ -61,7 +61,7 @@ if (isset($_POST['update_profile'], $_SESSION['username'])) {
                         $username = $Row['user_name'];
                         $password = $Row['user_password'];
                         $email = $Row['user_email'];
-                        ?>
+                ?>
 
                         <form action="" method="post">
 
@@ -77,7 +77,7 @@ if (isset($_POST['update_profile'], $_SESSION['username'])) {
 
                             <div class="form-group">
                                 <label for="username">Username</label>
-                                <input type="text" class="form-control" name="username" value='<?php echo $username; ?>' >
+                                <input type="text" class="form-control" name="username" value='<?php echo $username; ?>'>
                             </div>
 
                             <div class="form-group">

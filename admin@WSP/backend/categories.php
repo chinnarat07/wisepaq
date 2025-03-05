@@ -6,8 +6,8 @@ include "includes_backend/navigation.php";
 $error_message = "";
 if (isset($_POST["submit"])) {
     $cat_title = $_POST['cat_title'];
-    $cat_title_thai = $_POST['cat_title_thai']; 
-    $cat_page = $_POST['cat_page']; 
+    $cat_title_thai = $_POST['cat_title_thai'];
+    $cat_page = $_POST['cat_page'];
     if (!empty($cat_title) || $cat_title != "") {
         $query = "INSERT INTO tbl_categories (cat_title,cat_title_thai,cat_page) VALUES('$cat_title','$cat_title_thai','$cat_page '); ";
         $create_query = mysqli_query($connection, $query);
@@ -21,33 +21,32 @@ if (isset($_POST["submit"])) {
 
 // Delete Category.
 if (isset($_GET["delete"])) {
-        $cat_id = $_GET['delete'];
-     // Check exist user.
-        $exist = -1;
-         $queryExist = "SELECT EXISTS(SELECT * FROM tbl_posts WHERE post_category_id = $cat_id) as exist";
-         $fetch_data = mysqli_query($connection, $queryExist);
-              while ($Row = mysqli_fetch_assoc($fetch_data)) {
-                                  $exist = $Row['exist'];
-         }    
-    
-        if($exist==0){
-            $query = "DELETE FROM tbl_categories WHERE cat_id=$cat_id";
-            $delete_query = mysqli_query($connection, $query);
-            header("Location: categories.php");
-            if (!$delete_query) {
-                die("Query Failed: " . mysqli_error($connection));
-            }
-      }else if($exist==1){
-              echo "<script>alert('Found data in the system!Can not delete');</script>";           
-      } 
-    
+    $cat_id = $_GET['delete'];
+    // Check exist user.
+    $exist = -1;
+    $queryExist = "SELECT EXISTS(SELECT * FROM tbl_posts WHERE post_category_id = $cat_id) as exist";
+    $fetch_data = mysqli_query($connection, $queryExist);
+    while ($Row = mysqli_fetch_assoc($fetch_data)) {
+        $exist = $Row['exist'];
+    }
+
+    if ($exist == 0) {
+        $query = "DELETE FROM tbl_categories WHERE cat_id=$cat_id";
+        $delete_query = mysqli_query($connection, $query);
+        header("Location: categories.php");
+        if (!$delete_query) {
+            die("Query Failed: " . mysqli_error($connection));
+        }
+    } else if ($exist == 1) {
+        echo "<script>alert('Found data in the system!Can not delete');</script>";
+    }
 }
 
 // Update Category.
 if (isset($_GET["edit"], $_POST["update_category"])) {
     $cat_id = $_GET['edit'];
     $cat_title = $_POST["cat_title"];
-    $cat_title_thai = $_POST["cat_title_thai"]; 
+    $cat_title_thai = $_POST["cat_title_thai"];
     $cat_page = $_POST["cat_page"];
     $query = "UPDATE tbl_categories SET cat_title='$cat_title' , cat_title_thai='$cat_title_thai' , cat_page='$cat_page'   WHERE cat_id=$cat_id";
     echo $query;
@@ -66,7 +65,7 @@ if (isset($_GET["edit"], $_POST["update_category"])) {
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Welcome to  <small><?php echo $_SESSION['username'] ?></small>
+                    Welcome to <small><?php echo $_SESSION['username'] ?></small>
                 </h1>
             </div>
         </div>
@@ -108,7 +107,7 @@ if (isset($_GET["edit"], $_POST["update_category"])) {
                             $cat_title_thai = $Row["cat_title_thai"];
                             $cat_page = $Row["cat_page"];
                             if (isset($cat_title)) {
-                                ?>
+                    ?>
                                 <div style="border: 2px solid gray;">
                                     <h3>&nbsp;Edit Category</h3>
                                     <div class="form-group">
@@ -130,7 +129,7 @@ if (isset($_GET["edit"], $_POST["update_category"])) {
                                         <input class="btn btn-primary" type="submit" name="update_category" value="Edit Category">
                                     </div>
                                 </div>
-                            <?php };
+                    <?php };
                         }
                     }
                     ?>
@@ -153,7 +152,7 @@ if (isset($_GET["edit"], $_POST["update_category"])) {
                     </thead>
                     <tbody>
                         <?php
-                        $query = "SELECT * FROM tbl_categories";                        ;
+                        $query = "SELECT * FROM tbl_categories";;
                         $fetch_data = mysqli_query($connection, $query);
                         while ($Row = mysqli_fetch_assoc($fetch_data)) {
                             echo "<tr>
