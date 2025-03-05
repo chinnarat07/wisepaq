@@ -1,4 +1,3 @@
-
 <?php
 /*Web general*/
 define('work_time','Mon - Fri : 08.30 AM - 05.00 PM');
@@ -188,4 +187,4 @@ define('page_activity_3', 'Read more');
 
 
 ?>
->>>>>>> f210771355439f265820ae9777d49bf0dabfe4de
+

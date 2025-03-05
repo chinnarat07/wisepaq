@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  <!-- Footer -->
  <footer>
      <div class="row">

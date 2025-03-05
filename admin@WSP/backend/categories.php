@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 include "includes_backend/header.php";
 include "includes_backend/navigation.php";

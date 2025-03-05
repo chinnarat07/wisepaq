@@ -1,4 +1,3 @@
-
 <?php
 /*Web general*/
 define('work_time','周一至周五：早上8:30 - 下午5:00');
@@ -177,4 +176,4 @@ define('page_activity_3', '阅读更多');
 
 
 ?>
->>>>>>> f210771355439f265820ae9777d49bf0dabfe4de
+

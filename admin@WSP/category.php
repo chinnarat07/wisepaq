@@ -32,7 +32,7 @@ include "includes/navigation.php";
                 $post_image = $Row['post_image'];
                 $post_content = substr($Row['post_content'], 0, 270) . "...";
 
-                ?>
+            ?>
                 <!-- Blog Post -->
                 <h2>
                     <a href="post.php?p_id=<?php echo $post_id ?>"><?php echo $post_title ?></a>

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 <?php
 	$sql ="SELECT COUNT(activity_id) FROM tbl_activity";
 	$query=mysqli_query($connection,$sql);
