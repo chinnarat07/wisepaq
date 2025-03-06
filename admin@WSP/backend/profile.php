@@ -42,7 +42,7 @@ if (isset($_POST['update_profile'], $_SESSION['username'])) {
     <div class="card" style="height:77vh;">
         <div class="card-body">
         <div class="pagetitle">
-        <h1 class="fs-1 pb-1 ps-4 py-5">
+        <h1 class="fs-1 pb-1 ps-4 py-3">
              Welcome to <span style="color: #578FCA;">PROFILE</span>
         </h1>
     </div><!-- End Page Title -->

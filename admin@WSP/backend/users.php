@@ -7,7 +7,7 @@ include "includes_backend/navigation.php";
     <div class="card" style="height:77vh;">
         <div class="card-body">
         <div class="pagetitle">
-        <h1 class="fs-1 pb-1 ps-4 py-5">
+        <h1 class="fs-1 pb-1 ps-4 py-3">
              Welcome to <span style="color: #578FCA;">USERS</span>
         </h1>
     </div><!-- End Page Title -->
